@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://shyokote.github.io/linux/">
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../windows/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -218,19 +214,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Docs
@@ -255,81 +249,60 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Linux related
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Linux related
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Linux related
+    Ubuntu related
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ubuntu
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      不要カーネルの削除
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -426,38 +399,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ubuntu
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      不要カーネルの削除
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -472,18 +413,7 @@
 
 
 <h1 id="linux-related">Linux related</h1>
-<h2 id="ubuntu">Ubuntu</h2>
-<h3 id="_1">不要カーネルの削除</h3>
-<p>稼働中のカーネルバージョンの確認
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uname<span class="w"> </span>-r
-</span></code></pre></div></p>
-<p>インストール済みカーネルのリストを確認
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
-</span></code></pre></div></p>
-<p>カーネルの削除
-(例として3.13.0-65, 3.13.0-67, 3.13.0-71を削除する場合)
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>headers,image-extra,image<span class="o">}</span>-3.13.0-<span class="o">{</span><span class="m">65</span>,67,71<span class="o">}</span>
-</span></code></pre></div></p>
+<p>Ubuntu, Rocky Linuxなどのメモを残す。</p>
 
 
 
