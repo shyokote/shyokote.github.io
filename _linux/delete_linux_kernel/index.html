@@ -333,6 +333,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Delete Linux Kernel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -342,6 +353,112 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      現行のLinuxカーネルを確認する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      インストール済みカーネル確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      削除テスト
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      削除本番
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージをクリーンアップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      GRUBのアップデート
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos-rocky-linux-alma-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      CentOS / Rocky Linux / Alma Linux
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -375,6 +492,101 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      現行のLinuxカーネルを確認する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      インストール済みカーネル確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      削除テスト
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      削除本番
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      パッケージをクリーンアップ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      GRUBのアップデート
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos-rocky-linux-alma-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      CentOS / Rocky Linux / Alma Linux
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -389,6 +601,51 @@
 
 
 <h1 id="removing-unnecessary-linux-kernels">Removing unnecessary Linux kernels</h1>
+<h2 id="ubuntu">Ubuntu</h2>
+<h3 id="linux">現行のLinuxカーネルを確認する</h3>
+<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
+</code></pre></div>
+<h3 id="_1">インストール済みカーネル確認</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
+</code></pre></div>
+<h3 id="_2">削除テスト</h3>
+<p>例:
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>--dry-run<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-&lt;バージョン&gt;
+</code></pre></div>
+--dry-run オプションをつけて実行する
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>--dry-run<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
+</code></pre></div></p>
+<h3 id="_3">削除本番</h3>
+<p>例:
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-&lt;バージョン&gt;
+</code></pre></div>
+--dry-run オプションを外して実行する
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>headers,image<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
+</code></pre></div></p>
+<h3 id="_4">確認</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
+</code></pre></div>
+<h3 id="_5">パッケージをクリーンアップ</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove
+sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
+</code></pre></div>
+<h3 id="grub">GRUBのアップデート</h3>
+<p>GRUBブートローダーを更新して、削除したカーネルがブートメニューに表示されないようにする
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>update-grub
+</code></pre></div></p>
+<h2 id="centos-rocky-linux-alma-linux">CentOS / Rocky Linux / Alma Linux</h2>
+<p>現行のLinuxカーネルを確認する
+<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
+</code></pre></div></p>
+<p>インストール済みカーネルの確認
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>list<span class="w"> </span>--installed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kernel
+</code></pre></div></p>
+<p>不要Linuxカーネルを削除(最新のみ残す)
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly
+</code></pre></div></p>
+<p>不要Linuxカーネルの削除(最新2世代を残す)
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly<span class="w"> </span>--setopt<span class="w"> </span><span class="nv">installonly_limit</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>kernel
+</code></pre></div></p>
 
 
 
