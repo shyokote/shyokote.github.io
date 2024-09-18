@@ -474,9 +474,15 @@
 <h1 id="linux-related">Linux related</h1>
 <h2 id="ubuntu">Ubuntu</h2>
 <h3 id="_1">不要カーネルの削除</h3>
-<p>稼働中のカーネルバージョンの確認</p>
+<p>稼働中のカーネルバージョンの確認
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uname<span class="w"> </span>-r
-</span></code></pre></div>
+</span></code></pre></div></p>
+<p>インストール済みカーネルのリストを確認
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
+</span></code></pre></div></p>
+<p>カーネルの削除
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>headers,image-extra,image<span class="o">}</span>-3.13.0-<span class="o">{</span><span class="m">65</span>,67,71<span class="o">}</span>
+</span></code></pre></div></p>
 
 
 
