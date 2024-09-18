@@ -4,7 +4,17 @@ body {
 }
 
 /* 特定の部分だけ文字サイズを変更したい場合 */
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    font-size: inherit;
+    color: blue;
+}
+h2 {
+    font-size: inherit;
+}
+h3 {
+    font-size: inherit;
+}
+h4, h5, h6 {
     font-size: inherit; /* 見出しも本文と同じサイズにする */
 }
 
