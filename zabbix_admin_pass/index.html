@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://shyokote.github.io/others/">
+        <link rel="canonical" href="https://shyokote.github.io/zabbix_admin_pass/">
       
       
         <link rel="prev" href="../network/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Others related - My Docs</title>
+        <title>Zabbix related - My Docs</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#zabbix-webui-admin-password-change" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Others related
+              Zabbix related
             
           </span>
         </div>
@@ -486,16 +491,84 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Zabbix related
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Others related
+    Zabbix related
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      対処
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      確認
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ポイント
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -534,6 +607,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      対処
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      確認
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ポイント
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -548,9 +667,46 @@
                   
 
 
-  <h1>Others related</h1>
-
-
+<h1 id="zabbix-webui-admin-password-change">Zabbix WebUI Admin Password Change</h1>
+<ul>
+<li>ZabbixのWebUIログインパスワードを忘れてしまった。</li>
+<li>ldap連携をしていなくて、Zabbixデータベースのユーザー認証である</li>
+<li>他にログインをできる管理者ユーザーがいない状態である</li>
+</ul>
+<h2 id="_1">概要</h2>
+<ul>
+<li>Zabbix サーバーのデータベース (ここではMySQL) にログインをして直接変更をする</li>
+<li>登録するパスワードは事前にbcriptでハッシュ化する (ここではデフォルトの zabbix とする)</li>
+</ul>
+<h2 id="_2">対処</h2>
+<p>zabbixデータベースに接続
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>mysql
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mysql&gt;<span class="w">  </span>use<span class="w"> </span>zabbix<span class="p">;</span>
+</span></code></pre></div></p>
+<p>変更したいユーザーのIDを確認する
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mysql&gt;<span class="w"> </span><span class="k">select</span><span class="w"> </span>userid,<span class="w"> </span>username<span class="w"> </span>from<span class="w"> </span>users<span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>+--------+----------+
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">|</span><span class="w"> </span>userid<span class="w"> </span><span class="p">|</span><span class="w"> </span>username<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>+--------+----------+
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">|</span><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>admin<span class="w">    </span><span class="p">|</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">|</span><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>guest<span class="w">    </span><span class="p">|</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>+--------+----------+
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="m">2</span><span class="w"> </span>rows<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.00<span class="w"> </span>sec<span class="o">)</span>
+</span></code></pre></div></p>
+<p>Passwordをzabbixにする (デフォルトにする)。
+パスワード文字列をbcriptでハッシュしたものを使う
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mysql&gt;<span class="w"> </span>update<span class="w"> </span>zabbix.users<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">passwd</span><span class="o">=</span><span class="s1">&#39;$2a$08$Da5nMv6HAVy/7FDjJHS.Lu0QQGg9SBTGorAMmjyKl.0Ohpgfl9tnS&#39;</span><span class="w"> </span>where<span class="w"> </span><span class="nv">userid</span><span class="o">=</span>‘1’<span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mysql&gt;<span class="w"> </span>flush<span class="w"> </span>privileges<span class="p">;</span>
+</span></code></pre></div></p>
+<h2 id="_3">確認</h2>
+<p>Zabbix WebUIからログインをする。</p>
+<h2 id="_4">ポイント</h2>
+<ul>
+<li>zabbixのパスワードはWebUIからはハッシュ化されてデータベースに保存される</li>
+<li>zabbixのデータベースにはハッシュ化したパスワードを格納する必要がある</li>
+<li>zabbix 6.2からMD5からbcriptに変更された</li>
+</ul>
 
 
 
