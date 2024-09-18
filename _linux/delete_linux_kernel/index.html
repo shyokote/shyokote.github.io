@@ -44,9 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
-    
-      <link rel="stylesheet" href="../../css/second_extra.css">
+      <link rel="stylesheet" href="../../_css/styles.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -708,7 +706,7 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-&lt;バージョン&gt;
 </code></pre></div>
 --dry-run オプションを外して実行する
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>headers,image<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
 </code></pre></div></p>
 <h3 id="_4">確認</h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
