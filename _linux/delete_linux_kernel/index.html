@@ -692,7 +692,7 @@
 <div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
 </code></pre></div>
 <h3 id="_1">インストール済みカーネル確認</h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
+<div class="highlight"><pre><span></span><code>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
 </code></pre></div>
 <h3 id="_2">削除テスト</h3>
 <p>例:
@@ -709,7 +709,7 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
 </code></pre></div></p>
 <h3 id="_4">確認</h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
+<div class="highlight"><pre><span></span><code>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
 </code></pre></div>
 <h3 id="_5">パッケージをクリーンアップ</h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove
@@ -727,10 +727,10 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
 <div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>list<span class="w"> </span>--installed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kernel
 </code></pre></div>
 <h3 id="linux_2">不要Linuxカーネルを削除(最新のみ残す)</h3>
-<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly
 </code></pre></div>
 <h3 id="linux2">不要Linuxカーネルの削除(最新2世代を残す)</h3>
-<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly<span class="w"> </span>--setopt<span class="w"> </span><span class="nv">installonly_limit</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>kernel
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly<span class="w"> </span>--setopt<span class="w"> </span><span class="nv">installonly_limit</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>kernel
 </code></pre></div>
 
 
