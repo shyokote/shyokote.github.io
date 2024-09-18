@@ -458,6 +458,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="CentOS / Rocky Linux / Alma Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      現行のLinuxカーネルを確認する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      インストール済みカーネルの確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      不要Linuxカーネルを削除(最新のみ残す)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux2" class="md-nav__link">
+    <span class="md-ellipsis">
+      不要Linuxカーネルの削除(最新2世代を残す)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -587,6 +629,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="CentOS / Rocky Linux / Alma Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      現行のLinuxカーネルを確認する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      インストール済みカーネルの確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      不要Linuxカーネルを削除(最新のみ残す)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux2" class="md-nav__link">
+    <span class="md-ellipsis">
+      不要Linuxカーネルの削除(最新2世代を残す)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -638,18 +722,18 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>update-grub
 </code></pre></div></p>
 <h2 id="centos-rocky-linux-alma-linux">CentOS / Rocky Linux / Alma Linux</h2>
-<p>現行のLinuxカーネルを確認する
+<h3 id="linux_1">現行のLinuxカーネルを確認する</h3>
 <div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
-</code></pre></div></p>
-<p>インストール済みカーネルの確認
+</code></pre></div>
+<h3 id="_6">インストール済みカーネルの確認</h3>
 <div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>list<span class="w"> </span>--installed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kernel
-</code></pre></div></p>
-<p>不要Linuxカーネルを削除(最新のみ残す)
+</code></pre></div>
+<h3 id="linux_2">不要Linuxカーネルを削除(最新のみ残す)</h3>
 <div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly
-</code></pre></div></p>
-<p>不要Linuxカーネルの削除(最新2世代を残す)
+</code></pre></div>
+<h3 id="linux2">不要Linuxカーネルの削除(最新2世代を残す)</h3>
 <div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly<span class="w"> </span>--setopt<span class="w"> </span><span class="nv">installonly_limit</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>kernel
-</code></pre></div></p>
+</code></pre></div>
 
 
 
