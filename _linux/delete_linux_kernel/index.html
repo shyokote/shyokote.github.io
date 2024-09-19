@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Inconsolata"}</style>
       
     
     
@@ -209,6 +209,8 @@
         <a href="./" class="md-tabs__link">
           
   
+    
+  
   Linux
 
         </a>
@@ -232,6 +234,8 @@
       <li class="md-tabs__item">
         <a href="../../_network/yamaha_rtx1210_init_settings/" class="md-tabs__link">
           
+  
+    
   
   Network
 
@@ -312,6 +316,10 @@
   
   
     
+    
+      
+        
+      
     
     
       
@@ -553,6 +561,10 @@
   
     
     
+      
+        
+      
+    
     
       
       
@@ -594,6 +606,10 @@
   
   
     
+    
+      
+        
+      
     
     
       
@@ -838,49 +854,50 @@
 <h1 id="removing-unnecessary-linux-kernels">Removing unnecessary Linux kernels</h1>
 <h2 id="ubuntu">Ubuntu</h2>
 <h3 id="linux">現行のLinuxカーネルを確認する</h3>
-<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>uname<span style="color: #f8f8f2"> </span>-a
+</code></pre></div></td></tr></table></div>
 <h3 id="_1">インストール済みカーネル確認</h3>
-<div class="highlight"><pre><span></span><code>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>dpkg<span style="color: #f8f8f2"> </span>--get-selections<span style="color: #f8f8f2"> | </span>grep<span style="color: #f8f8f2"> </span>linux-
+</code></pre></div></td></tr></table></div>
 <h3 id="_2">削除テスト</h3>
 <p>例:
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>--dry-run<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-&lt;バージョン&gt;
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>--dry-run<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--purge<span style="color: #f8f8f2"> </span>linux-<span style="color: #ff4689">{</span>image,headers,modules<span style="color: #ff4689">}</span>-&lt;バージョン&gt;
+</code></pre></div></td></tr></table></div>
 --dry-run オプションをつけて実行する
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>--dry-run<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
-</code></pre></div></p>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>--dry-run<span style="color: #f8f8f2"> </span>autoremove<span style="color: #f8f8f2"> </span>--purge<span style="color: #f8f8f2"> </span>linux-<span style="color: #ff4689">{</span>image,headers,modules<span style="color: #ff4689">}</span>-5.15.0-<span style="color: #ff4689">{</span><span style="color: #ae81ff">56</span>,58<span style="color: #ff4689">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_3">削除本番</h3>
 <p>例:
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-&lt;バージョン&gt;
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--purge<span style="color: #f8f8f2"> </span>linux-<span style="color: #ff4689">{</span>image,headers,modules<span style="color: #ff4689">}</span>-&lt;バージョン&gt;
+</code></pre></div></td></tr></table></div>
 --dry-run オプションを外して実行する
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove<span class="w"> </span>--purge<span class="w"> </span>linux-<span class="o">{</span>image,headers,modules<span class="o">}</span>-5.15.0-<span class="o">{</span><span class="m">56</span>,58<span class="o">}</span>
-</code></pre></div></p>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>autoremove<span style="color: #f8f8f2"> </span>--purge<span style="color: #f8f8f2"> </span>linux-<span style="color: #ff4689">{</span>image,headers,modules<span style="color: #ff4689">}</span>-5.15.0-<span style="color: #ff4689">{</span><span style="color: #ae81ff">56</span>,58<span style="color: #ff4689">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_4">確認</h3>
-<div class="highlight"><pre><span></span><code>dpkg<span class="w"> </span>--get-selections<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>linux-
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>dpkg<span style="color: #f8f8f2"> </span>--get-selections<span style="color: #f8f8f2"> | </span>grep<span style="color: #f8f8f2"> </span>linux-
+</code></pre></div></td></tr></table></div>
 <h3 id="_5">パッケージをクリーンアップ</h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>autoremove
-sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>autoremove
+sudo<span style="color: #f8f8f2"> </span>apt-get<span style="color: #f8f8f2"> </span>clean
+</code></pre></div></td></tr></table></div>
 <h3 id="grub">GRUBのアップデート</h3>
 <p>GRUBブートローダーを更新して、削除したカーネルがブートメニューに表示されないようにする
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>update-grub
-</code></pre></div></p>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>update-grub
+</code></pre></div></td></tr></table></div></p>
 <h2 id="centos-rocky-linux-alma-linux">CentOS / Rocky Linux / Alma Linux</h2>
 <h3 id="linux_1">現行のLinuxカーネルを確認する</h3>
-<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>uname<span style="color: #f8f8f2"> </span>-a
+</code></pre></div></td></tr></table></div>
 <h3 id="_6">インストール済みカーネルの確認</h3>
-<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>list<span class="w"> </span>--installed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kernel
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>dnf<span style="color: #f8f8f2"> </span>list<span style="color: #f8f8f2"> </span>--installed<span style="color: #f8f8f2"> | </span>grep<span style="color: #f8f8f2"> </span>kernel
+</code></pre></div></td></tr></table></div>
 <h3 id="linux_2">不要Linuxカーネルを削除(最新のみ残す)</h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>dnf<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--oldinstallonly
+</code></pre></div></td></tr></table></div>
 <h3 id="linux2">不要Linuxカーネルの削除(最新2世代を残す)</h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>--oldinstallonly<span class="w"> </span>--setopt<span class="w"> </span><span class="nv">installonly_limit</span><span class="o">=</span><span class="m">2</span><span class="w"> </span>kernel
-</code></pre></div>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code>sudo<span style="color: #f8f8f2"> </span>dnf<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--oldinstallonly<span style="color: #f8f8f2"> </span>--setopt<span style="color: #f8f8f2"> installonly_limit</span><span style="color: #ff4689">=</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2"> </span>kernel
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -933,7 +950,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>

@@ -1,32 +1,16 @@
-/* 例: 全体の文字サイズを小さくする */
-body {
-    font-size: 14px;
+.md-typeset h1 {
+  /*font-size: 24pt;*/
+  font-weight: bold;
+  color: #000;
+  border-bottom: solid 2px #f18b21;
+  padding-bottom: 5px;
 }
-
-/* 特定の部分だけ文字サイズを変更したい場合 */
-h1 {
-    font-size: inherit; /* 見出しも本文と同じサイズにする */
+.md-typeset h2 {
+  border-bottom: 1px dotted #888;
 }
-h2 {
-    font-size: inherit; /* 見出しも本文と同じサイズにする */
-}
-h3 {
-    font-size: inherit; /* 見出しも本文と同じサイズにする */
-}
-h4, h5, h6 {
-    font-size: inherit; /* 見出しも本文と同じサイズにする */
-}
-
-p {
-    font-size: 14px; /* 段落テキストを小さくする */
-}
-
-/* 例: ul と ol のリスト全体の文字サイズを小さくする */
-ul, ol {
-    font-size: 14px; /* リスト全体のフォントサイズを小さくする */
-}
-
-/* 例: li（リスト項目）だけのフォントサイズを小さくする */
-li {
-    font-size: 14px; /* リスト項目のフォントサイズを小さくする */
+.md-typeset h3:before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f0a9";
+  margin-right: 5px;
 }
