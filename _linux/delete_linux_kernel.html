@@ -531,18 +531,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux_2" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      不要Linuxカーネルを削除(最新のみ残す)
+      削除(最新のみ残す)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux2" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      不要Linuxカーネルの削除(最新2世代を残す)
+      削除(最新2世代を残す)
     </span>
   </a>
   
@@ -830,18 +830,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux_2" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      不要Linuxカーネルを削除(最新のみ残す)
+      削除(最新のみ残す)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux2" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      不要Linuxカーネルの削除(最新2世代を残す)
+      削除(最新2世代を残す)
     </span>
   </a>
   
@@ -910,10 +910,10 @@
 <h3 id="_6">インストール済みカーネルの確認</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>dnf<span style="color: #f8f8f2"> </span>list<span style="color: #f8f8f2"> </span>--installed<span style="color: #f8f8f2"> | </span>grep<span style="color: #f8f8f2"> </span>kernel
 </span></code></pre></div></td></tr></table></div>
-<h3 id="linux_2">不要Linuxカーネルを削除(最新のみ残す)</h3>
+<h3 id="_7">削除(最新のみ残す)</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span style="color: #f8f8f2"> </span>dnf<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--oldinstallonly
 </span></code></pre></div></td></tr></table></div>
-<h3 id="linux2">不要Linuxカーネルの削除(最新2世代を残す)</h3>
+<h3 id="2">削除(最新2世代を残す)</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo<span style="color: #f8f8f2"> </span>dnf<span style="color: #f8f8f2"> </span>remove<span style="color: #f8f8f2"> </span>--oldinstallonly<span style="color: #f8f8f2"> </span>--setopt<span style="color: #f8f8f2"> installonly_limit</span><span style="color: #ff4689">=</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2"> </span>kernel
 </span></code></pre></div></td></tr></table></div>
 
