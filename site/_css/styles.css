@@ -1,0 +1,43 @@
+.md-typeset h1 {
+    font-weight: bold;
+    border-bottom: solid 2px hsl(33, 100%, 50%); /* オレンジ色 */
+    padding-bottom: .1em;
+}
+
+.md-typeset h2 {
+    font-weight: bold;
+    border-bottom: 2px dotted #C0C0C0; /* シルバー */
+}
+
+.md-typeset h3 {
+    font-weight: bold;
+    border-bottom: 1px dotted #C0C0C0; /* シルバー */
+}
+
+.md-typeset h4 {
+    font-weight: bold;
+    border-bottom: 1px solid #C0C0C0; /* シルバー */
+}
+
+.md-typeset > ::before {
+    font-family: "Font Awesome 5 Free";
+    margin-right: .3em;
+    display:inline-block !important;
+}
+
+.md-typeset h1::before {
+    content:"\f02d" !important;
+}
+
+.md-typeset h2::before {
+    content:"\f0a9" !important;
+}
+
+.md-typeset h3::before {
+    content:"\f061" !important;
+}
+
+.md-typeset h4::before {
+    content:"\f0da" !important;
+}
+
