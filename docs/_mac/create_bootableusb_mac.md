@@ -9,7 +9,6 @@ USBメモリを接続してターミナルから操作をする。
 USBメモリを接続する。
 USBメモリのデバイスを確認する。
 
-[コマンド]
 ``` bash
 diskutil list
 ```
@@ -59,7 +58,6 @@ diskutil list
 ### USBメモリの初期化
 対象ディスクをMS-DOS形式で初期化する。
 
-[コマンド]
 ``` bash
 diskutil eraseDisk MS-DOS UNTITLED /dev/disk8
 ```
@@ -68,13 +66,12 @@ UNTITLEDになっているものはラベルなので自由に。
 ### ISOイメージをディスクに書き込む
 USBディスクに書き込むため、一旦アンマウント
 
-[コマンド]
 ``` bash
 diskutil unmountDisk /dev/disk8
 ```
 
 ISOイメージをディスクに書き込む
-[コマンド]
+
 ``` bash
 sudo dd if=./xxxxxx.iso of=/dev/rdisk8 bs=16m
 ```
@@ -90,7 +87,6 @@ sudo dd if=./xxxxxx.iso of=/dev/rdisk8 bs=16m
 
 ### USBの取り出し
 
-[コマンド]
 ``` bash
 diskutil eject /dev/disk8
 ```
