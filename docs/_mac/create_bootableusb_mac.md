@@ -1,6 +1,6 @@
 # Create a Bootable USB from an ISO image using Mac's standard functions
 
-## 概要
+## 準備
 USBメモリを接続してターミナルから操作をする。
 
 ## 方法
