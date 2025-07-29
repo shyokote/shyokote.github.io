@@ -88,8 +88,8 @@ sudo dd if=./xxxxxx.iso of=/dev/rdisk8 bs=16m
 
 - 転送バイト数を指定しますが、デフォルトは512バイト。
 
-
 ### USBの取り出し
+
 [コマンド]
 ``` bash
 diskutil eject /dev/disk8
