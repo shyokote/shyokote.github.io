@@ -997,8 +997,7 @@
 <h3 id="usb">USBデバイスの確認</h3>
 <p>USBメモリを接続する。
 USBメモリのデバイスを確認する。</p>
-<p>[コマンド]
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>diskutil<span style="color: #f8f8f2"> </span>list
+<p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>diskutil<span style="color: #f8f8f2"> </span>list
 </span></code></pre></div></td></tr></table></div>
 以下の出力例では /dev/disk8 がUSBメモリ
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1"> 1</a></span>
@@ -1081,19 +1080,16 @@ USBメモリのデバイスを確認する。</p>
 </span></code></pre></div></td></tr></table></div></p>
 <h3 id="usb_1">USBメモリの初期化</h3>
 <p>対象ディスクをMS-DOS形式で初期化する。</p>
-<p>[コマンド]
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>diskutil<span style="color: #f8f8f2"> </span>eraseDisk<span style="color: #f8f8f2"> </span>MS-DOS<span style="color: #f8f8f2"> </span>UNTITLED<span style="color: #f8f8f2"> </span>/dev/disk8
+<p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>diskutil<span style="color: #f8f8f2"> </span>eraseDisk<span style="color: #f8f8f2"> </span>MS-DOS<span style="color: #f8f8f2"> </span>UNTITLED<span style="color: #f8f8f2"> </span>/dev/disk8
 </span></code></pre></div></td></tr></table></div>
 UNTITLEDになっているものはラベルなので自由に。</p>
 <h3 id="iso">ISOイメージをディスクに書き込む</h3>
 <p>USBディスクに書き込むため、一旦アンマウント</p>
-<p>[コマンド]
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>diskutil<span style="color: #f8f8f2"> </span>unmountDisk<span style="color: #f8f8f2"> </span>/dev/disk8
-</span></code></pre></div></td></tr></table></div></p>
-<p>ISOイメージをディスクに書き込む
-[コマンド]
+</span></code></pre></div></td></tr></table></div>
+<p>ISOイメージをディスクに書き込む</p>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span style="color: #f8f8f2"> </span>dd<span style="color: #f8f8f2"> </span><span style="color: #66d9ef">if</span><span style="color: #ff4689">=</span>./xxxxxx.iso<span style="color: #f8f8f2"> of</span><span style="color: #ff4689">=</span>/dev/rdisk8<span style="color: #f8f8f2"> bs</span><span style="color: #ff4689">=</span>16m
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="of">ofオプションについて</h4>
 <ul>
 <li>disk … 通常のランダムアクセス</li>
@@ -1104,9 +1100,8 @@ UNTITLEDになっているものはラベルなので自由に。</p>
 <li>転送バイト数を指定しますが、デフォルトは512バイト。</li>
 </ul>
 <h3 id="usb_2">USBの取り出し</h3>
-<p>[コマンド]
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>diskutil<span style="color: #f8f8f2"> </span>eject<span style="color: #f8f8f2"> </span>/dev/disk8
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
 
 
 
