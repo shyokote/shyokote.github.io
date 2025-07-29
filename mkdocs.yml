@@ -34,6 +34,8 @@ nav:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
 #  - Windows:
 #    - Windows:
+  - Mac:
+    - Create a Bootable USB from an ISO image using Mac's standard functions: _mac/create_bootableusb_mac.md
   - Network:
     - YAMAHA:
       - YAMAHA RTX1210 initial setting example: _network/yamaha_rtx1210_init_settings.md
