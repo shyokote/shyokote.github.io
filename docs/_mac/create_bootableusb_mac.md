@@ -16,9 +16,7 @@ diskutil list
 以下の出力例では /dev/disk8 がUSBメモリ
 ``` bash
 /dev/disk0 (internal, physical):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                        *500.3 GB   disk0
-   1:             Apple_APFS_ISC Container disk1         524.3 MB   disk0s1
+   #:                       TYPE NAME                    SIZE       IDENTIFIER 0:      GUID_partition_scheme                        *500.3 GB   disk0 1:             Apple_APFS_ISC Container disk1         524.3 MB   disk0s1
    2:                 Apple_APFS Container disk3         494.4 GB   disk0s2
    3:        Apple_APFS_Recovery Container disk2         5.4 GB     disk0s3
 
@@ -81,12 +79,11 @@ ISOイメージをディスクに書き込む
 sudo dd if=./xxxxxx.iso of=/dev/rdisk8 bs=16m
 ```
 #### ofオプションについて
-disk … 通常のランダムアクセス
-rdisk … シーケンシャル(順次)アクセス
-ddでランダムアクセスをしてしまうと激遅になる
+* disk … 通常のランダムアクセス
+* rdisk … シーケンシャル(順次)アクセス
 
 #### bsオプションについて
-転送バイト数を指定しますが、デフォルトは512バイト。
+* 転送バイト数を指定しますが、デフォルトは512バイト。
 
 ### USBの取り出し
 ``` bash
