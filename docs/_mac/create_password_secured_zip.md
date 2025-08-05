@@ -1,4 +1,4 @@
-## Create a Password-Secured Zip
+# Create a Password-Secured Zip
 
 ## Overview
 Macの基本機能でパスワード付きZipファイルを作成します。  
