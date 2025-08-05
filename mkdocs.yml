@@ -32,6 +32,7 @@ nav:
   - HOME: index.md
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
+    - Identify programs that expose files: _linux/lsof.md
 #  - Windows:
 #    - Windows:
   - Mac:
