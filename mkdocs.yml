@@ -33,8 +33,8 @@ nav:
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
     - Identify programs that expose files: _linux/lsof.md
-#  - Windows:
-#    - Windows:
+  - Windows:
+    - Apps won't disappear from the Windows Start menu: _windows/apps_wont_diappear_form_the_windows_menu.md
   - Mac:
     - Create a Bootable USB from an ISO image using Mac's standard functions: _mac/create_bootableusb_mac.md
     - Create a Password-Secured Zip: _mac/create_password_secured_zip.md
