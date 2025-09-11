@@ -32,6 +32,7 @@ nav:
   - HOME: index.md
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
+    - Locking a package version: _linux/linux_package_versionlock.md
     - Identify programs that expose files: _linux/lsof.md
   - Windows:
     - Apps won't disappear from the Windows Start menu: _windows/apps_wont_diappear_form_the_windows_menu.md
