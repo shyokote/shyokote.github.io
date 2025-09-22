@@ -574,6 +574,16 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LVMの拡張
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LVMの拡張">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       パーディションを拡張
@@ -614,9 +624,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_1" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの物理ボリュームを拡張
     </span>
@@ -626,7 +636,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lvm_1" class="md-nav__link">
+  <a href="#lvm_2" class="md-nav__link">
     <span class="md-ellipsis">
       新しいパーティションを LVM の物理ボリュームとして認識させる
     </span>
@@ -638,9 +648,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_3" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの論理ボリュームを拡張
     </span>
@@ -680,8 +690,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       ファイルシステムを拡張
@@ -713,13 +723,18 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       ディスク容量の確認
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1246,6 +1261,16 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LVMの拡張
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LVMの拡張">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       パーディションを拡張
@@ -1286,9 +1311,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_1" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの物理ボリュームを拡張
     </span>
@@ -1298,7 +1323,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lvm_1" class="md-nav__link">
+  <a href="#lvm_2" class="md-nav__link">
     <span class="md-ellipsis">
       新しいパーティションを LVM の物理ボリュームとして認識させる
     </span>
@@ -1310,9 +1335,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_3" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの論理ボリュームを拡張
     </span>
@@ -1352,8 +1377,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       ファイルシステムを拡張
@@ -1385,13 +1410,18 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       ディスク容量の確認
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1459,8 +1489,9 @@ sdaの容量を増加させることがわかる。</p>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>sr1<span style="color: #f8f8f2">                        </span><span style="color: #ae81ff">11</span>:1<span style="color: #f8f8f2">    </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span>1024M<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span>rom
 </span></code></pre></div></td></tr></table></div>
 sdaの欄のSIZEが100Gになっていることを確認</p>
-<h2 id="_4">パーディションを拡張</h2>
-<h3 id="_5">パーティションの確認</h3>
+<h2 id="lvm">LVMの拡張</h2>
+<h3 id="_4">パーディションを拡張</h3>
+<h4 id="_5">パーティションの確認</h4>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span style="color: #f8f8f2"> </span>fdisk<span style="color: #f8f8f2"> </span>-l<span style="color: #f8f8f2"> </span>/dev/sda
 </span></code></pre></div></td></tr></table></div>
 出力例
@@ -1492,7 +1523,7 @@ sdaの欄のSIZEが100Gになっていることを確認</p>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>/dev/sda2<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">4096</span><span style="color: #f8f8f2">   </span><span style="color: #ae81ff">4198399</span><span style="color: #f8f8f2">   </span><span style="color: #ae81ff">4194304</span><span style="color: #f8f8f2">   </span>2G<span style="color: #f8f8f2"> </span>Linux<span style="color: #f8f8f2"> </span>filesystem
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>/dev/sda3<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">4198400</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">104855551</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100657152</span><span style="color: #f8f8f2">  </span>48G<span style="color: #f8f8f2"> </span>Linux<span style="color: #f8f8f2"> </span>filesystem
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="fdisk">fdiskでパーティションを拡張</h3>
+<h4 id="fdisk">fdiskでパーティションを拡張</h4>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span style="color: #f8f8f2"> </span>fdisk<span style="color: #f8f8f2"> </span>/dev/sda
 </span></code></pre></div></td></tr></table></div>
 <p>途中出力される以下のメッセージは注意です！</p>
@@ -1651,15 +1682,15 @@ Do you want to remove the signature? [Y]es/[N]o:</p>
 </span><span id="__span-7-71"><a id="__codelineno-7-71" name="__codelineno-7-71"></a>The<span style="color: #f8f8f2"> </span>partition<span style="color: #f8f8f2"> </span>table<span style="color: #f8f8f2"> </span>has<span style="color: #f8f8f2"> </span>been<span style="color: #f8f8f2"> </span>altered.
 </span><span id="__span-7-72"><a id="__codelineno-7-72" name="__codelineno-7-72"></a>Syncing<span style="color: #f8f8f2"> </span>disks.
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="_6">作成した新しいパーティションをカーネルに通知</h3>
+<h4 id="_6">作成した新しいパーティションをカーネルに通知</h4>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span style="color: #f8f8f2"> </span>partprobe
 </span></code></pre></div></td></tr></table></div>
-<h2 id="lvm">LVMの物理ボリュームを拡張</h2>
-<h3 id="lvm_1">新しいパーティションを LVM の物理ボリュームとして認識させる</h3>
+<h3 id="lvm_1">LVMの物理ボリュームを拡張</h3>
+<h4 id="lvm_2">新しいパーティションを LVM の物理ボリュームとして認識させる</h4>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo<span style="color: #f8f8f2"> </span>pvresize<span style="color: #f8f8f2"> </span>/dev/sda3
 </span></code></pre></div></td></tr></table></div>
-<h2 id="lvm_2">LVMの論理ボリュームを拡張</h2>
-<h3 id="_7">ボリュームグループ名を確認する</h3>
+<h3 id="lvm_3">LVMの論理ボリュームを拡張</h3>
+<h4 id="_7">ボリュームグループ名を確認する</h4>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>sudo<span style="color: #f8f8f2"> </span>vgdisplay
 </span></code></pre></div></td></tr></table></div>
 出力例
@@ -1703,7 +1734,7 @@ Do you want to remove the signature? [Y]es/[N]o:</p>
 </span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19"></a><span style="color: #f8f8f2">  </span>Free<span style="color: #f8f8f2">  </span>PE<span style="color: #f8f8f2"> </span>/<span style="color: #f8f8f2"> </span>Size<span style="color: #f8f8f2">       </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span>/<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
 </span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20"></a><span style="color: #f8f8f2">  </span>VG<span style="color: #f8f8f2"> </span>UUID<span style="color: #f8f8f2">               </span>B874I4-bIDN-Koeo-NFmh-qu6l-qWob-ALGkV7
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="_8">論理ボリューム名を確認する</h3>
+<h4 id="_8">論理ボリューム名を確認する</h4>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo<span style="color: #f8f8f2"> </span>lvdisplay
 </span></code></pre></div></td></tr></table></div>
 出力例
@@ -1739,7 +1770,7 @@ Do you want to remove the signature? [Y]es/[N]o:</p>
 </span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15"></a><span style="color: #f8f8f2">  </span>-<span style="color: #f8f8f2"> </span>currently<span style="color: #f8f8f2"> set </span>to<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">256</span>
 </span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16"></a><span style="color: #f8f8f2">  </span>Block<span style="color: #f8f8f2"> </span>device<span style="color: #f8f8f2">           </span><span style="color: #ae81ff">252</span>:0
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="_9">論理ボリュームを必要な分だけ拡張する</h3>
+<h4 id="_9">論理ボリュームを必要な分だけ拡張する</h4>
 <p>ここの例では追加分を全て適用する
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo<span style="color: #f8f8f2"> </span>lvextend<span style="color: #f8f8f2"> </span>-l<span style="color: #f8f8f2"> </span>+100%FREE<span style="color: #f8f8f2"> </span>/dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;
 </span></code></pre></div></td></tr></table></div>
@@ -1772,21 +1803,21 @@ ubuntu-vg-ubuntu-lvなるはずですがr、lsblkやdfの結果だとubuntu--vg-
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a><span style="color: #f8f8f2">old_desc_blocks </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span>,<span style="color: #f8f8f2"> new_desc_blocks </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">13</span>
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a>The<span style="color: #f8f8f2"> </span>filesystem<span style="color: #f8f8f2"> </span>on<span style="color: #f8f8f2"> </span>/dev/mapper/ubuntu--vg-ubuntu--lv<span style="color: #f8f8f2"> </span>is<span style="color: #f8f8f2"> </span>now<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">25689088</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">(</span>4k<span style="color: #ff4689">)</span><span style="color: #f8f8f2"> </span>blocks<span style="color: #f8f8f2"> </span>long.
 </span></code></pre></div></td></tr></table></div></p>
-<h2 id="_10">ファイルシステムを拡張</h2>
-<h3 id="ext4">Ext4の場合</h3>
+<h3 id="_10">ファイルシステムを拡張</h3>
+<h4 id="ext4">Ext4の場合</h4>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>sudo<span style="color: #f8f8f2"> </span>resize2fs<span style="color: #f8f8f2"> </span>/dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;
 </span></code></pre></div></td></tr></table></div>
 例
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>sudo<span style="color: #f8f8f2"> </span>resize2fs<span style="color: #f8f8f2"> </span>/dev/mapper/ubuntu--vg-ubuntu--lv
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="xfs">XFSの場合</h3>
+<h4 id="xfs">XFSの場合</h4>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>sudo<span style="color: #f8f8f2"> </span>xfs_growfs<span style="color: #f8f8f2"> </span>/mount/point
 </span></code></pre></div></td></tr></table></div>
 /mount/pointの部分は、df -Th か lsblk コマンドで確認してください。</p>
 <p>例
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>sudo<span style="color: #f8f8f2"> </span>xfs_growfs<span style="color: #f8f8f2"> </span>/
 </span></code></pre></div></td></tr></table></div></p>
-<h2 id="_11">ディスク容量の確認</h2>
+<h3 id="_11">ディスク容量の確認</h3>
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>df<span style="color: #f8f8f2"> </span>-Th
 </span></code></pre></div></td></tr></table></div>
 例
