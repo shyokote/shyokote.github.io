@@ -610,10 +610,25 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lvm" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの物理ボリュームを拡張
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LVMの物理ボリュームを拡張">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      新しいパーティションを LVM の物理ボリュームとして認識させる
     </span>
   </a>
   
@@ -621,15 +636,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      新しいパーティションを LVM の物理ボリュームとして認識させる
-    </span>
-  </a>
   
 </li>
       
@@ -1276,10 +1282,25 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lvm" class="md-nav__link">
     <span class="md-ellipsis">
       LVMの物理ボリュームを拡張
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LVMの物理ボリュームを拡張">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lvm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      新しいパーティションを LVM の物理ボリュームとして認識させる
     </span>
   </a>
   
@@ -1287,15 +1308,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lvm_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      新しいパーティションを LVM の物理ボリュームとして認識させる
-    </span>
-  </a>
   
 </li>
       
@@ -1642,8 +1654,8 @@ Do you want to remove the signature? [Y]es/[N]o:</p>
 <h3 id="_6">作成した新しいパーティションをカーネルに通知</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span style="color: #f8f8f2"> </span>partprobe
 </span></code></pre></div></td></tr></table></div>
-<h3 id="lvm">LVMの物理ボリュームを拡張</h3>
-<h2 id="lvm_1">新しいパーティションを LVM の物理ボリュームとして認識させる</h2>
+<h2 id="lvm">LVMの物理ボリュームを拡張</h2>
+<h3 id="lvm_1">新しいパーティションを LVM の物理ボリュームとして認識させる</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo<span style="color: #f8f8f2"> </span>pvresize<span style="color: #f8f8f2"> </span>/dev/sda3
 </span></code></pre></div></td></tr></table></div>
 <h2 id="lvm_2">LVMの論理ボリュームを拡張</h2>
