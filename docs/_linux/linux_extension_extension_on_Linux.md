@@ -251,15 +251,11 @@ vgdisplayコマンドとlvdisplayコマンドで確認できます。
 
 例
 ```bash
-% sudo  lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
-  Size of logical volume ubuntu-vg/ubuntu-lv changed from <48.00 GiB (12287 extents) to <98.00 GiB (25087 extents).
-  Logical volume ubuntu-vg/ubuntu-lv successfully resized.
-root@pxc02:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
-resize2fs 1.47.0 (5-Feb-2023)
-Filesystem at /dev/mapper/ubuntu--vg-ubuntu--lv is mounted on /; on-line resizing required
-old_desc_blocks = 6, new_desc_blocks = 13
-The filesystem on /dev/mapper/ubuntu--vg-ubuntu--lv is now 25689088 (4k) blocks long.
+sudo  lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+Size of logical volume ubuntu-vg/ubuntu-lv changed from <48.00 GiB (12287 extents) to <98.00 GiB (25087 extents).
+Logical volume ubuntu-vg/ubuntu-lv successfully resized.
 ```
+
 
 ## ファイルシステムを拡張
 
