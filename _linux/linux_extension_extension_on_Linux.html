@@ -1255,8 +1255,8 @@ sdaの欄のSIZEが100Gになっていることを確認</p>
 Partition #3 contains a LVM2_member signature.
 Do you want to remove the signature? [Y]es/[N]o:</p>
 <p>このメッセージは
- - LVM2_member signature = そのパーティションが LVM の一部として使われている印（メタデータ）。
- - 既存の /dev/sda3 を拡張しようとしているので、既存のLVMシグネチャを消してはいけません。</p>
+・LVM2_member signature = そのパーティションが LVM の一部として使われている印（メタデータ）。
+・既存の /dev/sda3 を拡張しようとしているので、既存のLVMシグネチャを消してはいけません。</p>
 <p>したがって、ここは N (No) を選んでください。</p>
 </div>
 <p>出力例
@@ -1505,8 +1505,8 @@ ubuntu-vg-ubuntu-lvなるはずですがr、lsblkやdfの結果だとubuntu--vg-
 デバイスマッパー的には、 - は「VGとLVを区切るための記号」なので、デバイスマッパーが展開した形だと
 ハイフンが増えます。これはエスケープの仕様です。ubuntu-vg-ubuntu-lvをコマンドに渡すとエラーになります。
 そのため、コマンドで使用する際には、以下のどちらかで指定してください。
- - ハイフンを一個足してパスではないと明示的にする →  /dev/mapper/ubuntu--vg-ubuntu--lv
- - パスの-を/に置き換えて渡す → /dev/ubuntu-vg/ubuntu-lv</p>
+・ハイフンを一個足してパスではないと明示的にする →  /dev/mapper/ubuntu--vg-ubuntu--lv
+・パスの-を/に置き換えて渡す → /dev/ubuntu-vg/ubuntu-lv</p>
 </div>
 <p>例
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-1">1</a></span>
