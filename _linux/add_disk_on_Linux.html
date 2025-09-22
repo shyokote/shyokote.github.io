@@ -658,6 +658,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="自動マウント設定を行う。再起動後も自動でマウントされる">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ext4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ext4の場合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      XFSの場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1267,6 +1291,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="自動マウント設定を行う。再起動後も自動でマウントされる">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ext4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ext4の場合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      XFSの場合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1490,8 +1538,9 @@
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>/dev/mapper/rl_rocky--linux8-swap:<span style="color: #f8f8f2"> UUID</span><span style="color: #ff4689">=</span><span style="color: #e6db74">&quot;8d48d1af-b357-4bc3-9036-8b3681299329&quot;</span><span style="color: #f8f8f2"> TYPE</span><span style="color: #ff4689">=</span><span style="color: #e6db74">&quot;swap&quot;</span>
 </span></code></pre></div></td></tr></table></div></p>
 <h3 id="_5">自動マウント設定を行う。再起動後も自動でマウントされる</h3>
-<p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span style="color: #f8f8f2"> </span>vi<span style="color: #f8f8f2"> </span>/etc/fstab
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span style="color: #f8f8f2"> </span>vi<span style="color: #f8f8f2"> </span>/etc/fstab
 </span></code></pre></div></td></tr></table></div>
+<h4 id="ext4_1">Ext4の場合</h4>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1"> 1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-2"> 2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1519,30 +1568,59 @@
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>7437fbdf-88c9-41a5-972d-2c7bb99fefce<span style="color: #f8f8f2"> </span>/boot<span style="color: #f8f8f2">                   </span>xfs<span style="color: #f8f8f2">     </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13"></a>/dev/mapper/rl_rocky--linux8-swap<span style="color: #f8f8f2"> </span>none<span style="color: #f8f8f2">                    </span>swap<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>58ed24d3-d503-4d01-b6ca-eb8a4e69177f<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2"> </span>ext4<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">        </span>←これ
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="xfs_1">XFSの場合</h4>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-1"> 1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-2"> 2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-3"> 3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-4"> 4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-5"> 5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-6"> 6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-7"> 7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-8"> 8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-9"> 9</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-10">10</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-11">11</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-12">12</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-13">13</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span style="color: #959077">#</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span style="color: #959077"># /etc/fstab</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span style="color: #959077"># Created by anaconda on Thu Apr  6 08:40:19 2023</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span style="color: #959077">#</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a><span style="color: #959077"># Accessible filesystems, by reference, are maintained under &#39;/dev/disk/&#39;.</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a><span style="color: #959077"># See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span style="color: #959077">#</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a><span style="color: #959077"># After editing this file, run &#39;systemctl daemon-reload&#39; to update systemd</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><span style="color: #959077"># units generated from this file.</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a><span style="color: #959077">#</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a>/dev/mapper/rl_rocky--linux8-root<span style="color: #f8f8f2"> </span>/<span style="color: #f8f8f2">                       </span>xfs<span style="color: #f8f8f2">     </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>7437fbdf-88c9-41a5-972d-2c7bb99fefce<span style="color: #f8f8f2"> </span>/boot<span style="color: #f8f8f2">                   </span>xfs<span style="color: #f8f8f2">     </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a>/dev/mapper/rl_rocky--linux8-swap<span style="color: #f8f8f2"> </span>none<span style="color: #f8f8f2">                    </span>swap<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>58ed24d3-d503-4d01-b6ca-eb8a4e69177f<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2"> </span>xfs<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">        </span>←これ
+</span></code></pre></div></td></tr></table></div>
 <h3 id="_6">作成したディスクをマウントする</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>sudo<span style="color: #f8f8f2"> </span>mount<span style="color: #f8f8f2"> </span>/dev/sdb1<span style="color: #f8f8f2"> </span>/data
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo<span style="color: #f8f8f2"> </span>mount<span style="color: #f8f8f2"> </span>/dev/sdb1<span style="color: #f8f8f2"> </span>/data
 </span></code></pre></div></td></tr></table></div>
 <h3 id="data">/dataがマウントされているか確認をする</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1"> 1</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-2"> 2</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-3"> 3</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-4"> 4</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-5"> 5</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-6"> 6</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-7"> 7</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-8"> 8</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-9"> 9</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-10">10</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>df<span style="color: #f8f8f2"> </span>-h
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>Filesystem<span style="color: #f8f8f2">                         </span>Size<span style="color: #f8f8f2">  </span>Used<span style="color: #f8f8f2"> </span>Avail<span style="color: #f8f8f2"> </span>Use%<span style="color: #f8f8f2"> </span>Mounted<span style="color: #f8f8f2"> </span>on
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>devtmpfs<span style="color: #f8f8f2">                           </span><span style="color: #ae81ff">1</span>.9G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">1</span>.9G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/dev
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/dev/shm
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">8</span>.5M<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">1</span>%<span style="color: #f8f8f2"> </span>/run
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/sys/fs/cgroup
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a>/dev/mapper/rl_rocky--linux8-root<span style="color: #f8f8f2">   </span>47G<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.4G<span style="color: #f8f8f2">   </span>45G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">5</span>%<span style="color: #f8f8f2"> </span>/
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a>/dev/sda1<span style="color: #f8f8f2">                         </span>1014M<span style="color: #f8f8f2">  </span>207M<span style="color: #f8f8f2">  </span>808M<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">21</span>%<span style="color: #f8f8f2"> </span>/boot
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a>tmpfs<span style="color: #f8f8f2">                              </span>393M<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span>393M<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/run/user/1000
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a>/dev/sdb1<span style="color: #f8f8f2">                           </span>98G<span style="color: #f8f8f2">   </span>24K<span style="color: #f8f8f2">   </span>93G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">1</span>%<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2">    </span>←これ
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-1"> 1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-2"> 2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-3"> 3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-4"> 4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-5"> 5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-6"> 6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-7"> 7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-8"> 8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-9"> 9</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-10">10</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>df<span style="color: #f8f8f2"> </span>-h
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>Filesystem<span style="color: #f8f8f2">                         </span>Size<span style="color: #f8f8f2">  </span>Used<span style="color: #f8f8f2"> </span>Avail<span style="color: #f8f8f2"> </span>Use%<span style="color: #f8f8f2"> </span>Mounted<span style="color: #f8f8f2"> </span>on
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a>devtmpfs<span style="color: #f8f8f2">                           </span><span style="color: #ae81ff">1</span>.9G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">1</span>.9G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/dev
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/dev/shm
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">8</span>.5M<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">1</span>%<span style="color: #f8f8f2"> </span>/run
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a>tmpfs<span style="color: #f8f8f2">                              </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.0G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/sys/fs/cgroup
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a>/dev/mapper/rl_rocky--linux8-root<span style="color: #f8f8f2">   </span>47G<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">2</span>.4G<span style="color: #f8f8f2">   </span>45G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">5</span>%<span style="color: #f8f8f2"> </span>/
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a>/dev/sda1<span style="color: #f8f8f2">                         </span>1014M<span style="color: #f8f8f2">  </span>207M<span style="color: #f8f8f2">  </span>808M<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">21</span>%<span style="color: #f8f8f2"> </span>/boot
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a>tmpfs<span style="color: #f8f8f2">                              </span>393M<span style="color: #f8f8f2">     </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">  </span>393M<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">0</span>%<span style="color: #f8f8f2"> </span>/run/user/1000
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a>/dev/sdb1<span style="color: #f8f8f2">                           </span>98G<span style="color: #f8f8f2">   </span>24K<span style="color: #f8f8f2">   </span>93G<span style="color: #f8f8f2">   </span><span style="color: #ae81ff">1</span>%<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2">    </span>←これ
 </span></code></pre></div></td></tr></table></div>
 
 
