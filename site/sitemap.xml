@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://shyokote.github.io/index.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_blog/index.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/delete_linux_kernel.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://shyokote.github.io/_linux/linux_extension_extension_on_Linux.html</loc>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/linux_package_versionlock.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/lsof.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_mac/create_bootableusb_mac.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_mac/create_password_secured_zip.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_network/yamaha_rtx1210_init_settings.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_windows/apps_wont_diappear_form_the_windows_menu.html</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-22</lastmod>
     </url>
 </urlset>
