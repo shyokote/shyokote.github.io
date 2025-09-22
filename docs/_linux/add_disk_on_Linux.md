@@ -134,6 +134,8 @@ sudo blkid
 ```bash
 sudo vi /etc/fstab
 ```
+
+#### Ext4の場合
 ```bash
 #
 # /etc/fstab
@@ -150,6 +152,25 @@ UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaul
 /dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
 UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data ext4    defaults        1 2        ←これ
 ```
+
+#### XFSの場合
+```bash
+#
+# /etc/fstab
+# Created by anaconda on Thu Apr  6 08:40:19 2023
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/rl_rocky--linux8-root /                       xfs     defaults        0 0
+UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaults        0 0
+/dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
+UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data xfs    defaults        1 2        ←これ
+```
+
 ### 作成したディスクをマウントする
 ```bash
 sudo mount /dev/sdb1 /data
