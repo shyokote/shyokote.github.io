@@ -1766,7 +1766,7 @@ Do you want to remove the signature? [Y]es/[N]o:</p>
 <p>ここの例では追加分を全て適用する
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo<span style="color: #f8f8f2"> </span>lvextend<span style="color: #f8f8f2"> </span>-l<span style="color: #f8f8f2"> </span>+100%FREE<span style="color: #f8f8f2"> </span>/dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;
 </span></code></pre></div></td></tr></table></div>
-/dev/mapper/<volume-group-name>-<logical-volume-name>の部分は、
+/dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;の部分は、
 vgdisplayコマンドとlvdisplayコマンドで確認できます。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
