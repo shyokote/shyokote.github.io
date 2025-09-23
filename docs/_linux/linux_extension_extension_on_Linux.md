@@ -239,7 +239,7 @@ vgdisplayコマンドとlvdisplayコマンドで確認できます。
 
 !!! tip
     &lt;volume-group-name&gt;-&lt;logical-volume-name&gt;"の部分をvgdisplayコマンドとlvdisplayコマンドで確認すると
-    ubuntu-vg-ubuntu-lvなるはずですがr、lsblkやdfの結果だとubuntu--vg-ubuntu--lvとなっています。
+    ubuntu-vg-ubuntu-lvなるはずですが、lsblkやdfの結果だとubuntu--vg-ubuntu--lvとなっています。
     デバイスマッパー的には、 - は「VGとLVを区切るための記号」なので、デバイスマッパーが展開した形だと
     ハイフンが増えます。これはエスケープの仕様です。ubuntu-vg-ubuntu-lvをコマンドに渡すとエラーになります。
     そのため、コマンドで使用する際には、以下のどちらかで指定してください。
