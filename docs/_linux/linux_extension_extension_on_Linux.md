@@ -234,7 +234,7 @@ sudo lvdisplay
 ```bash
 sudo lvextend -l +100%FREE /dev/mapper/<volume-group-name>-<logical-volume-name>
 ```
-/dev/mapper/<volume-group-name>-<logical-volume-name>の部分は、
+/dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;の部分は、
 vgdisplayコマンドとlvdisplayコマンドで確認できます。
 
 !!! tip
