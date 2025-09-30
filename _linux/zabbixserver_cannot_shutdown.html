@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://shyokote.github.io/_linux/lsof.html">
+        <link rel="canonical" href="https://shyokote.github.io/_linux/zabbixserver_cannot_shutdown.html">
       
       
-        <link rel="prev" href="linux_package_versionlock.html">
+        <link rel="prev" href="lsof.html">
       
       
-        <link rel="next" href="zabbixserver_cannot_shutdown.html">
+        <link rel="next" href="../_windows/apps_wont_diappear_form_the_windows_menu.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Identify programs that expose files - My Docs</title>
+        <title>Zabbix server cannot be stopped or shut down - My Docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#identify-programs-that-expose-files" class="md-skip">
+        <a href="#zabbix-server-cannot-be-stopped-or-shut-down" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Identify programs that expose files
+              Zabbix server cannot be stopped or shut down
             
           </span>
         </div>
@@ -541,6 +541,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="lsof.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identify programs that expose files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -557,18 +578,18 @@
           
   
   <span class="md-ellipsis">
-    Identify programs that expose files
+    Zabbix server cannot be stopped or shut down
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="lsof.html" class="md-nav__link md-nav__link--active">
+      <a href="zabbixserver_cannot_shutdown.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Identify programs that expose files
+    Zabbix server cannot be stopped or shut down
   </span>
   
 
@@ -590,35 +611,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ポートを利用しているプロセスの確認
+      概要
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      プロセスが掴んでいるファイルをサイズの小さい順でソートする
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -626,27 +623,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="zabbixserver_cannot_shutdown.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Zabbix server cannot be stopped or shut down
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1073,35 +1049,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ポートを利用しているプロセスの確認
+      概要
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      プロセスが掴んでいるファイルをサイズの小さい順でソートする
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1120,33 +1072,133 @@
                   
 
 
-<h1 id="identify-programs-that-expose-files">Identify programs that expose files</h1>
-<h2 id="overview">Overview</h2>
-<p>Linuxのlsofコマンドはファイルを開いているプログラムを特定するためのコマンドです。</p>
-<h3 id="_1">ポートを利用しているプロセスの確認</h3>
-<p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>lsof<span style="color: #f8f8f2"> </span>-I
+<h1 id="zabbix-server-cannot-be-stopped-or-shut-down">Zabbix server cannot be stopped or shut down</h1>
+<h2 id="_1">概要</h2>
+<p>Ubuntuで構築されたZabbixサーバーで
+「job zabbix-server.service/stop runnning」や 「A stop job is running for Zabbix Server」と表示されたまま
+OSのシャットダウンができない状態になる</p>
+<h1 id="_2">ユニット単位のタイムアウト設定を編集</h1>
+<p>今回はZabbixなのでzabbix-serverのファイルを探す</p>
+<p>ユニット毎の設定ファイルは、man 5 systemd.unit を確認すればわかる。
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1"> 1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-2"> 2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-3"> 3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-4"> 4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-5"> 5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-6"> 6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-7"> 7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-8"> 8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-9"> 9</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-10">10</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-11">11</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-12">12</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-13">13</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-14">14</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-15">15</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-16">16</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-17">17</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-18">18</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-19">19</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-20">20</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-21">21</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-22">22</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-23">23</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-24">24</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-25">25</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-26">26</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-27">27</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-28">28</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-29">29</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span style="color: #f8f8f2">   </span>System<span style="color: #f8f8f2"> </span>Unit<span style="color: #f8f8f2"> </span>Search<span style="color: #f8f8f2"> </span>Path
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span style="color: #f8f8f2">       </span>/etc/systemd/system.control/*
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span style="color: #f8f8f2">       </span>/run/systemd/system.control/*
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span style="color: #f8f8f2">       </span>/run/systemd/transient/*
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span style="color: #f8f8f2">       </span>/run/systemd/generator.early/*
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span style="color: #f8f8f2">       </span>/etc/systemd/system/*
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span style="color: #f8f8f2">       </span>/etc/systemd/system.attached/*
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span style="color: #f8f8f2">       </span>/run/systemd/system/*
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span style="color: #f8f8f2">       </span>/run/systemd/system.attached/*
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span style="color: #f8f8f2">       </span>/run/systemd/generator/*
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span style="color: #f8f8f2">       </span>...
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span style="color: #f8f8f2">       </span>/usr/lib/systemd/system/*
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span style="color: #f8f8f2">       </span>/run/systemd/generator.late/*
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span style="color: #f8f8f2">   </span>User<span style="color: #f8f8f2"> </span>Unit<span style="color: #f8f8f2"> </span>Search<span style="color: #f8f8f2"> </span>Path
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span style="color: #f8f8f2">       </span>~/.config/systemd/user.control/*
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/user.control/*
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/transient/*
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/generator.early/*
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span style="color: #f8f8f2">       </span>~/.config/systemd/user/*
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span style="color: #f8f8f2">       $XDG_CONFIG_DIRS</span>/systemd/user/*
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span style="color: #f8f8f2">       </span>/etc/systemd/user/*
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/user/*
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span style="color: #f8f8f2">       </span>/run/systemd/user/*
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/generator/*
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span style="color: #f8f8f2">       $XDG_DATA_HOME</span>/systemd/user/*
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span style="color: #f8f8f2">       $XDG_DATA_DIRS</span>/systemd/user/*
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span style="color: #f8f8f2">       </span>...
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span style="color: #f8f8f2">       </span>/usr/lib/systemd/user/*
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span style="color: #f8f8f2">       $XDG_RUNTIME_DIR</span>/systemd/generator.late/*
+</span></code></pre></div></td></tr></table></div></p>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> </span>i<span style="color: #f8f8f2"> </span><span style="color: #66d9ef">in</span><span style="color: #f8f8f2"> </span>/etc/systemd/system.control<span style="color: #f8f8f2"> </span>/run/systemd/system.control<span style="color: #f8f8f2"> </span>/run/systemd/transient<span style="color: #f8f8f2"> </span>/run/systemd/generator.early<span style="color: #f8f8f2"> </span>/etc/systemd/system<span style="color: #f8f8f2"> </span>/etc/systemd/system.attached<span style="color: #f8f8f2"> </span>/run/systemd/system<span style="color: #f8f8f2"> </span>/run/systemd/system.attached<span style="color: #f8f8f2"> </span>/run/systemd/generator<span style="color: #f8f8f2"> </span>/usr/lib/systemd/system<span style="color: #f8f8f2"> </span>/run/systemd/generator.late<span style="color: #f8f8f2">; </span><span style="color: #66d9ef">do</span><span style="color: #f8f8f2">  </span><span style="color: #ff4689">[</span><span style="color: #f8f8f2"> </span>-f<span style="color: #f8f8f2"> $i</span>/*zabbix-server*<span style="color: #f8f8f2"> </span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> </span>ls<span style="color: #f8f8f2"> </span>-l<span style="color: #f8f8f2"> $i</span>/*zabbix-server*<span style="color: #f8f8f2"> ; </span><span style="color: #66d9ef">done</span>
 </span></code></pre></div></td></tr></table></div>
-ポートを開いている全てのプロセスが表示されます。</p>
-<p>ポート番号で絞る場合には以下のように実行します。
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>lsof<span style="color: #f8f8f2"> </span>-I:ポート番号
+<p>実行結果から
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>-rw-r--r--<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span>root<span style="color: #f8f8f2"> </span>root<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">555</span><span style="color: #f8f8f2"> </span>Sep<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">30</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">08</span>:48<span style="color: #f8f8f2"> </span>/usr/lib/systemd/system/zabbix-server.service
 </span></code></pre></div></td></tr></table></div>
-ex lsof -I:80</p>
-<h3 id="_2">プロセスが掴んでいるファイルをサイズの小さい順でソートする</h3>
-<p>プロセスが掴んでいるファイルが増大してディスク容量を圧迫する場合があります。調査に有用なコマンドライン。<br />
-ex Rsyslogを再起動せずに、書き込んでいるファイルを削除してしまったら、存在しないファイルに書き込み続けてディスク使用量が増大し続けるなど。</p>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-2">2</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-3">3</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-4">4</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-5">5</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-6">6</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>lsof<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span style="color: #f8f8f2">| </span>grep<span style="color: #f8f8f2"> </span>REG<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span style="color: #f8f8f2">| </span>grep<span style="color: #f8f8f2"> </span>-v<span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;stat: No such file or directory&quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span style="color: #f8f8f2">| </span>grep<span style="color: #f8f8f2"> </span>-v<span style="color: #f8f8f2"> </span>DEL<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span style="color: #f8f8f2">| </span>awk<span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;{if ($NF==&quot;(deleted)&quot;) {x=3;y=1} else {x=2;y=0}; {print $(NF-x) &quot;  &quot; $(NF-y) } }&#39;</span><span style="color: #f8f8f2">  </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span style="color: #f8f8f2">| </span>sort<span style="color: #f8f8f2"> </span>-n<span style="color: #f8f8f2"> </span>-u<span style="color: #f8f8f2">  </span><span style="color: #ae81ff">\</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span style="color: #f8f8f2">| </span>numfmt<span style="color: #f8f8f2">  </span>--field<span style="color: #ff4689">=</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span>--to<span style="color: #ff4689">=</span>iec
+/usr/lib/systemd/system/zabbix-server.service であることが確認できる</p>
+<p>ファイルの中身を確認すると
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1"> 1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-2"> 2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-3"> 3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-4"> 4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-5"> 5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-6"> 6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-7"> 7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-8"> 8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-9"> 9</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-10">10</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-11">11</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-12">12</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-13">13</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-14">14</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-15">15</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-16">16</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-17">17</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-18">18</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-19">19</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-20">20</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-21">21</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-22">22</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span style="color: #ff4689">[</span>Unit<span style="color: #ff4689">]</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span style="color: #f8f8f2">Description</span><span style="color: #ff4689">=</span>Zabbix<span style="color: #f8f8f2"> </span>Server
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span style="color: #f8f8f2">After</span><span style="color: #ff4689">=</span>syslog.target
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span style="color: #f8f8f2">After</span><span style="color: #ff4689">=</span>network.target
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span style="color: #f8f8f2">After</span><span style="color: #ff4689">=</span>mysql.service
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span style="color: #f8f8f2">After</span><span style="color: #ff4689">=</span>mysqld.service
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span style="color: #f8f8f2">After</span><span style="color: #ff4689">=</span>mariadb.service
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span style="color: #ff4689">[</span>Service<span style="color: #ff4689">]</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span style="color: #f8f8f2">Environment</span><span style="color: #ff4689">=</span><span style="color: #e6db74">&quot;CONFFILE=/etc/zabbix/zabbix_server.conf&quot;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span style="color: #f8f8f2">EnvironmentFile</span><span style="color: #ff4689">=</span>-/etc/default/zabbix-server
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span style="color: #f8f8f2">Type</span><span style="color: #ff4689">=</span>forking
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span style="color: #f8f8f2">Restart</span><span style="color: #ff4689">=</span>on-failure
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span style="color: #f8f8f2">PIDFile</span><span style="color: #ff4689">=</span>/run/zabbix/zabbix_server.pid
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span style="color: #f8f8f2">KillMode</span><span style="color: #ff4689">=</span>control-group
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span style="color: #f8f8f2">ExecStart</span><span style="color: #ff4689">=</span>/usr/sbin/zabbix_server<span style="color: #f8f8f2"> </span>-c<span style="color: #f8f8f2"> $CONFFILE</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span style="color: #f8f8f2">ExecStop</span><span style="color: #ff4689">=</span>/bin/sh<span style="color: #f8f8f2"> </span>-c<span style="color: #f8f8f2"> </span><span style="color: #e6db74">&#39;[ -n &quot;$1&quot; ] &amp;&amp; kill -s TERM &quot;$1&quot;&#39;</span><span style="color: #f8f8f2"> </span>--<span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">$MAINPID</span><span style="color: #e6db74">&quot;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span style="color: #f8f8f2">RestartSec</span><span style="color: #ff4689">=</span>10s
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span style="color: #f8f8f2">TimeoutSec</span><span style="color: #ff4689">=</span>infinity
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span style="color: #f8f8f2">LimitNOFILE</span><span style="color: #ff4689">=</span><span style="color: #ae81ff">65536</span>:1048576
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span style="color: #ff4689">[</span>Install<span style="color: #ff4689">]</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span style="color: #f8f8f2">WantedBy</span><span style="color: #ff4689">=</span>multi-user.target
+</span></code></pre></div></td></tr></table></div>
+TimeoutSec=infinity の部分です。デフォルトで制限なしになっているので、
+この行をコメントアウトします。
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span style="color: #959077">#TimeoutSec=infinity</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="_3">設定の反映</h2>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span style="color: #f8f8f2"> </span>systemctl<span style="color: #f8f8f2"> </span>daemon-reload
 </span></code></pre></div></td></tr></table></div>
 
 
