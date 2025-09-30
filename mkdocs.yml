@@ -36,6 +36,7 @@ nav:
     - Add disk on Linux: _linux/add_disk_on_Linux.md
     - Locking a package version: _linux/linux_package_versionlock.md
     - Identify programs that expose files: _linux/lsof.md
+    - Zabbix server cannot be stopped or shut down: _linux/zabbixserver_cannot_shutdown.md
   - Windows:
     - Apps won't disappear from the Windows Start menu: _windows/apps_wont_diappear_form_the_windows_menu.md
   - Mac:
