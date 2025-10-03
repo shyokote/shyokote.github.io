@@ -81,9 +81,8 @@ sudo fdisk /dev/sda
 
     このメッセージは
 
-    ・LVM2_member signature = そのパーティションが LVM の一部として使われている印（メタデータ）。
-
-    ・既存の /dev/sda3 を拡張しようとしているので、既存のLVMシグネチャを消してはいけません。
+    * LVM2_member signature = そのパーティションが LVM の一部として使われている印（メタデータ）。
+    * 既存の /dev/sda3 を拡張しようとしているので、既存のLVMシグネチャを消してはいけません。
 
     したがって、ここは N (No) を選んでください。
 
@@ -244,9 +243,8 @@ vgdisplayコマンドとlvdisplayコマンドで確認できます。
     ハイフンが増えます。これはエスケープの仕様です。ubuntu-vg-ubuntu-lvをコマンドに渡すとエラーになります。
     そのため、コマンドで使用する際には、以下のどちらかで指定してください。
 
-    ・ハイフンを一個足してパスではないと明示的にする →  /dev/mapper/ubuntu--vg-ubuntu--lv
-
-    ・パスの-を/に置き換えて渡す → /dev/ubuntu-vg/ubuntu-lv
+    * ハイフンを一個足してパスではないと明示的にする →  /dev/mapper/ubuntu--vg-ubuntu--lv
+    * パスの-を/に置き換えて渡す → /dev/ubuntu-vg/ubuntu-lv
 
 
 例
@@ -259,25 +257,25 @@ Logical volume ubuntu-vg/ubuntu-lv successfully resized.
 
 ## ファイルシステムを拡張
 
-### Ext4の場合
-```bash
-sudo resize2fs /dev/mapper/<volume-group-name>-<logical-volume-name>
-```
-例
-```bash
-sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
-```
+=== "EXT4の場合"
+    ```bash
+    sudo resize2fs /dev/mapper/<volume-group-name>-<logical-volume-name>
+    ```
+    例
+    ```bash
+    sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+    ```
 
-### XFSの場合
-```bash
-sudo xfs_growfs /mount/point
-```
-/mount/pointの部分は、df -Th か lsblk コマンドで確認してください。
+=== "XFSの場合"
+    ```bash
+    sudo xfs_growfs /mount/point
+    ```
+    /mount/pointの部分は、df -Th か lsblk コマンドで確認してください。
+    例
+    ```bash
+    sudo xfs_growfs /
+    ```
 
-例
-```bash
-sudo xfs_growfs /
-```
 
 ## ディスク容量の確認
 ```bash

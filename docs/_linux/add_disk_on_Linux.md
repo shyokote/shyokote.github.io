@@ -88,28 +88,29 @@ sudo partprobe
 
 ## パーティションをフォーマットする
 
-### Ext4の場合
-```bash
-sudo mkfs -t ext4 /dev/sdb1
-```
-出力例
-```bash
-mke2fs 1.45.6 (20-Mar-2020)
-Creating filesystem with 26214144 4k blocks and 6553600 inodes
-Filesystem UUID: 58ed24d3-d503-4d01-b6ca-eb8a4e69177f
-Superblock backups stored on blocks:
-	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
-	4096000, 7962624, 11239424, 20480000, 23887872
+=== "EXT4の場合"
+    ```bash
+    sudo mkfs -t ext4 /dev/sdb1
+    ```
+    出力例
+    ```bash
+    mke2fs 1.45.6 (20-Mar-2020)
+    Creating filesystem with 26214144 4k blocks and 6553600 inodes
+    Filesystem UUID: 58ed24d3-d503-4d01-b6ca-eb8a4e69177f
+    Superblock backups stored on blocks:
+	    32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+	    4096000, 7962624, 11239424, 20480000, 23887872
 
-Allocating group tables: done
-Writing inode tables: done
-Creating journal (131072 blocks): done
-Writing superblocks and filesystem accounting information: done
-```
-### XFSの場合
-```bash
-sudo mkfs -t xfs /dev/sdb1
-```
+    Allocating group tables: done
+    Writing inode tables: done
+    Creating journal (131072 blocks): done
+    Writing superblocks and filesystem accounting information: done
+    ```
+
+=== "XFSの場合"
+    ```bash
+    sudo mkfs -t xfs /dev/sdb1
+    ```
 
 ## Diskをマウントする
 ### マウントするディレクトリを作成する
@@ -135,41 +136,42 @@ sudo blkid
 sudo vi /etc/fstab
 ```
 
-#### Ext4の場合
-```bash
-#
-# /etc/fstab
-# Created by anaconda on Thu Apr  6 08:40:19 2023
-#
-# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
-# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
-#
-# After editing this file, run 'systemctl daemon-reload' to update systemd
-# units generated from this file.
-#
-/dev/mapper/rl_rocky--linux8-root /                       xfs     defaults        0 0
-UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaults        0 0
-/dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
-UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data ext4    defaults        1 2        ←これ
-```
+=== "EXT4の場合"
+    ```bash
+    #
+    # /etc/fstab
+    # Created by anaconda on Thu Apr  6 08:40:19 2023
+    #
+    # Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+    # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+    #
+    # After editing this file, run 'systemctl daemon-reload' to update systemd
+    # units generated from this file.
+    #
+    /dev/mapper/rl_rocky--linux8-root /                       xfs     defaults        0 0
+    UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaults        0 0
+    /dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
+    UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data ext4    defaults        1 2        ←これ
+    ```
 
-#### XFSの場合
-```bash
-#
-# /etc/fstab
-# Created by anaconda on Thu Apr  6 08:40:19 2023
-#
-# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
-# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
-#
-# After editing this file, run 'systemctl daemon-reload' to update systemd
-# units generated from this file.
-#
-/dev/mapper/rl_rocky--linux8-root /                       xfs     defaults        0 0
-UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaults        0 0
-/dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
-UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data xfs    defaults        1 2        ←これ
-```
+=== "XFSの場合"
+    ```bash
+    #
+    # /etc/fstab
+    # Created by anaconda on Thu Apr  6 08:40:19 2023
+    #
+    # Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+    # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+    #
+    # After editing this file, run 'systemctl daemon-reload' to update systemd
+    # units generated from this file.
+    #
+    /dev/mapper/rl_rocky--linux8-root /                       xfs     defaults        0 0
+    UUID=7437fbdf-88c9-41a5-972d-2c7bb99fefce /boot                   xfs     defaults        0 0
+    /dev/mapper/rl_rocky--linux8-swap none                    swap    defaults        0 0
+    UUID=58ed24d3-d503-4d01-b6ca-eb8a4e69177f /data xfs    defaults        1 2        ←これ
+    ```
+
 
 ### 作成したディスクをマウントする
 ```bash

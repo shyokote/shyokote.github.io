@@ -601,30 +601,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="パーティションをフォーマットする">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ext4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ext4の場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFSの場合
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -661,30 +637,6 @@
       自動マウント設定を行う。再起動後も自動でマウントされる
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="自動マウント設定を行う。再起動後も自動でマウントされる">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ext4_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ext4の場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFSの場合
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1276,30 +1228,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="パーティションをフォーマットする">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ext4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ext4の場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFSの場合
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1336,30 +1264,6 @@
       自動マウント設定を行う。再起動後も自動でマウントされる
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="自動マウント設定を行う。再起動後も自動でマウントされる">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ext4_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ext4の場合
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      XFSの場合
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1535,7 +1439,9 @@
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span style="color: #f8f8f2"> </span>partprobe
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_3">パーティションをフォーマットする</h2>
-<h3 id="ext4">Ext4の場合</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">EXT4の場合</label><label for="__tabbed_1_2">XFSの場合</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span style="color: #f8f8f2"> </span>mkfs<span style="color: #f8f8f2"> </span>-t<span style="color: #f8f8f2"> </span>ext4<span style="color: #f8f8f2"> </span>/dev/sdb1
 </span></code></pre></div></td></tr></table></div>
 出力例
@@ -1561,9 +1467,13 @@
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a>Creating<span style="color: #f8f8f2"> </span>journal<span style="color: #f8f8f2"> </span><span style="color: #ff4689">(</span><span style="color: #ae81ff">131072</span><span style="color: #f8f8f2"> </span>blocks<span style="color: #ff4689">)</span>:<span style="color: #f8f8f2"> </span><span style="color: #66d9ef">done</span>
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a>Writing<span style="color: #f8f8f2"> </span>superblocks<span style="color: #f8f8f2"> </span>and<span style="color: #f8f8f2"> </span>filesystem<span style="color: #f8f8f2"> </span>accounting<span style="color: #f8f8f2"> </span>information:<span style="color: #f8f8f2"> </span><span style="color: #66d9ef">done</span>
 </span></code></pre></div></td></tr></table></div></p>
-<h3 id="xfs">XFSの場合</h3>
+</div>
+<div class="tabbed-block">
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo<span style="color: #f8f8f2"> </span>mkfs<span style="color: #f8f8f2"> </span>-t<span style="color: #f8f8f2"> </span>xfs<span style="color: #f8f8f2"> </span>/dev/sdb1
 </span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h2 id="disk_2">Diskをマウントする</h2>
 <h3 id="_4">マウントするディレクトリを作成する</h3>
 <p>ここでは/dataとする
@@ -1586,7 +1496,9 @@
 <h3 id="_5">自動マウント設定を行う。再起動後も自動でマウントされる</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span style="color: #f8f8f2"> </span>vi<span style="color: #f8f8f2"> </span>/etc/fstab
 </span></code></pre></div></td></tr></table></div>
-<h4 id="ext4_1">Ext4の場合</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">EXT4の場合</label><label for="__tabbed_2_2">XFSの場合</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1"> 1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-2"> 2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1615,7 +1527,8 @@
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13"></a>/dev/mapper/rl_rocky--linux8-swap<span style="color: #f8f8f2"> </span>none<span style="color: #f8f8f2">                    </span>swap<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>58ed24d3-d503-4d01-b6ca-eb8a4e69177f<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2"> </span>ext4<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">        </span>←これ
 </span></code></pre></div></td></tr></table></div>
-<h4 id="xfs_1">XFSの場合</h4>
+</div>
+<div class="tabbed-block">
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-1"> 1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-2"> 2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-3"> 3</a></span>
@@ -1644,6 +1557,9 @@
 </span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a>/dev/mapper/rl_rocky--linux8-swap<span style="color: #f8f8f2"> </span>none<span style="color: #f8f8f2">                    </span>swap<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span>
 </span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14"></a><span style="color: #f8f8f2">UUID</span><span style="color: #ff4689">=</span>58ed24d3-d503-4d01-b6ca-eb8a4e69177f<span style="color: #f8f8f2"> </span>/data<span style="color: #f8f8f2"> </span>xfs<span style="color: #f8f8f2">    </span>defaults<span style="color: #f8f8f2">        </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">        </span>←これ
 </span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h3 id="_6">作成したディスクをマウントする</h3>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo<span style="color: #f8f8f2"> </span>mount<span style="color: #f8f8f2"> </span>/dev/sdb1<span style="color: #f8f8f2"> </span>/data
 </span></code></pre></div></td></tr></table></div>
