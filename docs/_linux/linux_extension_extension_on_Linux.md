@@ -271,6 +271,7 @@ Logical volume ubuntu-vg/ubuntu-lv successfully resized.
     sudo xfs_growfs /mount/point
     ```
     /mount/pointの部分は、df -Th か lsblk コマンドで確認してください。
+
     例
     ```bash
     sudo xfs_growfs /
