@@ -36,6 +36,7 @@ nav:
     - Add disk on Linux: _linux/add_disk_on_Linux.md
     - Locking a package version: _linux/linux_package_versionlock.md
     - SSH authentication key public key remote distribution: _linux/remotely_distribute_ssh_keys.md
+    - Recovering a public key from an SSH private key: _linux/recovering_public_key.md
     - Identify programs that expose files: _linux/lsof.md
     - Zabbix server cannot be stopped or shut down: _linux/zabbixserver_cannot_shutdown.md
   - Windows:
