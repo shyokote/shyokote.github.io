@@ -5,7 +5,7 @@ SSHの鍵ペアのうち公開鍵を紛失してしまった場合は以下の�
 
 ## SSH公開鍵の復元
 ```bash
- ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 ```
 上記はRSA鍵の場合であるが、DSA鍵も同様の手順で復元できる。
 ```bash

@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://shyokote.github.io/_linux/recovering_public_key.html">
       
       
+        <link rel="prev" href="remotely_distribute_ssh_keys.html">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="lsof.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>My Docs</title>
+        <title>Recovering a public key from an SSH private key - My Docs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,16 +50,25 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     
-      <link rel="stylesheet" href="/_css/styles.css">
+      <link rel="stylesheet" href="../_css/styles.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -71,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#recovering-a-public-key-from-an-ssh-private-key" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +103,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/index.html" title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href="../index.html" title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -103,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Recovering a public key from an SSH private key
             
           </span>
         </div>
@@ -192,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -207,11 +227,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/_linux/delete_linux_kernel.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="delete_linux_kernel.html" class="md-tabs__link">
           
   
     
@@ -231,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/_windows/apps_wont_diappear_form_the_windows_menu.html" class="md-tabs__link">
+        <a href="../_windows/apps_wont_diappear_form_the_windows_menu.html" class="md-tabs__link">
           
   
     
@@ -251,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/_mac/create_bootableusb_mac.html" class="md-tabs__link">
+        <a href="../_mac/create_bootableusb_mac.html" class="md-tabs__link">
           
   
     
@@ -277,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/_network/yamaha_rtx1210_init_settings.html" class="md-tabs__link">
+        <a href="../_network/yamaha_rtx1210_init_settings.html" class="md-tabs__link">
           
   
     
@@ -300,7 +322,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/_blog/index.html" class="md-tabs__link">
+        <a href="../_blog/index.html" class="md-tabs__link">
           
   
     
@@ -341,7 +363,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href="../index.html" title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -359,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -376,8 +398,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -400,21 +424,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -425,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -439,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/delete_linux_kernel.html" class="md-nav__link">
+      <a href="delete_linux_kernel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/linux_extension_extension_on_Linux.html" class="md-nav__link">
+      <a href="linux_extension_extension_on_Linux.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/add_disk_on_Linux.html" class="md-nav__link">
+      <a href="add_disk_on_Linux.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/linux_package_versionlock.html" class="md-nav__link">
+      <a href="linux_package_versionlock.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/remotely_distribute_ssh_keys.html" class="md-nav__link">
+      <a href="remotely_distribute_ssh_keys.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,10 +566,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/_linux/recovering_public_key.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Recovering a public key from an SSH private key
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="recovering_public_key.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -553,6 +598,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH公開鍵の復元
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/lsof.html" class="md-nav__link">
+      <a href="lsof.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_linux/zabbixserver_cannot_shutdown.html" class="md-nav__link">
+      <a href="zabbixserver_cannot_shutdown.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_windows/apps_wont_diappear_form_the_windows_menu.html" class="md-nav__link">
+      <a href="../_windows/apps_wont_diappear_form_the_windows_menu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_mac/create_bootableusb_mac.html" class="md-nav__link">
+      <a href="../_mac/create_bootableusb_mac.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_mac/create_password_secured_zip.html" class="md-nav__link">
+      <a href="../_mac/create_password_secured_zip.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_network/yamaha_rtx1210_init_settings.html" class="md-nav__link">
+      <a href="../_network/yamaha_rtx1210_init_settings.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +1023,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/_blog/index.html" class="md-nav__link ">
+            <a href="../_blog/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -973,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,6 +1094,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH公開鍵の復元
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1022,8 +1133,32 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="recovering-a-public-key-from-an-ssh-private-key">Recovering a public key from an SSH private key</h1>
+<h2 id="_1">目的</h2>
+<p>SSHの鍵ペアのうち公開鍵を紛失してしまった場合は以下のコマンドで秘密鍵から復元できる。</p>
+<h2 id="ssh">SSH公開鍵の復元</h2>
+<p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span style="color: #f8f8f2"> </span>ssh-keygen<span style="color: #f8f8f2"> </span>-y<span style="color: #f8f8f2"> </span>-f<span style="color: #f8f8f2"> </span>~/.ssh/id_rsa<span style="color: #f8f8f2"> </span>&gt;<span style="color: #f8f8f2"> </span>~/.ssh/id_rsa.pub
+</span></code></pre></div></td></tr></table></div>
+上記はRSA鍵の場合であるが、DSA鍵も同様の手順で復元できる。
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ssh-keygen<span style="color: #f8f8f2"> </span>-y<span style="color: #f8f8f2"> </span>-t<span style="color: #f8f8f2"> </span>dsa<span style="color: #f8f8f2"> </span>-f<span style="color: #f8f8f2"> </span>~/.ssh/id_dsa<span style="color: #f8f8f2"> </span>&gt;<span style="color: #f8f8f2"> </span>~/.ssh/id_dsa.pub
+</span></code></pre></div></td></tr></table></div>
+なお、秘密鍵を紛失してしまった場合は復元する術がないので再度鍵ペアを作成する必要がある。#</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1063,13 +1198,15 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "/assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
