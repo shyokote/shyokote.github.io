@@ -30,6 +30,8 @@ theme:
 
 nav:
   - HOME: index.md
+  - Git:
+    - Delete the entire contents of a Git repository: _git/delete_contents_git_repository.md
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
     - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
