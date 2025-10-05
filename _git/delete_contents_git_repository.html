@@ -524,6 +524,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1197,6 +1206,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1214,9 +1232,10 @@
 
 <h1 id="delete-the-entire-contents-of-a-git-repository">Delete the entire contents of a Git repository</h1>
 <h2 id="_1">目的</h2>
-<p>Gitリポジトリの中身を全部一気に消す
+<p>Gitリポジトリの中身を全部一気に消す</p>
+<h2 id="_2">方法</h2>
 <div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span style="color: #f8f8f2"> </span>clean<span style="color: #f8f8f2"> </span>-fdx<span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> test </span><span style="color: #66d9ef">$(</span>git<span style="color: #f8f8f2"> </span>ls-files<span style="color: #f8f8f2"> | </span>wc<span style="color: #f8f8f2"> </span>-l<span style="color: #66d9ef">)</span><span style="color: #f8f8f2"> </span>-eq<span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> </span>git<span style="color: #f8f8f2"> </span>rm<span style="color: #f8f8f2"> </span>-rf<span style="color: #f8f8f2"> </span>.
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
 
 
 
