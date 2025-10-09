@@ -34,6 +34,7 @@ nav:
     - Delete the entire contents of a Git repository: _git/delete_contents_git_repository.md
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
+    - Virtualization changes in RockyLinux10 (RHEL10): _linux/virtualization_changes_in_rhel10.md
     - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
     - Add disk on Linux: _linux/add_disk_on_Linux.md
     - Locking a package version: _linux/linux_package_versionlock.md
