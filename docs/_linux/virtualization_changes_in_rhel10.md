@@ -9,7 +9,7 @@ CPUの種別が x86-64-v2-AESがデフォルトだったことが原因
 
 RHEL10系から
 
-??? Note
+!!! Note
 	参考：
 		https://docs.redhat.com/ja/documentation/red_hat_enterprise_linux/10/html/considerations_in_adopting_rhel_10/virtualization
 
@@ -20,7 +20,7 @@ RHEL10系から
 			* IBM Z の場合: IBM z14 より前のモデル
 
 
-??? Note
+!!! Note
 	参考：
 	https://access.redhat.com/solutions/7066628
 
