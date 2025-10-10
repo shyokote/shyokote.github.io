@@ -51,7 +51,8 @@ nav:
     - Create a Password-Secured Zip: _mac/create_password_secured_zip.md
   - Network:
     - YAMAHA:
-      - YAMAHA RTX1210 initial setting example: _network/yamaha_rtx1210_init_settings.md
+      - Set up automatic route switching in the event of a failure (network backup function): _network/yamaha_rtx1210_network_backup_function.md
+      - Initial setting example: _network/yamaha_rtx1210_init_settings.md
 #    - Cisco:
   - Blog:
       - _blog/index.md
