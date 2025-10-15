@@ -35,6 +35,7 @@ nav:
   - Linux:
     - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
     - Virtualization changes in RockyLinux10 (RHEL10): _linux/virtualization_changes_in_rhel10.md
+    - Disable automatic service restart after apt upgrade: _linux/disable_automatic_service_restart_after_upgrade.md
     - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
     - Add disk on Linux: _linux/add_disk_on_Linux.md
     - Locking a package version: _linux/linux_package_versionlock.md
