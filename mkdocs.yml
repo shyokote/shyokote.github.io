@@ -33,17 +33,21 @@ nav:
   - Git:
     - Delete the entire contents of a Git repository: _git/delete_contents_git_repository.md
   - Linux:
-    - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
-    - Virtualization changes in RockyLinux10 (RHEL10): _linux/virtualization_changes_in_rhel10.md
-    - Disable automatic service restart after apt upgrade: _linux/disable_automatic_service_restart_after_upgrade.md
-    - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
-    - Add disk on Linux: _linux/add_disk_on_Linux.md
-    - Locking a package version: _linux/linux_package_versionlock.md
-    - SSH authentication key public key remote distribution: _linux/remotely_distribute_ssh_keys.md
-    - Recovering a public key from an SSH private key: _linux/recovering_public_key.md
-    - Identify programs that expose files: _linux/lsof.md
-    - Zabbix server cannot be stopped or shut down: _linux/zabbixserver_cannot_shutdown.md
-    - How to fix Ubuntu dpkg lock error: _linux/ubuntu_dpkg_lock_error.md
+    - Common:
+      - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
+      - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
+      - Add disk on Linux: _linux/add_disk_on_Linux.md
+      - Locking a package version: _linux/linux_package_versionlock.md
+      - SSH authentication key public key remote distribution: _linux/remotely_distribute_ssh_keys.md
+      - Recovering a public key from an SSH private key: _linux/recovering_public_key.md
+      - Identify programs that expose files: _linux/lsof.md
+    - RedHat / Rocky:
+      - Virtualization changes in RockyLinux10 (RHEL10): _linux/virtualization_changes_in_rhel10.md
+    - Ubuntu / Debian:
+      - Disable automatic service restart after apt upgrade: _linux/disable_automatic_service_restart_after_upgrade.md
+      - How to fix Ubuntu dpkg lock error: _linux/ubuntu_dpkg_lock_error.md
+    - Application:
+      - Zabbix server cannot be stopped or shut down: _linux/zabbixserver_cannot_shutdown.md
   - Windows:
     - Apps won't disappear from the Windows Start menu: _windows/apps_wont_diappear_form_the_windows_menu.md
     - Unable to remove Linux installed with WSL: _windows/remove_linux_installed_with_wsl.md
