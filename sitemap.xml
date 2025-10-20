@@ -2,82 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://shyokote.github.io/index.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_blog/index.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_git/delete_contents_git_repository.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/add_disk_on_Linux.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/delete_linux_kernel.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/disable_automatic_service_restart_after_upgrade.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://shyokote.github.io/_linux/enabling_totp_with_google_authenticator_for_ssh.html</loc>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/linux_extension_extension_on_Linux.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/linux_package_versionlock.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/lsof.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/recovering_public_key.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/remotely_distribute_ssh_keys.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/ubuntu_dpkg_lock_error.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/virtualization_changes_in_rhel10.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_linux/zabbixserver_cannot_shutdown.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_mac/create_bootableusb_mac.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_mac/create_password_secured_zip.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_network/yamaha_rtx1210_init_settings.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_network/yamaha_rtx1210_network_backup_function.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_windows/apps_wont_diappear_form_the_windows_menu.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
     <url>
          <loc>https://shyokote.github.io/_windows/remove_linux_installed_with_wsl.html</loc>
-         <lastmod>2025-10-15</lastmod>
+         <lastmod>2025-10-20</lastmod>
     </url>
 </urlset>

@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://shyokote.github.io/_linux/delete_linux_kernel.html">
+        <link rel="canonical" href="https://shyokote.github.io/_linux/enabling_totp_with_google_authenticator_for_ssh.html">
       
       
-        <link rel="prev" href="../_git/delete_contents_git_repository.html">
+        <link rel="prev" href="lsof.html">
       
       
-        <link rel="next" href="linux_extension_extension_on_Linux.html">
+        <link rel="next" href="virtualization_changes_in_rhel10.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Removing unnecessary Linux kernels - My Docs</title>
+        <title>SSH settings requiring one-time passwords (TOTP) using Google Authenticator - My Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#removing-unnecessary-linux-kernels" class="md-skip">
+        <a href="#ssh-settings-requiring-one-time-passwords-totp-using-google-authenticator" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Removing unnecessary Linux kernels
+              SSH settings requiring one-time passwords (TOTP) using Google Authenticator
             
           </span>
         </div>
@@ -651,32 +651,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Removing unnecessary Linux kernels
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="delete_linux_kernel.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="delete_linux_kernel.html" class="md-nav__link">
         
   
   
@@ -687,155 +665,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ubuntu
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      現行のLinuxカーネルを確認する
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      インストール済みカーネル確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除テスト
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除本番
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      パッケージをクリーンアップ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      GRUBのアップデート
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#centos-rocky-linux-alma-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      CentOS / Rocky Linux / Alma Linux
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CentOS / Rocky Linux / Alma Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      現行のLinuxカーネルを確認する
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      インストール済みカーネルの確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除(最新のみ残す)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除(最新2世代を残す)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -983,10 +812,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="enabling_totp_with_google_authenticator_for_ssh.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SSH settings requiring one-time passwords (TOTP) using Google Authenticator
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="enabling_totp_with_google_authenticator_for_ssh.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -997,6 +848,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rocky-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocky Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rocky Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#epel" class="md-nav__link">
+    <span class="md-ellipsis">
+      epelリポジトリの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要パッケージのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-authenticator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Authenticatorの初期設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pam-pluggable-authentication-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAM (Pluggable Authentication Modules) の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSHデーモンの設定変更
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSHデーモンの設定変更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sshd_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      sshd_configの編集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#50-redhatconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      50-redhat.confの編集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      設定の反映
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設定の反映">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSHログインの確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      設定の反映
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1779,28 +1800,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
+  <a href="#rocky-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Ubuntu
+      Rocky Linux
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ubuntu">
+    <nav class="md-nav" aria-label="Rocky Linux">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      現行のLinuxカーネルを確認する
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      インストール済みカーネル確認
+      概要
     </span>
   </a>
   
@@ -1809,7 +1821,17 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      削除テスト
+      方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#epel" class="md-nav__link">
+    <span class="md-ellipsis">
+      epelリポジトリの追加
     </span>
   </a>
   
@@ -1818,16 +1840,82 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      削除本番
+      必要パッケージのインストール
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#google-authenticator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Authenticatorの初期設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pam-pluggable-authentication-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAM (Pluggable Authentication Modules) の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSHデーモンの設定変更
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSHデーモンの設定変更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sshd_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      sshd_configの編集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#50-redhatconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      50-redhat.confの編集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      確認
+      設定の反映
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設定の反映">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSHログインの確認
     </span>
   </a>
   
@@ -1836,18 +1924,14 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      パッケージをクリーンアップ
+      設定の反映
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      GRUBのアップデート
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -1857,53 +1941,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#centos-rocky-linux-alma-linux" class="md-nav__link">
+  <a href="#ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      CentOS / Rocky Linux / Alma Linux
+      Ubuntu
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="CentOS / Rocky Linux / Alma Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      現行のLinuxカーネルを確認する
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      インストール済みカーネルの確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除(最新のみ残す)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      削除(最新2世代を残す)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1923,55 +1965,129 @@
 
 
 
-<h1 id="removing-unnecessary-linux-kernels">Removing unnecessary Linux kernels</h1>
+<h1 id="ssh-settings-requiring-one-time-passwords-totp-using-google-authenticator">SSH settings requiring one-time passwords (TOTP) using Google Authenticator</h1>
+<h2 id="rocky-linux">Rocky Linux</h2>
+<h3 id="_1">概要</h3>
+<p>SSHログイン時にGoogle Authenticatorによるワンタイムパスワード（TOTP）を必須として
+セキュリティを向上させます。
+Linux踏み台などに有効な方法です。</p>
+<h3 id="_2">方法</h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>SELinuxが有効な場合は権限で弾かれます。SELinuxは無効を推奨します。</li>
+<li>有効なSSHセッションを複数維持して作業をしましょう。</li>
+<li>スマートフォンとサーバーの時刻がズレていると認証に失敗するので時刻を正確にしましょう。</li>
+</ul>
+</div>
+<h4 id="epel">epelリポジトリの追加</h4>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>epel-release
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="_3">必要パッケージのインストール</h4>
+<p>Google AuthenticatorのPAMモジュールをインストール
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>-y<span style="color: #F8F8F2"> </span>google-authenticator
+</span></code></pre></div></td></tr></tbody></table></div>
+ターミナル画面にQRコードを表示するためのライブラリをインストール
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>qrencode
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<h4 id="google-authenticator">Google Authenticatorの初期設定</h4>
+<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>google-authenticator
+</span></code></pre></div></td></tr></tbody></table></div>
+ワンタイムパスワードを時間ベースにしますか？ → y を選択
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Do<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>want<span style="color: #F8F8F2"> </span>authentication<span style="color: #F8F8F2"> </span>tokens<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span>be<span style="color: #F8F8F2"> </span>time-based<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>y/n<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>y<span style="color: #F8F8F2"> </span>
+</span></code></pre></div></td></tr></tbody></table></div>
+QRコードやシークレットキー、リカバリコードが表示されます。QRコードはスマートフォンのGoogle Authenticatorアプリで読み取ってください。<p></p>
+<p>設定ファイルをホームディレクトリに保存しますか？ → y を選択
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Do<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>want<span style="color: #F8F8F2"> </span>me<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span>update<span style="color: #F8F8F2"> </span>your<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">"/home/user/.google_authenticator"</span><span style="color: #F8F8F2"> </span>file?<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>y/n<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>y
+</span></code></pre></div></td></tr></tbody></table></div>
+同じワンタイムパスワードの再利用を禁止しますか？ → y を選択
+<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-2">2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Do you want to disallow multiple uses of the same authentication
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>token? This restricts you to one login about every 30s, but it increases
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>your chances to notice or even prevent man-in-the-middle attacks (y/n) y
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<p>サーバーとクライアントの時刻ズレを考慮して有効期間を延ばしますか？ → 通常は n で問題ありません
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1"> 1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-2"> 2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-3"> 3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-4"> 4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-5"> 5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-6"> 6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-7"> 7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-8"> 8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-9"> 9</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>By<span style="color: #F8F8F2"> </span>default,<span style="color: #F8F8F2"> </span>a<span style="color: #F8F8F2"> </span>new<span style="color: #F8F8F2"> </span>token<span style="color: #F8F8F2"> </span>is<span style="color: #F8F8F2"> </span>generated<span style="color: #F8F8F2"> </span>every<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">30</span><span style="color: #F8F8F2"> </span>seconds<span style="color: #F8F8F2"> </span>by<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>mobile<span style="color: #F8F8F2"> </span>app.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>In<span style="color: #F8F8F2"> </span>order<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span>compensate<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> </span>possible<span style="color: #F8F8F2"> </span>time-skew<span style="color: #F8F8F2"> </span>between<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>client<span style="color: #F8F8F2"> </span>and<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>server,
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>we<span style="color: #F8F8F2"> </span>allow<span style="color: #F8F8F2"> </span>an<span style="color: #F8F8F2"> </span>extra<span style="color: #F8F8F2"> </span>token<span style="color: #F8F8F2"> </span>before<span style="color: #F8F8F2"> </span>and<span style="color: #F8F8F2"> </span>after<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>current<span style="color: #F8F8F2"> </span>time.<span style="color: #F8F8F2"> </span>This<span style="color: #F8F8F2"> </span>allows<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> </span>a
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span style="color: #F8F8F2">time </span>skew<span style="color: #F8F8F2"> </span>of<span style="color: #F8F8F2"> </span>up<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">30</span><span style="color: #F8F8F2"> </span>seconds<span style="color: #F8F8F2"> </span>between<span style="color: #F8F8F2"> </span>authentication<span style="color: #F8F8F2"> </span>server<span style="color: #F8F8F2"> </span>and<span style="color: #F8F8F2"> </span>client.<span style="color: #F8F8F2"> </span>If<span style="color: #F8F8F2"> </span>you
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>experience<span style="color: #F8F8F2"> </span>problems<span style="color: #F8F8F2"> </span>with<span style="color: #F8F8F2"> </span>poor<span style="color: #F8F8F2"> time </span>synchronization,<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>can<span style="color: #F8F8F2"> </span>increase<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>window
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>from<span style="color: #F8F8F2"> </span>its<span style="color: #F8F8F2"> </span>default<span style="color: #F8F8F2"> </span>size<span style="color: #F8F8F2"> </span>of<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2"> </span>permitted<span style="color: #F8F8F2"> </span>codes<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>one<span style="color: #F8F8F2"> </span>previous<span style="color: #F8F8F2"> </span>code,<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>current
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>code,<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>next<span style="color: #F8F8F2"> </span>code<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">17</span><span style="color: #F8F8F2"> </span>permitted<span style="color: #F8F8F2"> </span>codes<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>the<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">8</span><span style="color: #F8F8F2"> </span>previous<span style="color: #F8F8F2"> </span>codes,<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>current
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>code,<span style="color: #F8F8F2"> </span>and<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">8</span><span style="color: #F8F8F2"> </span>next<span style="color: #F8F8F2"> </span>codes<span style="color: #FF4689">)</span>.<span style="color: #F8F8F2"> </span>This<span style="color: #F8F8F2"> </span>will<span style="color: #F8F8F2"> </span>permit<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> </span>a<span style="color: #F8F8F2"> time </span>skew<span style="color: #F8F8F2"> </span>of<span style="color: #F8F8F2"> </span>up<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2"> </span>minutes
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>between<span style="color: #F8F8F2"> </span>client<span style="color: #F8F8F2"> </span>and<span style="color: #F8F8F2"> </span>server.
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>Do<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>want<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">do</span><span style="color: #F8F8F2"> </span>so?<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>y/n<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>n
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<p>ブルートフォース攻撃対策としてレートリミットを有効にしますか？ → y
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-1">1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-2">2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-3">3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>If<span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>computer<span style="color: #F8F8F2"> </span>that<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>are<span style="color: #F8F8F2"> </span>logging<span style="color: #F8F8F2"> </span>into<span style="color: #F8F8F2"> </span>isn<span style="color: #ED007E; background-color: #1E0010">'</span>t<span style="color: #F8F8F2"> </span>hardened<span style="color: #F8F8F2"> </span>against<span style="color: #F8F8F2"> </span>brute-force
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>login<span style="color: #F8F8F2"> </span>attempts,<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>can<span style="color: #F8F8F2"> enable </span>rate-limiting<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> </span>the<span style="color: #F8F8F2"> </span>authentication<span style="color: #F8F8F2"> </span>module.
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>By<span style="color: #F8F8F2"> </span>default,<span style="color: #F8F8F2"> </span>this<span style="color: #F8F8F2"> </span>limits<span style="color: #F8F8F2"> </span>attackers<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> </span>no<span style="color: #F8F8F2"> </span>more<span style="color: #F8F8F2"> </span>than<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2"> </span>login<span style="color: #F8F8F2"> </span>attempts<span style="color: #F8F8F2"> </span>every<span style="color: #F8F8F2"> </span>30s.
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>Do<span style="color: #F8F8F2"> </span>you<span style="color: #F8F8F2"> </span>want<span style="color: #F8F8F2"> </span>to<span style="color: #F8F8F2"> enable </span>rate-limiting?<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>y/n<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>y
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<h4 id="pam-pluggable-authentication-modules">PAM (Pluggable Authentication Modules) の設定</h4>
+<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo<span style="color: #F8F8F2"> </span>vim<span style="color: #F8F8F2"> </span>/etc/pam.d/sshd
+</span></code></pre></div></td></tr></tbody></table></div>
+ファイルの一番上に、以下の1行を追加します。<p></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>nullok オプションは、まだ .google_authenticator ファイルを作成していないユーザーでも、一時的に公開鍵認証のみでログインできるようにするためのものです。全ユーザーの設定が完了したら、セキュリティ向上のためこのオプションは削除することを推奨します。</p>
+</div>
+<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>auth<span style="color: #F8F8F2">       </span>required<span style="color: #F8F8F2">     </span>pam_google_authenticator.so<span style="color: #F8F8F2"> </span>nullok
+</span></code></pre></div></td></tr></tbody></table></div>
+ファイルの以下の1行をコメントアウトする
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span style="color: #959077">#auth       substack     password-auth</span>
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<h4 id="ssh">SSHデーモンの設定変更</h4>
+<h5 id="sshd_config">sshd_configの編集</h5>
+<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo<span style="color: #F8F8F2"> </span>vim<span style="color: #F8F8F2"> </span>/etc/ssh/sshd_config
+</span></code></pre></div></td></tr></tbody></table></div>
+以下の設定を追加<p></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>この設定で「最初に公開鍵認証を行い、成功したら次に対話形式の認証（今回はGoogle Authenticator）を行う」という認証フローを定義します。</p>
+</div>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>AuthenticationMethods<span style="color: #F8F8F2"> </span>publickey,keyboard-interactive
+</span></code></pre></div></td></tr></tbody></table></div>
+<h5 id="50-redhatconf">50-redhat.confの編集</h5>
+<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo<span style="color: #F8F8F2"> </span>vim<span style="color: #F8F8F2"> </span>/etc/ssh/sshd_config.d/50-redhat.conf
+</span></code></pre></div></td></tr></tbody></table></div>
+以下の1行を変更します。<p></p>
+<p>[変更前]
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>ChallengeResponseAuthentication<span style="color: #F8F8F2"> </span>no
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<p>[変更後] yesに変更します。
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>ChallengeResponseAuthentication<span style="color: #F8F8F2"> </span>yes
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<h3 id="_4">設定の反映</h3>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>sudo<span style="color: #F8F8F2"> </span>systemctl<span style="color: #F8F8F2"> </span>restart<span style="color: #F8F8F2"> </span>sshd
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="ssh_1">SSHログインの確認</h4>
+<p>ワンタイムコードでログインができたらPAMの設定を適切に設定します。
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>sudo<span style="color: #F8F8F2"> </span>vim<span style="color: #F8F8F2"> </span>/etc/pam.d/sshd
+</span></code></pre></div></td></tr></tbody></table></div>
+[変更前]
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>auth<span style="color: #F8F8F2">       </span>required<span style="color: #F8F8F2">     </span>pam_google_authenticator.so<span style="color: #F8F8F2"> </span>nullok
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<p>[変更後] nullokオプションを削除します
+</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>auth<span style="color: #F8F8F2">       </span>required<span style="color: #F8F8F2">     </span>pam_google_authenticator.so
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<h4 id="_5">設定の反映</h4>
+<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>sudo<span style="color: #F8F8F2"> </span>systemctl<span style="color: #F8F8F2"> </span>restart<span style="color: #F8F8F2"> </span>sshd
+</span></code></pre></div></td></tr></tbody></table></div>
 <h2 id="ubuntu">Ubuntu</h2>
-<p>Ubuntuで不要Linuxカーネルを削除する方法</p>
-<h3 id="linux">現行のLinuxカーネルを確認する</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>uname<span style="color: #F8F8F2"> </span>-a
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="_1">インストール済みカーネル確認</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>dpkg<span style="color: #F8F8F2"> </span>--get-selections<span style="color: #F8F8F2"> | </span>grep<span style="color: #F8F8F2"> </span>linux-
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="_2">削除テスト</h3>
-<p>例:
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>--dry-run<span style="color: #F8F8F2"> </span>remove<span style="color: #F8F8F2"> </span>--purge<span style="color: #F8F8F2"> </span>linux-<span style="color: #FF4689">{</span>image,headers,modules<span style="color: #FF4689">}</span>-&lt;バージョン&gt;
-</span></code></pre></div></td></tr></tbody></table></div>
---dry-run オプションをつけて実行する
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>--dry-run<span style="color: #F8F8F2"> </span>autoremove<span style="color: #F8F8F2"> </span>--purge<span style="color: #F8F8F2"> </span>linux-<span style="color: #FF4689">{</span>image,headers,modules<span style="color: #FF4689">}</span>-5.15.0-<span style="color: #FF4689">{</span><span style="color: #AE81FF">56</span>,58<span style="color: #FF4689">}</span>
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
-<h3 id="_3">削除本番</h3>
-<p>例:
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>remove<span style="color: #F8F8F2"> </span>--purge<span style="color: #F8F8F2"> </span>linux-<span style="color: #FF4689">{</span>image,headers,modules<span style="color: #FF4689">}</span>-&lt;バージョン&gt;
-</span></code></pre></div></td></tr></tbody></table></div>
---dry-run オプションを外して実行する
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>autoremove<span style="color: #F8F8F2"> </span>--purge<span style="color: #F8F8F2"> </span>linux-<span style="color: #FF4689">{</span>image,headers,modules<span style="color: #FF4689">}</span>-5.15.0-<span style="color: #FF4689">{</span><span style="color: #AE81FF">56</span>,58<span style="color: #FF4689">}</span>
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
-<h3 id="_4">確認</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>dpkg<span style="color: #F8F8F2"> </span>--get-selections<span style="color: #F8F8F2"> | </span>grep<span style="color: #F8F8F2"> </span>linux-
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="_5">パッケージをクリーンアップ</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1">1</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>autoremove
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>sudo<span style="color: #F8F8F2"> </span>apt-get<span style="color: #F8F8F2"> </span>clean
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="grub">GRUBのアップデート</h3>
-<p>GRUBブートローダーを更新して、削除したカーネルがブートメニューに表示されないようにする
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span style="color: #F8F8F2"> </span>update-grub
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
-<h2 id="centos-rocky-linux-alma-linux">CentOS / Rocky Linux / Alma Linux</h2>
-<p>RedHat系Linuxで不要Linuxカーネルを削除する方法</p>
-<h3 id="linux_1">現行のLinuxカーネルを確認する</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>uname<span style="color: #F8F8F2"> </span>-a
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="_6">インストール済みカーネルの確認</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>dnf<span style="color: #F8F8F2"> </span>list<span style="color: #F8F8F2"> </span>--installed<span style="color: #F8F8F2"> | </span>grep<span style="color: #F8F8F2"> </span>kernel
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="_7">削除(最新のみ残す)</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>remove<span style="color: #F8F8F2"> </span>--oldinstallonly
-</span></code></pre></div></td></tr></tbody></table></div>
-<h3 id="2">削除(最新2世代を残す)</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>remove<span style="color: #F8F8F2"> </span>--oldinstallonly<span style="color: #F8F8F2"> </span>--setopt<span style="color: #F8F8F2"> installonly_limit</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2"> </span>kernel
-</span></code></pre></div></td></tr></tbody></table></div>
 
 
 
