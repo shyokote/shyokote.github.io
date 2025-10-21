@@ -20,7 +20,7 @@ sudo dnf install epel-release
 #### 必要パッケージのインストール
 Google AuthenticatorのPAMモジュールをインストール
 ```bash
-sudo dnf install -y google-authenticator
+sudo dnf install google-authenticator
 ```
 ターミナル画面にQRコードを表示するためのライブラリをインストール
 ```bash
