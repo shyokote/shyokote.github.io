@@ -90,4 +90,5 @@ TimeoutSec=infinity の部分です。デフォルトで制限なしになって
 sudo systemctl daemon-reload
 ```
 
-
+!!! Tip
+    zabbix-serverがアップデートされると設定が元に戻ってしまうので再度設定する必要があります
