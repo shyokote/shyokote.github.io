@@ -55,6 +55,8 @@ nav:
   - Mac:
     - Create a Bootable USB from an ISO image using Mac's standard functions: _mac/create_bootableusb_mac.md
     - Create a Password-Secured Zip: _mac/create_password_secured_zip.md
+  - Ansible:
+    - Ansible Vault: _ansible/ansible_vault.md
   - Network:
     - YAMAHA:
       - Set up automatic route switching in the event of a failure (network backup function): _network/yamaha_rtx1210_network_backup_function.md
