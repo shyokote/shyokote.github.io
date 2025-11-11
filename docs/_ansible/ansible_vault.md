@@ -41,8 +41,8 @@ ansible-vault encrypt secrets.yml
 
 ```bash
 group_vars/
-│   ├── all.yml                  <--- (方法1) server1用のファイル
-│   └── all/                     <--- (方法2) server2用のディレクトリ
+│   ├── all.yml                  <--- (方法1) 全サーバー用のファイル
+│   └── all/                     <--- (方法2) 全サーバー用のディレクトリ
 │       ├── main.yml
 │       └── vault.yml
 ```
@@ -52,8 +52,8 @@ group_vars/
 
 ```bash
 group_vars/
-│   ├── web.yml                  <--- (方法1) server1用のファイル
-│   └── web/                     <--- (方法2) server2用のディレクトリ
+│   ├── web.yml                  <--- (方法1) webサーバーグループ用のファイル
+│   └── web/                     <--- (方法2) webサーバーグループ用のディレクトリ
 │       ├── main.yml
 │       └── vault.yml
 ```
