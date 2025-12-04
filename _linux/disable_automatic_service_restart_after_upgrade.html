@@ -1839,15 +1839,15 @@
 <h2 id="_2">方法</h2>
 <p>needrestart というツールの設定を変更して対処します。</p>
 <h3 id="_3">設定ファイルの編集</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span style="color: #F8F8F2"> </span>vi<span style="color: #F8F8F2"> </span>/etc/needrestart/needrestart.conf
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo vi /etc/needrestart/needrestart.conf
+</span></code></pre></div>
 <p>編集項目</p>
 <p>以下の部分に注目してください。
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span style="color: #959077">#$nrconf{restart} = 'i';</span>
-</span></code></pre></div></td></tr></tbody></table></div>
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">/etc/needrestart/needrestart.conf</span><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#$nrconf{restart} = 'i';
+</span></code></pre></div>
 上記を以下のように変更します。
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span style="color: #F8F8F2">$nrconf</span><span style="color: #FF4689">{</span>restart<span style="color: #FF4689">}</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">'l'</span><span style="color: #F8F8F2">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><span class="filename">/etc/needrestart/needrestart.conf</span><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$nrconf{restart} = 'l';
+</span></code></pre></div>
 これでapt upgrade後に自動でサービスをリスタートすることなく、リストの表示に留まってくれます。<p></p>
 
 

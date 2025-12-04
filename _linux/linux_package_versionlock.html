@@ -2039,49 +2039,48 @@
 <h1 id="locking-a-package-version">Locking a package version</h1>
 <h2 id="ubuntu">Ubuntu</h2>
 <h3 id="_1">バージョン固定</h3>
-<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-mark<span style="color: #F8F8F2"> </span>hold<span style="color: #F8F8F2"> </span>パッケージ名
-</span></code></pre></div></td></tr></tbody></table></div>
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt-mark hold パッケージ名
+</span></code></pre></div>
 例:
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-mark<span style="color: #F8F8F2"> </span>hold<span style="color: #F8F8F2"> </span>nginx
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt-mark hold nginx
+</span></code></pre></div><p></p>
 <h3 id="_2">バージョン固定状態確認</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>apt-mark<span style="color: #F8F8F2"> </span>showhold
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apt-mark showhold
+</span></code></pre></div>
 <h3 id="_3">バージョン固定解除</h3>
-<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-mark<span style="color: #F8F8F2"> </span>unhold<span style="color: #F8F8F2"> </span>パッケージ名
-</span></code></pre></div></td></tr></tbody></table></div>
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo apt-mark unhold パッケージ名
+</span></code></pre></div>
 例:
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span style="color: #F8F8F2"> </span>apt-mark<span style="color: #F8F8F2"> </span>unhold<span style="color: #F8F8F2"> </span>nginx
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo apt-mark unhold nginx
+</span></code></pre></div><p></p>
 <h3 id="_4">パッケージをどこからインストールしたかの確認</h3>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>apt<span style="color: #F8F8F2"> </span>policy<span style="color: #F8F8F2"> </span>パッケージ名
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>apt policy パッケージ名
+</span></code></pre></div>
 <h2 id="centos-rocky-linux-alma-linux">CentOS / Rocky Linux / Alma Linux</h2>
 <h3 id="_5">一時的な抑止</h3>
 <p>例: パッケージ名 'httpd' のアップデートを抑止
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>update<span style="color: #F8F8F2"> </span>--exclude<span style="color: #FF4689">=</span>httpd
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo dnf update --exclude=httpd
+</span></code></pre></div><p></p>
 <h3 id="_6">永続的な抑止</h3>
 <h4 id="dnf">dnfのプラグインをインストール (なければ)</h4>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>dnf-plugin-versionlock
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo dnf install dnf-plugin-versionlock
+</span></code></pre></div>
 <h4 id="_7">バージョン固定</h4>
 <p>例: パッケージ名 'kernel' のバージョンをロックする
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>versionlock<span style="color: #F8F8F2"> </span>add<span style="color: #F8F8F2"> </span>kernel
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo dnf versionlock add kernel
+</span></code></pre></div><p></p>
 <h4 id="_8">バージョン固定状態確認</h4>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>versionlock<span style="color: #F8F8F2"> </span>list
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo dnf versionlock list
+</span></code></pre></div>
 <h4 id="_9">バージョン固定解除</h4>
 <p>例: パッケージ名 'kernel' のロックを解除する
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>sudo<span style="color: #F8F8F2"> </span>dnf<span style="color: #F8F8F2"> </span>versionlock<span style="color: #F8F8F2"> </span>delete<span style="color: #F8F8F2"> </span>kernel
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo dnf versionlock delete kernel
+</span></code></pre></div><p></p>
 <h3 id="etcdnfdnfconf">/etc/dnf/dnf.confに記載してバージョンを固定する方法もある</h3>
 <p>例: httpd で始まるすべてのパッケージと my-packageを固定する
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-1">1</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span style="color: #FF4689">[</span>main<span style="color: #FF4689">]</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span style="color: #F8F8F2">exclude</span><span style="color: #FF4689">=</span>httpd*<span style="color: #F8F8F2"> </span>my-package*
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[main]
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>exclude=httpd* my-package*
+</span></code></pre></div><p></p>
 
 
 

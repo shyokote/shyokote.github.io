@@ -1847,12 +1847,12 @@
 <h2 id="_2">設定方法</h2>
 <h3 id="_3">経路設定</h3>
 <p>全ての通信（default）において、正常経路を「tunnel 1」・バックアップを経路「pp 11」としたとき
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ip<span style="color: #F8F8F2"> </span>route<span style="color: #F8F8F2"> </span>default<span style="color: #F8F8F2"> </span>gateway<span style="color: #F8F8F2"> </span>tunnel<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span>keepalive<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span>gateway<span style="color: #F8F8F2"> </span>pp<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">11</span><span style="color: #F8F8F2"> </span>weight<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span>
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ip route default gateway tunnel 1 keepalive 1 gateway pp 11 weight 0
+</span></code></pre></div><p></p>
 <h3 id="_4">キープアライブの設定 (トリガーの設定)</h3>
 <p>「10」秒ごとに計「6」カウントを「192.168.1.1」に向けて送信し、応答がなければ、バックアップ経路に切り替える
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ip<span style="color: #F8F8F2"> </span>keepalive<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span>icmp-echo<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">6</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">192</span>.168.1.1
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ip keepalive 1 icmp-echo 10 6 192.168.1.1
+</span></code></pre></div><p></p>
 
 
 

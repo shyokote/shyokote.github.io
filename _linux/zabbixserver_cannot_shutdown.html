@@ -1828,7 +1828,7 @@ OSのシャットダウンができない状態になる</p>
 <h2 id="_2">ユニット単位のタイムアウト設定を編集</h2>
 <p>今回はZabbixなのでzabbix-serverのファイルを探す</p>
 <p>ユニット毎の設定ファイルは、man 5 systemd.unit を確認すればわかる。
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1"> 1</a></span>
+</p><div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">man 5 systemd.unit</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1"> 1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-2"> 2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-3"> 3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1857,45 +1857,46 @@ OSのシャットダウンができない状態になる</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-27">27</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-28">28</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-29">29</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span style="color: #F8F8F2">   </span>System<span style="color: #F8F8F2"> </span>Unit<span style="color: #F8F8F2"> </span>Search<span style="color: #F8F8F2"> </span>Path
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span style="color: #F8F8F2">       </span>/etc/systemd/system.control/*
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span style="color: #F8F8F2">       </span>/run/systemd/system.control/*
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span style="color: #F8F8F2">       </span>/run/systemd/transient/*
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span style="color: #F8F8F2">       </span>/run/systemd/generator.early/*
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span style="color: #F8F8F2">       </span>/etc/systemd/system/*
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span style="color: #F8F8F2">       </span>/etc/systemd/system.attached/*
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span style="color: #F8F8F2">       </span>/run/systemd/system/*
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span style="color: #F8F8F2">       </span>/run/systemd/system.attached/*
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span style="color: #F8F8F2">       </span>/run/systemd/generator/*
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span style="color: #F8F8F2">       </span>...
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span style="color: #F8F8F2">       </span>/usr/lib/systemd/system/*
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span style="color: #F8F8F2">       </span>/run/systemd/generator.late/*
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>   System Unit Search Path
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>       /etc/systemd/system.control/*
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>       /run/systemd/system.control/*
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>       /run/systemd/transient/*
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>       /run/systemd/generator.early/*
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>       /etc/systemd/system/*
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>       /etc/systemd/system.attached/*
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>       /run/systemd/system/*
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>       /run/systemd/system.attached/*
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>       /run/systemd/generator/*
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>       ...
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>       /usr/lib/systemd/system/*
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>       /run/systemd/generator.late/*
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span style="color: #F8F8F2">   </span>User<span style="color: #F8F8F2"> </span>Unit<span style="color: #F8F8F2"> </span>Search<span style="color: #F8F8F2"> </span>Path
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span style="color: #F8F8F2">       </span>~/.config/systemd/user.control/*
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/user.control/*
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/transient/*
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/generator.early/*
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span style="color: #F8F8F2">       </span>~/.config/systemd/user/*
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span style="color: #F8F8F2">       $XDG_CONFIG_DIRS</span>/systemd/user/*
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span style="color: #F8F8F2">       </span>/etc/systemd/user/*
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/user/*
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span style="color: #F8F8F2">       </span>/run/systemd/user/*
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/generator/*
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span style="color: #F8F8F2">       $XDG_DATA_HOME</span>/systemd/user/*
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span style="color: #F8F8F2">       $XDG_DATA_DIRS</span>/systemd/user/*
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span style="color: #F8F8F2">       </span>...
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span style="color: #F8F8F2">       </span>/usr/lib/systemd/user/*
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span style="color: #F8F8F2">       $XDG_RUNTIME_DIR</span>/systemd/generator.late/*
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>   User Unit Search Path
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>       ~/.config/systemd/user.control/*
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>       $XDG_RUNTIME_DIR/systemd/user.control/*
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>       $XDG_RUNTIME_DIR/systemd/transient/*
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>       $XDG_RUNTIME_DIR/systemd/generator.early/*
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>       ~/.config/systemd/user/*
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>       $XDG_CONFIG_DIRS/systemd/user/*
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>       /etc/systemd/user/*
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>       $XDG_RUNTIME_DIR/systemd/user/*
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>       /run/systemd/user/*
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>       $XDG_RUNTIME_DIR/systemd/generator/*
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>       $XDG_DATA_HOME/systemd/user/*
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>       $XDG_DATA_DIRS/systemd/user/*
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>       ...
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>       /usr/lib/systemd/user/*
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>       $XDG_RUNTIME_DIR/systemd/generator.late/*
 </span></code></pre></div></td></tr></tbody></table></div><p></p>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> </span>i<span style="color: #F8F8F2"> </span><span style="color: #66D9EF">in</span><span style="color: #F8F8F2"> </span>/etc/systemd/system.control<span style="color: #F8F8F2"> </span>/run/systemd/system.control<span style="color: #F8F8F2"> </span>/run/systemd/transient<span style="color: #F8F8F2"> </span>/run/systemd/generator.early<span style="color: #F8F8F2"> </span>/etc/systemd/system<span style="color: #F8F8F2"> </span>/etc/systemd/system.attached<span style="color: #F8F8F2"> </span>/run/systemd/system<span style="color: #F8F8F2"> </span>/run/systemd/system.attached<span style="color: #F8F8F2"> </span>/run/systemd/generator<span style="color: #F8F8F2"> </span>/usr/lib/systemd/system<span style="color: #F8F8F2"> </span>/run/systemd/generator.late<span style="color: #F8F8F2">; </span><span style="color: #66D9EF">do</span><span style="color: #F8F8F2">  </span><span style="color: #FF4689">[</span><span style="color: #F8F8F2"> </span>-f<span style="color: #F8F8F2"> $i</span>/*zabbix-server*<span style="color: #F8F8F2"> </span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> </span>ls<span style="color: #F8F8F2"> </span>-l<span style="color: #F8F8F2"> $i</span>/*zabbix-server*<span style="color: #F8F8F2"> ; </span><span style="color: #66D9EF">done</span>
-</span></code></pre></div></td></tr></tbody></table></div>
+<p>以下のコマンドで設定ファイルを探す
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>for i in /etc/systemd/system.control /run/systemd/system.control /run/systemd/transient /run/systemd/generator.early /etc/systemd/system /etc/systemd/system.attached /run/systemd/system /run/systemd/system.attached /run/systemd/generator /usr/lib/systemd/system /run/systemd/generator.late; do  [ -f $i/*zabbix-server* ] &amp;&amp; ls -l $i/*zabbix-server* ; done
+</span></code></pre></div><p></p>
 <p>実行結果から
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>-rw-r--r--<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span>root<span style="color: #F8F8F2"> </span>root<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">555</span><span style="color: #F8F8F2"> </span>Sep<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">30</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">08</span>:48<span style="color: #F8F8F2"> </span>/usr/lib/systemd/system/zabbix-server.service
-</span></code></pre></div></td></tr></tbody></table></div>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>-rw-r--r-- 1 root root 555 Sep 30 08:48 /usr/lib/systemd/system/zabbix-server.service
+</span></code></pre></div>
 /usr/lib/systemd/system/zabbix-server.service であることが確認できる<p></p>
 <p>ファイルの中身を確認すると
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1"> 1</a></span>
+</p><div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1"> 1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-2"> 2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-3"> 3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-4"> 4</a></span>
@@ -1917,37 +1918,37 @@ OSのシャットダウンができない状態になる</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-20">20</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-21">21</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-22">22</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span style="color: #FF4689">[</span>Unit<span style="color: #FF4689">]</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span style="color: #F8F8F2">Description</span><span style="color: #FF4689">=</span>Zabbix<span style="color: #F8F8F2"> </span>Server
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span style="color: #F8F8F2">After</span><span style="color: #FF4689">=</span>syslog.target
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span style="color: #F8F8F2">After</span><span style="color: #FF4689">=</span>network.target
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span style="color: #F8F8F2">After</span><span style="color: #FF4689">=</span>mysql.service
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span style="color: #F8F8F2">After</span><span style="color: #FF4689">=</span>mysqld.service
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span style="color: #F8F8F2">After</span><span style="color: #FF4689">=</span>mariadb.service
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[Unit]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>Description=Zabbix Server
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>After=syslog.target
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>After=network.target
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>After=mysql.service
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>After=mysqld.service
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>After=mariadb.service
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span style="color: #FF4689">[</span>Service<span style="color: #FF4689">]</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span style="color: #F8F8F2">Environment</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">"CONFFILE=/etc/zabbix/zabbix_server.conf"</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span style="color: #F8F8F2">EnvironmentFile</span><span style="color: #FF4689">=</span>-/etc/default/zabbix-server
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span style="color: #F8F8F2">Type</span><span style="color: #FF4689">=</span>forking
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span style="color: #F8F8F2">Restart</span><span style="color: #FF4689">=</span>on-failure
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span style="color: #F8F8F2">PIDFile</span><span style="color: #FF4689">=</span>/run/zabbix/zabbix_server.pid
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span style="color: #F8F8F2">KillMode</span><span style="color: #FF4689">=</span>control-group
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span style="color: #F8F8F2">ExecStart</span><span style="color: #FF4689">=</span>/usr/sbin/zabbix_server<span style="color: #F8F8F2"> </span>-c<span style="color: #F8F8F2"> $CONFFILE</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span style="color: #F8F8F2">ExecStop</span><span style="color: #FF4689">=</span>/bin/sh<span style="color: #F8F8F2"> </span>-c<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">'[ -n "$1" ] &amp;&amp; kill -s TERM "$1"'</span><span style="color: #F8F8F2"> </span>--<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">"</span><span style="color: #F8F8F2">$MAINPID</span><span style="color: #E6DB74">"</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span style="color: #F8F8F2">RestartSec</span><span style="color: #FF4689">=</span>10s
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span style="color: #F8F8F2">TimeoutSec</span><span style="color: #FF4689">=</span>infinity
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span style="color: #F8F8F2">LimitNOFILE</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">65536</span>:1048576
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>[Service]
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>Environment="CONFFILE=/etc/zabbix/zabbix_server.conf"
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>EnvironmentFile=-/etc/default/zabbix-server
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>Type=forking
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>Restart=on-failure
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>PIDFile=/run/zabbix/zabbix_server.pid
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>KillMode=control-group
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>ExecStart=/usr/sbin/zabbix_server -c $CONFFILE
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>ExecStop=/bin/sh -c '[ -n "$1" ] &amp;&amp; kill -s TERM "$1"' -- "$MAINPID"
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>RestartSec=10s
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>TimeoutSec=infinity
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>LimitNOFILE=65536:1048576
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span style="color: #FF4689">[</span>Install<span style="color: #FF4689">]</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span style="color: #F8F8F2">WantedBy</span><span style="color: #FF4689">=</span>multi-user.target
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>[Install]
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>WantedBy=multi-user.target
 </span></code></pre></div></td></tr></tbody></table></div>
 TimeoutSec=infinity の部分です。デフォルトで制限なしになっているので、
 この行をコメントアウトします。
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span style="color: #959077">#TimeoutSec=infinity</span>
-</span></code></pre></div></td></tr></tbody></table></div><p></p>
+<div class="language-text highlight" style="background: #272822"><span class="filename">/usr/lib/systemd/system/zabbix-server.service</span><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>#TimeoutSec=infinity
+</span></code></pre></div><p></p>
 <h2 id="_3">設定の反映</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span style="color: #F8F8F2"> </span>systemctl<span style="color: #F8F8F2"> </span>daemon-reload
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo systemctl daemon-reload
+</span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>zabbix-serverがアップデートされると設定が元に戻ってしまうので再度設定する必要があります</p>

@@ -1836,29 +1836,29 @@
 <h2 id="overview">Overview</h2>
 <p>Linuxのlsofコマンドはファイルを開いているプログラムを特定するためのコマンドです。</p>
 <h3 id="_1">ポートを利用しているプロセスの確認</h3>
-<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>lsof<span style="color: #F8F8F2"> </span>-I
-</span></code></pre></div></td></tr></tbody></table></div>
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lsof -I
+</span></code></pre></div>
 ポートを開いている全てのプロセスが表示されます。<p></p>
 <p>ポート番号で絞る場合には以下のように実行します。
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>lsof<span style="color: #F8F8F2"> </span>-I:ポート番号
-</span></code></pre></div></td></tr></tbody></table></div>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>lsof -I:ポート番号
+</span></code></pre></div>
 ex lsof -I:80<p></p>
 <h3 id="_2">プロセスが掴んでいるファイルをサイズの小さい順でソートする</h3>
 <p>プロセスが掴んでいるファイルが増大してディスク容量を圧迫する場合があります。調査に有用なコマンドライン。<br>
 ex Rsyslogを再起動せずに、書き込んでいるファイルを削除してしまったら、存在しないファイルに書き込み続けてディスク使用量が増大し続けるなど。</p>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span>
+<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-2">2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-3">3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-4">4</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-5">5</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-6">6</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>lsof<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span style="color: #F8F8F2">| </span>grep<span style="color: #F8F8F2"> </span>REG<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span style="color: #F8F8F2">| </span>grep<span style="color: #F8F8F2"> </span>-v<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">"stat: No such file or directory"</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span style="color: #F8F8F2">| </span>grep<span style="color: #F8F8F2"> </span>-v<span style="color: #F8F8F2"> </span>DEL<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span style="color: #F8F8F2">| </span>awk<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">'{if ($NF=="(deleted)") {x=3;y=1} else {x=2;y=0}; {print $(NF-x) "  " $(NF-y) } }'</span><span style="color: #F8F8F2">  </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span style="color: #F8F8F2">| </span>sort<span style="color: #F8F8F2"> </span>-n<span style="color: #F8F8F2"> </span>-u<span style="color: #F8F8F2">  </span><span style="color: #AE81FF">\</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span style="color: #F8F8F2">| </span>numfmt<span style="color: #F8F8F2">  </span>--field<span style="color: #FF4689">=</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span>--to<span style="color: #FF4689">=</span>iec
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>lsof \
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>| grep REG \
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>| grep -v "stat: No such file or directory" \
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>| grep -v DEL \
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>| awk '{if ($NF=="(deleted)") {x=3;y=1} else {x=2;y=0}; {print $(NF-x) "  " $(NF-y) } }'  \
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>| sort -n -u  \
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>| numfmt  --field=1 --to=iec
 </span></code></pre></div></td></tr></tbody></table></div>
 
 

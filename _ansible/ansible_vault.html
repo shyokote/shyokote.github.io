@@ -1974,21 +1974,21 @@
 通常の Playbook では、環境変数や別の管理ツールで機密情報を扱うことが一般的ですが、Ansible Vault を使用することで、Ansible のワークフローの中で安全に機密情報を扱うことができます。</p>
 <h2 id="_2">ファイルの作成</h2>
 <p>vaultで暗号化したファイルを作成する。例：secrets.yml
-</p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ansible-vault<span style="color: #F8F8F2"> </span>create<span style="color: #F8F8F2"> </span>secrets.yml
-</span></code></pre></div></td></tr></tbody></table></div>
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ansible-vault create secrets.yml
+</span></code></pre></div>
 パスワードの設定を効かれるのでパスワードを設定する
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>New<span style="color: #F8F8F2"> </span>Vault<span style="color: #F8F8F2"> </span>password:
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>New Vault password:
+</span></code></pre></div>
 ファイルが開くのでファイルの内容を記述する<p></p>
 <h2 id="_3">ファイルの編集</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>ansible-vault<span style="color: #F8F8F2"> </span>edit<span style="color: #F8F8F2"> </span>secrets.yml<span style="color: #F8F8F2"> </span>--ask-vault-pass
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ansible-vault edit secrets.yml --ask-vault-pass
+</span></code></pre></div>
 <h2 id="_4">ファイル内容の確認</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ansible-vault<span style="color: #F8F8F2"> </span>view<span style="color: #F8F8F2"> </span>secrets.yml<span style="color: #F8F8F2"> </span>--ask-vault-pass
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ansible-vault view secrets.yml --ask-vault-pass
+</span></code></pre></div>
 <h2 id="_5">非暗号ファイルを暗号化する方法</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>ansible-vault<span style="color: #F8F8F2"> </span>encrypt<span style="color: #F8F8F2"> </span>secrets.yml
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ansible-vault encrypt secrets.yml
+</span></code></pre></div>
 <h2 id="group_vars-host_vars">group_vars と host_vars</h2>
 <h3 id="group_vars">group_vars</h3>
 <ul>
@@ -2000,27 +2000,27 @@
 <li>方法1：group_vars直下に設定ファイルを作成する</li>
 <li>方法2：ディレクトリを作成して管理する</li>
 </ul>
-<p></p><div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span>
+<p></p><div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-1">1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-2">2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-3">3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-4">4</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>group_vars/
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>│<span style="color: #F8F8F2">   </span>├──<span style="color: #F8F8F2"> </span>all.yml<span style="color: #F8F8F2">                  </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法1<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>全サーバー用のファイル
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>│<span style="color: #F8F8F2">   </span>└──<span style="color: #F8F8F2"> </span>all/<span style="color: #F8F8F2">                     </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法2<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>全サーバー用のディレクトリ
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>│<span style="color: #F8F8F2">       </span>├──<span style="color: #F8F8F2"> </span>main.yml
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>│<span style="color: #F8F8F2">       </span>└──<span style="color: #F8F8F2"> </span>vault.yml
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>│   ├── all.yml                  &lt;--- (方法1) 全サーバー用のファイル
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>│   └── all/                     &lt;--- (方法2) 全サーバー用のディレクトリ
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>│       ├── main.yml
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>│       └── vault.yml
 </span></code></pre></div></td></tr></tbody></table></div>
 ディレクトリを作成した方が管理しやすいのでオススメです。<p></p>
 <p>また、inventoryで設定されているグループを指定する場合、(以下webというグループ)の設定も可能です。</p>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span>
+<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-1">1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-2">2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-3">3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-4">4</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>group_vars/
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>│<span style="color: #F8F8F2">   </span>├──<span style="color: #F8F8F2"> </span>web.yml<span style="color: #F8F8F2">                  </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法1<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>webサーバーグループ用のファイル
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>│<span style="color: #F8F8F2">   </span>└──<span style="color: #F8F8F2"> </span>web/<span style="color: #F8F8F2">                     </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法2<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>webサーバーグループ用のディレクトリ
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>│<span style="color: #F8F8F2">       </span>├──<span style="color: #F8F8F2"> </span>main.yml
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>│<span style="color: #F8F8F2">       </span>└──<span style="color: #F8F8F2"> </span>vault.yml
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>│   ├── web.yml                  &lt;--- (方法1) webサーバーグループ用のファイル
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>│   └── web/                     &lt;--- (方法2) webサーバーグループ用のディレクトリ
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>│       ├── main.yml
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>│       └── vault.yml
 </span></code></pre></div></td></tr></tbody></table></div>
 <h3 id="host_vars">host_vars</h3>
 <p>host_varsも基本的にgroup_varsと同じです。
@@ -2031,15 +2031,15 @@
 <li>方法1：host_vars直下に設定ファイルを作成する</li>
 <li>方法2：ディレクトリを作成して管理する</li>
 </ul>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1">1</a></span>
+<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-1">1</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-2">2</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-3">3</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-4">4</a></span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>host_vars/
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>│<span style="color: #F8F8F2">   </span>├──<span style="color: #F8F8F2"> </span>server1.example.com.yml<span style="color: #F8F8F2">  </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法1<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>server1用のファイル
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>│<span style="color: #F8F8F2">   </span>└──<span style="color: #F8F8F2"> </span>server2.example.com/<span style="color: #F8F8F2">     </span>&lt;---<span style="color: #F8F8F2"> </span><span style="color: #FF4689">(</span>方法2<span style="color: #FF4689">)</span><span style="color: #F8F8F2"> </span>server2用のディレクトリ
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>│<span style="color: #F8F8F2">       </span>├──<span style="color: #F8F8F2"> </span>main.yml
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>│<span style="color: #F8F8F2">       </span>└──<span style="color: #F8F8F2"> </span>vault.yml
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>│   ├── server1.example.com.yml  &lt;--- (方法1) server1用のファイル
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>│   └── server2.example.com/     &lt;--- (方法2) server2用のディレクトリ
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>│       ├── main.yml
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>│       └── vault.yml
 </span></code></pre></div></td></tr></tbody></table></div>
 
 
