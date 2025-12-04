@@ -8,11 +8,11 @@
 - ~/.ssh/authorized_keysがパーミッション644で作成されていること
 
 ## ssh-copy-id の利用
-```bash
+```linenums="0"
 ssh-copy-id ${USER}@${target_host}
 ```
 -iオプションで任意の公開鍵を指定することもできる
-```bash
+```linenums="0"
 ssh-copy-id -i ${identity_file} ${USER}@${target_host}
 ```
 

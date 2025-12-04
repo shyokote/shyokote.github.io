@@ -7,12 +7,12 @@
 
 ### 経路設定
 全ての通信（default）において、正常経路を「tunnel 1」・バックアップを経路「pp 11」としたとき
-```bash
+```linenums="0"
 ip route default gateway tunnel 1 keepalive 1 gateway pp 11 weight 0
 ```
 
 ### キープアライブの設定 (トリガーの設定)
 「10」秒ごとに計「6」カウントを「192.168.1.1」に向けて送信し、応答がなければ、バックアップ経路に切り替える
-```bash
+```linenums="0"
 ip keepalive 1 icmp-echo 10 6 192.168.1.1
 ```

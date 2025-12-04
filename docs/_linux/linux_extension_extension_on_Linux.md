@@ -7,11 +7,11 @@
 
 ### 既存の構成を確認する
 
-```bash
+```linenums="0"
 lsblk
 ```
 出力例
-```bash
+```
 NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda                         8:0    0  50G  0 disk
 ├─sda1                      8:1    0    1M  0 part
@@ -28,11 +28,11 @@ sdaの容量を増加させることがわかる。
 
 ### 構成確認
 50G増えているか確認をする
-```bash
+```linenums="0"
 lsblk
 ```
 出力例
-```bash
+```
 NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda                         8:0    0  100G  0 disk
 ├─sda1                      8:1    0    1M  0 part
@@ -47,11 +47,11 @@ sdaの欄のSIZEが100Gになっていることを確認
 
 ## パーディションを拡張
 ### パーティションの確認
-```bash
+```linenums="0"
 sudo fdisk -l /dev/sda
 ```
 出力例
-```bash
+```
 GPT PMBR size mismatch (104857599 != 209715199) will be corrected by write.
 The backup GPT table is not on the end of the device.
 Disk /dev/sda: 100 GiB, 107374182400 bytes, 209715200 sectors
@@ -69,7 +69,7 @@ Device       Start       End   Sectors Size Type
 ```
 
 ### fdiskでパーティションを拡張
-```bash
+```linenums="0"
 sudo fdisk /dev/sda
 ```
 
@@ -88,7 +88,7 @@ sudo fdisk /dev/sda
 
 
 出力例
-```bash
+```
 Welcome to fdisk (util-linux 2.39.3).
 Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
@@ -163,25 +163,25 @@ The partition table has been altered.
 Syncing disks.
 ```
 ### 作成した新しいパーティションをカーネルに通知
-```bash
+```linenums="0"
 sudo partprobe
 ```
 
 ## LVMの物理ボリュームを拡張
 
 ### 新しいパーティションを LVM の物理ボリュームとして認識させる
-```bash
+```linenums="0"
 sudo pvresize /dev/sda3
 ```
 
 ## LVMの論理ボリュームを拡張
 
 ### ボリュームグループ名を確認する
-```bash
+```linenums="0"
 sudo vgdisplay
 ```
 出力例
-```bash
+```
   --- Volume group ---
   VG Name               ubuntu-vg
   System ID
@@ -205,11 +205,11 @@ sudo vgdisplay
 ```
 
 ### 論理ボリューム名を確認する
-```bash
+```linenums="0"
 sudo lvdisplay
 ```
 出力例
-```bash
+```
   --- Logical volume ---
   LV Path                /dev/ubuntu-vg/ubuntu-lv
   LV Name                ubuntu-lv
@@ -230,7 +230,7 @@ sudo lvdisplay
 
 ### 論理ボリュームを必要な分だけ拡張する
 ここの例では追加分を全て適用する
-```bash
+```linenums="0"
 sudo lvextend -l +100%FREE /dev/mapper/<volume-group-name>-<logical-volume-name>
 ```
 /dev/mapper/&lt;volume-group-name&gt;-&lt;logical-volume-name&gt;の部分は、
@@ -248,7 +248,7 @@ vgdisplayコマンドとlvdisplayコマンドで確認できます。
 
 
 例
-```bash
+```
 sudo  lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 Size of logical volume ubuntu-vg/ubuntu-lv changed from <48.00 GiB (12287 extents) to <98.00 GiB (25087 extents).
 Logical volume ubuntu-vg/ubuntu-lv successfully resized.
@@ -258,32 +258,32 @@ Logical volume ubuntu-vg/ubuntu-lv successfully resized.
 ## ファイルシステムを拡張
 
 === "EXT4の場合"
-    ```bash
+    ```linenums="0"
     sudo resize2fs /dev/mapper/<volume-group-name>-<logical-volume-name>
     ```
     例
-    ```bash
+    ```linenums="0"
     sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
     ```
 
 === "XFSの場合"
-    ```bash
+    ```linenums="0"
     sudo xfs_growfs /mount/point
     ```
     /mount/pointの部分は、df -Th か lsblk コマンドで確認してください。
 
     例
-    ```bash
+    ```linenums="0"
     sudo xfs_growfs /
     ```
 
 
 ## ディスク容量の確認
-```bash
+```linenums="0"
 df -Th
 ```
 例
-```bash
+```
 Filesystem                         Size  Used Avail Use% Mounted on
 tmpfs                              794M  1.1M  793M   1% /run
 /dev/mapper/ubuntu--vg-ubuntu--lv   97G  5.2G   87G   6% /

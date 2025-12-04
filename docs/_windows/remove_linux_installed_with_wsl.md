@@ -4,11 +4,11 @@
 WSLでインストールしたLinuxが削除できないときがある
 
 ## 削除方法
-```bash
+```linenums="0"
 wsl --unregister <DistributionName>
 ```
 例：
-```bash
+```linenums="0"
 wsl --unregister kali-linux
 ```
 ## 参考

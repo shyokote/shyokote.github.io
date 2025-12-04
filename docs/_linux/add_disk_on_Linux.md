@@ -8,11 +8,11 @@
 今回追加したDiskは/dev/sdbとして100GB認識されていることを確認
 
 ## Diskが認識されていることを確認する
-```bash
+```linenums="0"
 sudo fdisk -l
 ```
 出力例
-```bash
+```
 Disk /dev/sda: 50 GiB, 53687091200 bytes, 104857600 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
@@ -41,11 +41,11 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
 ## fdiskコマンドを使用し、領域を作成する
-```bash
+```linenums="0"
 sudo fdisk /dev/sdb
 ```
 出力例
-```bash
+```
 Welcome to fdisk (util-linux 2.32.1).
 Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
@@ -82,18 +82,18 @@ Syncing disks.
 ```
 
 ## パーティションの更新情報を認識させる
-```bash
+```linenums="0"
 sudo partprobe
 ```
 
 ## パーティションをフォーマットする
 
 === "EXT4の場合"
-    ```bash
+    ```linenums="0"
     sudo mkfs -t ext4 /dev/sdb1
     ```
     出力例
-    ```bash
+    ```
     mke2fs 1.45.6 (20-Mar-2020)
     Creating filesystem with 26214144 4k blocks and 6553600 inodes
     Filesystem UUID: 58ed24d3-d503-4d01-b6ca-eb8a4e69177f
@@ -101,29 +101,29 @@ sudo partprobe
 	    32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
 	    4096000, 7962624, 11239424, 20480000, 23887872
 
-    Allocating group tables: done
+   Allocating group tables: done
     Writing inode tables: done
     Creating journal (131072 blocks): done
     Writing superblocks and filesystem accounting information: done
     ```
 
 === "XFSの場合"
-    ```bash
+    ```linenums="0"
     sudo mkfs -t xfs /dev/sdb1
     ```
 
 ## Diskをマウントする
 ### マウントするディレクトリを作成する
 ここでは/dataとする
-```bash
+```linenums="0"
 sudo mkdir /data
 ```
 ### 追加したディスクの UUID を確認する
-```bsah
+```linenums="0"
 sudo blkid
 ```
 出力例
-```bash
+```
 /dev/sda1: UUID="7437fbdf-88c9-41a5-972d-2c7bb99fefce" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="a9cb21b7-01"
 /dev/sda2: UUID="yljnUK-UATf-KSKJ-coAq-b1DR-v4Xp-TppTkM" TYPE="LVM2_member" PARTUUID="a9cb21b7-02"    ←これ
 /dev/sdb1: UUID="58ed24d3-d503-4d01-b6ca-eb8a4e69177f" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="652d9457-01"
@@ -132,12 +132,12 @@ sudo blkid
 ```
 
 ### 自動マウント設定を行う。再起動後も自動でマウントされる
-```bash
+```linenums="0"
 sudo vi /etc/fstab
 ```
 
 === "EXT4の場合"
-    ```bash
+    ```
     #
     # /etc/fstab
     # Created by anaconda on Thu Apr  6 08:40:19 2023
@@ -155,7 +155,7 @@ sudo vi /etc/fstab
     ```
 
 === "XFSの場合"
-    ```bash
+    ```
     #
     # /etc/fstab
     # Created by anaconda on Thu Apr  6 08:40:19 2023
@@ -174,12 +174,12 @@ sudo vi /etc/fstab
 
 
 ### 作成したディスクをマウントする
-```bash
+```linenums="0"
 sudo mount /dev/sdb1 /data
 ```
 
 ### /dataがマウントされているか確認をする
-```bash
+```
 df -h
 Filesystem                         Size  Used Avail Use% Mounted on
 devtmpfs                           1.9G     0  1.9G   0% /dev
