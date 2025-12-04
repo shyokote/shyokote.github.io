@@ -6,7 +6,7 @@ Windowsでアプリをアンインストールしているのにも関わらず�
 ## Method
 Windowsから右クリック、ファイル名を指定して実行から
 
-```bash
+```linenums="0"
 %appdata%\Microsoft\Windows\Start Menu\Programs
 ```
 を入力するとスタートメニューに表示されているアプリやフォルダが見られる。

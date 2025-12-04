@@ -6,27 +6,27 @@ Ansible Vault は、Ansible で扱う機密情報（パスワードや API キ�
 
 ## ファイルの作成
 vaultで暗号化したファイルを作成する。例：secrets.yml
-```bash
+```linenums="0"
 ansible-vault create secrets.yml
 ```
 パスワードの設定を効かれるのでパスワードを設定する
-```bash
+```linenums="0"
 New Vault password:
 ```
 ファイルが開くのでファイルの内容を記述する
 
 ## ファイルの編集
-```bash
+```linenums="0"
 ansible-vault edit secrets.yml --ask-vault-pass
 ```
 
 ## ファイル内容の確認
-```bash
+```linenums="0"
 ansible-vault view secrets.yml --ask-vault-pass
 ```
 
 ## 非暗号ファイルを暗号化する方法
-```bash
+```linenums="0"
 ansible-vault encrypt secrets.yml
 ```
 
@@ -39,7 +39,7 @@ ansible-vault encrypt secrets.yml
 - 方法1：group_vars直下に設定ファイルを作成する
 - 方法2：ディレクトリを作成して管理する
 
-```bash
+```
 group_vars/
 │   ├── all.yml                  <--- (方法1) 全サーバー用のファイル
 │   └── all/                     <--- (方法2) 全サーバー用のディレクトリ
@@ -50,7 +50,7 @@ group_vars/
 
 また、inventoryで設定されているグループを指定する場合、(以下webというグループ)の設定も可能です。
 
-```bash
+```
 group_vars/
 │   ├── web.yml                  <--- (方法1) webサーバーグループ用のファイル
 │   └── web/                     <--- (方法2) webサーバーグループ用のディレクトリ
@@ -67,7 +67,7 @@ host_varsも基本的にgroup_varsと同じです。
 - 方法1：host_vars直下に設定ファイルを作成する
 - 方法2：ディレクトリを作成して管理する
 
-```bash
+```
 host_vars/
 │   ├── server1.example.com.yml  <--- (方法1) server1用のファイル
 │   └── server2.example.com/     <--- (方法2) server2用のディレクトリ

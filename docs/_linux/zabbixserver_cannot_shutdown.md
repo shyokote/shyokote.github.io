@@ -9,7 +9,7 @@ OSのシャットダウンができない状態になる
 今回はZabbixなのでzabbix-serverのファイルを探す
 
 ユニット毎の設定ファイルは、man 5 systemd.unit を確認すればわかる。
-```bash
+```title="man 5 systemd.unit"
    System Unit Search Path
        /etc/systemd/system.control/*
        /run/systemd/system.control/*
@@ -42,19 +42,20 @@ OSのシャットダウンができない状態になる
        $XDG_RUNTIME_DIR/systemd/generator.late/*
 ```
 
-```bash
+以下のコマンドで設定ファイルを探す
+```linenums="0"
 for i in /etc/systemd/system.control /run/systemd/system.control /run/systemd/transient /run/systemd/generator.early /etc/systemd/system /etc/systemd/system.attached /run/systemd/system /run/systemd/system.attached /run/systemd/generator /usr/lib/systemd/system /run/systemd/generator.late; do  [ -f $i/*zabbix-server* ] && ls -l $i/*zabbix-server* ; done
 ```
 
 実行結果から
-```bash
+```linenums="0"
 -rw-r--r-- 1 root root 555 Sep 30 08:48 /usr/lib/systemd/system/zabbix-server.service
 ```
 /usr/lib/systemd/system/zabbix-server.service であることが確認できる
 
 
 ファイルの中身を確認すると
-```bash
+```
 [Unit]
 Description=Zabbix Server
 After=syslog.target
@@ -81,12 +82,12 @@ WantedBy=multi-user.target
 ```
 TimeoutSec=infinity の部分です。デフォルトで制限なしになっているので、
 この行をコメントアウトします。
-```bash
+```title="/usr/lib/systemd/system/zabbix-server.service" linenums="0"
 #TimeoutSec=infinity
 ```
 
 ## 設定の反映
-```bash
+```linenums="0"
 sudo systemctl daemon-reload
 ```
 

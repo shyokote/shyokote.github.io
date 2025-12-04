@@ -4,7 +4,7 @@
 apt upgrade を実施して「Waiting for cache lock」エラーが発生してアップデートできない
 
 ## エラー内容
-```bash
+```
 Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 3822
 Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 3822
 Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 3822
@@ -13,11 +13,11 @@ Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is he
 Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 3822
 ```
 ## ロックファイルの削除
-```bash
+```linenums="0"
 sudo rm -rf /var/lib/dpkg/lock /var/lib/dpkg/lock-frontend
 ```
 念の為、キャッシュのクリアもしておく
-```bash
+```linenums="0"
 sudo apt clean 
 ```
 

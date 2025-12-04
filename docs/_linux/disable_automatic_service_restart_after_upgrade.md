@@ -8,18 +8,18 @@ Ubuntu / Debian ではapt upgrade後に必要に応じてサービスのリス�
 needrestart というツールの設定を変更して対処します。
 
 ### 設定ファイルの編集
-```bash
+```linenums="0"
 sudo vi /etc/needrestart/needrestart.conf
 ```
 
 編集項目
 
 以下の部分に注目してください。
-```bash
+```title="/etc/needrestart/needrestart.conf" linenums="0"
 #$nrconf{restart} = 'i';
 ```
 上記を以下のように変更します。
-```bash
+```title="/etc/needrestart/needrestart.conf" linenums="0"
 $nrconf{restart} = 'l';
 ```
 これでapt upgrade後に自動でサービスをリスタートすることなく、リストの表示に留まってくれます。
