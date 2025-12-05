@@ -2258,26 +2258,26 @@
 <div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo mount /dev/sdb1 /data
 </span></code></pre></div>
 <h3 id="data">/dataがマウントされているか確認をする</h3>
-<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-1"> 1</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-2"> 2</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-3"> 3</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-4"> 4</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-5"> 5</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-6"> 6</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-7"> 7</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-8"> 8</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-9"> 9</a></span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-10">10</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>df -h
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>Filesystem                         Size  Used Avail Use% Mounted on
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a>devtmpfs                           1.9G     0  1.9G   0% /dev
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a>tmpfs                              2.0G     0  2.0G   0% /dev/shm
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a>tmpfs                              2.0G  8.5M  2.0G   1% /run
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a>tmpfs                              2.0G     0  2.0G   0% /sys/fs/cgroup
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a>/dev/mapper/rl_rocky--linux8-root   47G  2.4G   45G   5% /
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a>/dev/sda1                         1014M  207M  808M  21% /boot
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a>tmpfs                              393M     0  393M   0% /run/user/1000
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a>/dev/sdb1                           98G   24K   93G   1% /data    ←これ
+<p></p><div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>df -h
 </span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-1">1</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-2">2</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-3">3</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-4">4</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-5">5</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-6">6</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-7">7</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-8">8</a></span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-16-9">9</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>Filesystem                         Size  Used Avail Use% Mounted on
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a>devtmpfs                           1.9G     0  1.9G   0% /dev
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>tmpfs                              2.0G     0  2.0G   0% /dev/shm
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a>tmpfs                              2.0G  8.5M  2.0G   1% /run
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a>tmpfs                              2.0G     0  2.0G   0% /sys/fs/cgroup
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6"></a>/dev/mapper/rl_rocky--linux8-root   47G  2.4G   45G   5% /
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7"></a>/dev/sda1                         1014M  207M  808M  21% /boot
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8"></a>tmpfs                              393M     0  393M   0% /run/user/1000
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9"></a>/dev/sdb1                           98G   24K   93G   1% /data    ←これ
+</span></code></pre></div></td></tr></tbody></table></div><p></p>
 
 
 
