@@ -35,8 +35,8 @@ nav:
   - Linux:
     - Common:
       - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
-      - LVM extension extension on Linux: _linux/linux_extension_extension_on_Linux.md
-      - Add disk on Linux: _linux/add_disk_on_Linux.md
+      - LVM extension extension on Linux (MBR): _linux/linux_extension_extension_on_Linux_mbr.md
+      - Add disk on Linux (MBR): _linux/add_disk_on_Linux_mbr.md
       - Locking a package version: _linux/linux_package_versionlock.md
       - SSH authentication key public key remote distribution: _linux/remotely_distribute_ssh_keys.md
       - Recovering a public key from an SSH private key: _linux/recovering_public_key.md
