@@ -182,6 +182,8 @@ sudo mount /dev/sdb1 /data
 ### /dataがマウントされているか確認をする
 ```
 df -h
+```
+```
 Filesystem                         Size  Used Avail Use% Mounted on
 devtmpfs                           1.9G     0  1.9G   0% /dev
 tmpfs                              2.0G     0  2.0G   0% /dev/shm
