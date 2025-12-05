@@ -285,14 +285,14 @@ df -Th
 ```
 例
 ```
-Filesystem                         Size  Used Avail Use% Mounted on
-tmpfs                              794M  1.1M  793M   1% /run
-/dev/mapper/ubuntu--vg-ubuntu--lv   97G  5.2G   87G   6% /
-tmpfs                              3.9G     0  3.9G   0% /dev/shm
-tmpfs                              5.0M     0  5.0M   0% /run/lock
-tmpfs                              3.9G     0  3.9G   0% /run/qemu
-/dev/sda2                          2.0G   95M  1.7G   6% /boot
-tmpfs                              794M   16K  794M   1% /run/user/1001
+Filesystem                        Type   Size  Used Avail Use% Mounted on
+tmpfs                             tmpfs  794M  1.1M  793M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4    97G   11G   82G  12% /
+tmpfs                             tmpfs  3.9G     0  3.9G   0% /dev/shm
+tmpfs                             tmpfs  5.0M     0  5.0M   0% /run/lock
+tmpfs                             tmpfs  3.9G     0  3.9G   0% /run/qemu
+/dev/sda2                         ext4   2.0G  197M  1.6G  11% /boot
+tmpfs                             tmpfs  794M   16K  794M   1% /run/user/1001
 ```
 / が100Gに拡張されています。
 
