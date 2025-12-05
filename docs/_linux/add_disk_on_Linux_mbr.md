@@ -1,7 +1,8 @@
-# Add disk on Linux
+# Add disk on Linux (MBR)
 
 ## 目的
 新規にDiskを追加してマウントまでする
+パーティション形式はMBRを利用した場合を説明する
 
 ## Disk追加
 仮想マシンのDiskを追加しておく
