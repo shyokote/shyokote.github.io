@@ -33,7 +33,7 @@ ansible-vault encrypt secrets.yml
 ## group_vars と host_vars
 ### group_vars
 - inventoryに定義されているグループに対する定義
-- allディレクトリまたはall.ymlはansibleが内部で持っている特別なグループ名で、「インベントリに含まれる全てのホスト」を意味します。
+- allディレクトリまたはall.ymlはAnsibleが内部で持っている特別なグループ名で、「インベントリに含まれる全てのホスト」を意味します。
 
 #### 構成例
 - 方法1：group_vars直下に設定ファイルを作成する
