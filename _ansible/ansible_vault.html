@@ -1993,7 +1993,7 @@
 <h3 id="group_vars">group_vars</h3>
 <ul>
 <li>inventoryに定義されているグループに対する定義</li>
-<li>allディレクトリまたはall.ymlはnsibleが内部で持っている特別なグループ名で、「インベントリに含まれる全てのホスト」を意味します。</li>
+<li>allディレクトリまたはall.ymlはAnsibleが内部で持っている特別なグループ名で、「インベントリに含まれる全てのホスト」を意味します。</li>
 </ul>
 <h4 id="_6">構成例</h4>
 <ul>
@@ -2023,9 +2023,11 @@
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>│       └── vault.yml
 </span></code></pre></div></td></tr></tbody></table></div>
 <h3 id="host_vars">host_vars</h3>
-<p>host_varsも基本的にgroup_varsと同じです。
-- inventoryに定義されているホストに対する定義
-- ホスト名のディレクトリまたはホスト名.ymlを作成します。</p>
+<p>host_varsも基本的にgroup_varsと同じです。</p>
+<ul>
+<li>inventoryに定義されているホストに対する定義。</li>
+<li>ホスト名のディレクトリまたはホスト名.ymlを作成します。</li>
+</ul>
 <h4 id="_7">構成例</h4>
 <ul>
 <li>方法1：host_vars直下に設定ファイルを作成する</li>
