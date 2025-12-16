@@ -42,6 +42,7 @@ nav:
       - Recovering a public key from an SSH private key: _linux/recovering_public_key.md
       - Identify programs that expose files: _linux/lsof.md
       - SSH settings requiring one-time passwords (TOTP) using Google Authenticator: _linux/enabling_totp_with_google_authenticator_for_ssh.md
+      - SSH Port Forwarding: _linux/ssh_port_forwarding.md
     - RedHat / Rocky:
       - Virtualization changes in RockyLinux10 (RHEL10): _linux/virtualization_changes_in_rhel10.md
     - Ubuntu / Debian:
