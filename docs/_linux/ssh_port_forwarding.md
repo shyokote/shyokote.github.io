@@ -4,7 +4,7 @@
 - ローカルPCから直接接続できないサーバーのポートをローカルに転送して接続をする
 
 ## Explanatory diagram
-![](./img/SSH-PortForwarding.png)
+![](./_img/ssh-portforwarding.png)
 
 ## Method
 
