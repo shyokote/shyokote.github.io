@@ -1962,18 +1962,18 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/SSH-PortForwarding.png" data-desc-position="bottom"><img alt="" src="img/SSH-PortForwarding.png"></a></p>
 <h2 id="method">Method</h2>
 <h3 id="ssh">SSHログインと共にポート転送をする</h3>
-<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ssh -L [PCのローカルポート番号]:[接続先サーバのアドレス]:[接続先サーバのポート番号] [踏み台サーバのアドレス]
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh -L [PCのローカルポート番号]:[接続先サーバのアドレス]:[接続先サーバのポート番号] [踏み台サーバのアドレス]
+</span></code></pre></div>
 <h4 id="example">example</h4>
-<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ssh -L 8443:192.168.1.85:443 192.168.1.10
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh -L 8443:192.168.1.85:443 192.168.1.10
+</span></code></pre></div>
 <h3 id="_1">ポート転送のみを実施</h3>
 <p>ログイン時にポート転送のみをおこないたい場合は、「-N」オプションを付与します。
 sshによるログイン後、通常はプロンプトが表示されますが、「-N」オプションを付与するとアカウント・パスワードを入力した後、応答が戻ってこなくなります。
 これでポート転送のみが行われる状態になったので、この画面は開いたままにします。</p>
 <h4 id="example_1">example</h4>
-<div class="language-text highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>ssh -L -N 8443:192.168.1.85:443 192.168.1.10
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh -L -N 8443:192.168.1.85:443 192.168.1.10
+</span></code></pre></div>
 
 
 
