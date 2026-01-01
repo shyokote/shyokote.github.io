@@ -78,7 +78,7 @@ net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
 ```
 
-#### 設定の反映
+#### 2-4-1. 設定の反映
 OSの再起動か以下のコマンドで再起動なしに反映
 ```linenums="0"
 sudo sysctl --system
