@@ -24,7 +24,7 @@ Cephが一般的かもしれませんが、小 - 中規模程度であればLong
 -  Agent: k3s-agt01 (192.168.1.61)
 -  Agent: k3s-agt02 (192.168.1.62)
 
-## 2. 事前準備
+## 2. 事前準備 (3ノード共通)
 ### 2-1. 必須カーネルモジュールのロード (dm_crypt)
 Longhornのボリューム管理(暗号化機能等の依存)に必要なモジュールを有効化します。これを行わないと、ノードはReadyでもディスクが認識されません。
 ```linenums="0"
@@ -50,6 +50,8 @@ sudo systemctl enable --now iscsid
 
 # インストールされていない場合は以下のコマンドでインストール
 sudo apt install open-iscsi
+sudo systemctl start iscsid
+sudo systemctl enable iscsid
 ```
 ### 2-4. クリーンアップ (再構築時のみ)
 既存環境がある場合は完全に削除します。
