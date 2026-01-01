@@ -1208,9 +1208,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2-4-1" class="md-nav__link">
     <span class="md-ellipsis">
-      設定の反映
+      2-4-1. 設定の反映
     </span>
   </a>
   
@@ -1292,7 +1292,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       インストール
     </span>
@@ -2157,9 +2157,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2-4-1" class="md-nav__link">
     <span class="md-ellipsis">
-      設定の反映
+      2-4-1. 設定の反映
     </span>
   </a>
   
@@ -2241,7 +2241,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       インストール
     </span>
@@ -2470,7 +2470,7 @@ Cephが一般的かもしれませんが、小 - 中規模程度であればLong
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>net.ipv6.conf.default.disable_ipv6 = 1
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>net.ipv6.conf.lo.disable_ipv6 = 1
 </span></code></pre></div><p></p>
-<h4 id="_2">設定の反映</h4>
+<h4 id="2-4-1">2-4-1. 設定の反映</h4>
 <p>OSの再起動か以下のコマンドで再起動なしに反映
 </p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo sysctl --system
 </span></code></pre></div><p></p>
@@ -2573,7 +2573,7 @@ Cephが一般的かもしれませんが、小 - 中規模程度であればLong
 </span></code></pre></div>
 ※補足: 万が一 DNS解決ができない場合は、coredns ServiceAccount に cluster-admin 権限を付与してください。<p></p>
 <h3 id="6-2-metrics-server-traefik">6-2. Metrics Server &amp; Traefik</h3>
-<h4 id="_3">インストール</h4>
+<h4 id="_2">インストール</h4>
 <div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>helm repo add traefik https://traefik.github.io/charts
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>helm repo update
