@@ -249,7 +249,7 @@ vgdisplayコマンドとlvdisplayコマンドで確認できます。
 
 
 例
-```
+```linenums="0"
 sudo  lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 Size of logical volume ubuntu-vg/ubuntu-lv changed from <48.00 GiB (12287 extents) to <98.00 GiB (25087 extents).
 Logical volume ubuntu-vg/ubuntu-lv successfully resized.
@@ -284,7 +284,7 @@ Logical volume ubuntu-vg/ubuntu-lv successfully resized.
 df -Th
 ```
 例
-```
+```linenums="0"
 Filesystem                        Type   Size  Used Avail Use% Mounted on
 tmpfs                             tmpfs  794M  1.1M  793M   1% /run
 /dev/mapper/ubuntu--vg-ubuntu--lv ext4    97G   11G   82G  12% /

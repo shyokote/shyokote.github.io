@@ -169,6 +169,7 @@ helm install coredns coredns/coredns -n kube-system -f values-coredns.yaml
 ※補足: 万が一 DNS解決ができない場合は、coredns ServiceAccount に cluster-admin 権限を付与してください。
 
 ### 6-2. Metrics Server & Traefik
+#### インストール
 ```linenums="0"
 helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
 helm repo add traefik https://traefik.github.io/charts
@@ -186,8 +187,178 @@ helm install traefik traefik/traefik -n kube-system \
   --set ports.websecure.nodePort=30443
 ```
 
-## 7. Longhorn のインストールと設定
-### 7-1. インストール
+## 7. Pod分散のためのAnti-Affinity設定 (CoreDNS, Metrics, Traefik)
+なるべく同じノードでPodが起動しないようにルールを設定
+### 7-1. coredns
+```linenums="0"
+vi values-coredns.yaml
+```
+```title="values-coredns.yaml" linenums="0"
+replicaCount: 3
+service:
+  clusterIP: 10.43.0.10
+deployment:
+  enabled: true
+servers:
+- zones:
+  - zone: .
+  port: 53
+  plugins:
+  - name: errors
+  - name: health
+    configBlock: |-
+      lameduck 5s
+  - name: ready
+  - name: kubernetes
+    parameters: cluster.local in-addr.arpa ip6.arpa
+    configBlock: |-
+      pods insecure
+      fallthrough in-addr.arpa ip6.arpa
+      ttl 30
+  - name: prometheus
+    parameters: 0.0.0.0:9153
+  - name: forward
+    parameters: . /etc/resolv.conf
+  - name: cache
+    parameters: 30
+  - name: loop
+  - name: reload
+  - name: loadbalance
+
+# --- 分散設定 (Affinity) ---
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        labelSelector:
+          matchExpressions:
+          - key: k8s-app
+            operator: In
+            values:
+            - kube-dns
+        topologyKey: kubernetes.io/hostname
+```
+### 7-2. metrics-server
+```linenums="0"
+vi values-metrics.yaml
+```
+```title="values-metrics.yaml" linenums="0"
+replicas: 3
+args:
+  - --kubelet-insecure-tls
+
+# --- 分散設定 (Affinity) ---
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        labelSelector:
+          matchExpressions:
+          - key: k8s-app
+            operator: In
+            values:
+            - metrics-server
+        topologyKey: kubernetes.io/hostname
+```
+### 7-3. traefik
+```linenums="0"
+vi values-traefik.yaml
+```
+```title="values-traefik.yaml" linenums="0"
+deployment:
+  replicas: 3
+ports:
+  web:
+    nodePort: 30080
+  websecure:
+    nodePort: 30443
+
+# --- 分散設定 (Affinity) ---
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        labelSelector:
+          matchExpressions:
+          - key: app.kubernetes.io/name
+            operator: In
+            values:
+            - traefik
+        topologyKey: kubernetes.io/hostname
+```
+
+### 7-4. 設定適用
+```linenums="0"
+# CoreDNS の適用
+helm upgrade coredns coredns/coredns -n kube-system -f values-coredns.yaml
+
+# Metrics Server の適用
+helm upgrade metrics-server metrics-server/metrics-server -n kube-system -f values-metrics.yaml
+
+# Traefik の適用
+helm upgrade traefik traefik/traefik -n kube-system -f values-traefik.yaml
+```
+
+!!! note
+	コマンド：helm upgrade [リリース名] [チャート]
+	
+	[リリース名]
+    
+    - コマンド: helm list -A
+		- 見る場所: NAME 列
+			- 例: coredns
+
+    ```linenums="0"
+    helm list -A
+    NAME          	NAMESPACE      	REVISION	UPDATED                                	STATUS  	CHART                	APP VERSION
+    coredns       	kube-system    	2       	2026-01-01 21:08:20.079149614 +0900 JST	deployed	coredns-1.45.0       	1.13.1
+    longhorn      	longhorn-system	1       	2025-12-26 23:53:24.879972224 +0900 JST	deployed	longhorn-1.10.1      	v1.10.1
+    metrics-server	kube-system    	2       	2026-01-01 21:09:07.176476875 +0900 JST	deployed	metrics-server-3.13.0	0.8.0
+    traefik       	kube-system    	2       	2026-01-01 21:09:27.140848038 +0900 JST	deployed	traefik-38.0.1       	v3.6.5
+    ```
+
+	[チャート] (リポジトリ名/チャート名)
+	
+    - コマンド: helm search repo [キーワード] または helm search repo
+		- 見る場所: NAME 列
+			- 例: coredns/coredns
+				- スラッシュの左側 (coredns): helm repo list で表示されたリポジトリ名
+				- スラッシュの右側 (coredns): そのリポジトリの中にあるパッケージ名
+
+    ```linenums="0"
+    helm search repo
+    NAME                         	CHART VERSION	APP VERSION	DESCRIPTION
+    coredns/coredns              	1.45.0       	1.13.1     	CoreDNS is a DNS server that chains plugins and...
+    longhorn/longhorn            	1.10.1       	v1.10.1    	Longhorn is a distributed block storage system ...
+    metrics-server/metrics-server	3.13.0       	0.8.0      	Metrics Server is a scalable, efficient source ...
+    traefik/maesh                	2.1.2        	v1.3.2     	Maesh - Simpler Service Mesh
+    traefik/traefik              	38.0.1       	v3.6.5     	A Traefik based Kubernetes ingress controller
+    traefik/traefik-crds         	1.13.0       	           	A Traefik based Kubernetes ingress controller
+    traefik/traefik-hub          	4.2.0        	v2.11.0    	Traefik Hub Ingress Controller
+    traefik/traefik-mesh         	4.1.1        	v1.4.8     	Traefik Mesh - Simpler Service Mesh
+    traefik/traefikee            	4.2.5        	v2.12.5    	Traefik Enterprise is a unified cloud-native ne...
+    ```
+
+    [リポジトリ名だけの確認]
+
+    - コマンド: helm repo list
+        - 見る場所: NAME 列
+			- 例: coredns
+
+    ```linenums="0"
+    helm repo list
+    NAME          	URL
+    traefik       	https://traefik.github.io/charts
+    coredns       	https://coredns.github.io/helm
+    metrics-server	https://kubernetes-sigs.github.io/metrics-server/
+    longhorn      	https://charts.longhorn.io
+    ```
+
+## 8. Longhorn のインストールと設定
+### 8-1. インストール
 ```linenums="0"
 helm repo add longhorn https://charts.longhorn.io
 helm repo update
@@ -210,7 +381,7 @@ helm install longhorn longhorn/longhorn \
   -f values-longhorn.yaml
 ```
 
-### 7-2. Web UI のHTTPS公開
+### 8-2. Web UI のHTTPS公開
 Traefik Ingress を使用して管理画面をHTTPS(443)で公開します。
 ```linenums="0"
 vi longhorn-ingress.yaml
@@ -245,7 +416,7 @@ spec:
 ```linenums="0"
 sudo k3s kubectl apply -f longhorn-ingress.yaml
 ```
-## 8. 動作確認
+## 9. 動作確認
 ブラウザで https://longhorn.192.168.1.71.nip.io にアクセスします。
 
 1.  Nodes: 3つ全てが Schedulable (緑色) であること。
