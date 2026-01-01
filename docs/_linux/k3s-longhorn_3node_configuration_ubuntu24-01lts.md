@@ -53,7 +53,38 @@ sudo apt install open-iscsi
 sudo systemctl start iscsid
 sudo systemctl enable iscsid
 ```
-### 2-4. クリーンアップ (再構築時のみ)
+### 2-4. カーネルパラメーターの調整
+```linenums="0"
+vi /etc/modules-load.d/k3s.conf
+```
+```title="k3s.conf" linenums="0"
+br_netfilter
+overlay
+```
+```linenums="0"
+vi /etc/sysctl.d/99-kubernetes-cri.conf
+```
+```title="99-kubernetes-cri.conf" linenums="0"
+net.bridge.bridge-nf-call-iptables  = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward                 = 1
+```
+```linenums="0"
+vi /etc/sysctl.d/99-disable-ipv6.conf
+```
+```title="99-disable-ipv6.conf" linenums="0"
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+```
+
+#### 設定の反映
+OSの再起動か以下のコマンドで再起動なしに反映
+```linenums="0"
+sudo sysctl --system
+```
+
+### 2-5. クリーンアップ (再構築時のみ)
 既存環境がある場合は完全に削除します。
 ```linenums="0"
 /usr/local/bin/k3s-uninstall.sh 2>/dev/null || true
