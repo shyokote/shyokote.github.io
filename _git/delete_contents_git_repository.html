@@ -1867,8 +1867,8 @@
 <h2 id="_1">目的</h2>
 <p>Gitリポジトリの中身を全部一気に消す</p>
 <h2 id="_2">方法</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span style="color: #F8F8F2"> </span>clean<span style="color: #F8F8F2"> </span>-fdx<span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> test </span><span style="color: #66D9EF">$(</span>git<span style="color: #F8F8F2"> </span>ls-files<span style="color: #F8F8F2"> | </span>wc<span style="color: #F8F8F2"> </span>-l<span style="color: #66D9EF">)</span><span style="color: #F8F8F2"> </span>-eq<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">||</span><span style="color: #F8F8F2"> </span>git<span style="color: #F8F8F2"> </span>rm<span style="color: #F8F8F2"> </span>-rf<span style="color: #F8F8F2"> </span>.
-</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clean -fdx &amp;&amp; test $(git ls-files | wc -l) -eq 0 || git rm -rf .
+</span></code></pre></div>
 
 
 
