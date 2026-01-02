@@ -2211,7 +2211,7 @@ configファイルに以下の内容を記載．IdentityFileは作成したフ�
 <ul>
 <li>SSH公開鍵と秘密鍵がないと登録できないので.ssh以下に公開鍵と秘密鍵を用意しておく</li>
 </ul>
-<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>echo "/usr/bin/keychain $HOME/.ssh/id_rsa" &gt;&gt; ~/.bashrc
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>echo "/usr/bin/keychain $HOME/.ssh/id_ed25519" &gt;&gt; ~/.bashrc
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>echo "source $HOME/.keychain/`hostname`-sh" &gt;&gt; ~/.bashrc
 </span></code></pre></div>
 この設定をする場合は手順5で設定した eval "$(ssh-agent -s) の設定は削除して問題ない。<p></p>
