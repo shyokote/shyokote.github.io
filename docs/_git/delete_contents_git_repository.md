@@ -4,6 +4,6 @@
 Gitリポジトリの中身を全部一気に消す
 
 ## 方法
-```bash
+```linenums="0"
 git clean -fdx && test $(git ls-files | wc -l) -eq 0 || git rm -rf .
 ```
