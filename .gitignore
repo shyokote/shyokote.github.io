@@ -1,6 +1,12 @@
 # MkDocs build output
 /site/
 
+# SSH Key
+*.key
+*.pem
+id_rsa*
+id_ed*
+
 # Python virtual environments
 .venv/
 env/
