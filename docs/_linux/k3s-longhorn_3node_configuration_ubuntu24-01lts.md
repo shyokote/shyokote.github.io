@@ -226,6 +226,9 @@ vi values-coredns.yaml
 ```
 ```title="values-coredns.yaml" linenums="0"
 replicaCount: 3
+serviceAccount:
+  create: true
+  name: coredns # 重要: ServiceAccount名を固定化
 service:
   clusterIP: 10.43.0.10
 deployment:
