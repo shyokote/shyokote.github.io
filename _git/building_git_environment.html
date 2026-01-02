@@ -643,6 +643,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#42-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. .bashrcを再読み込みして設定を反映
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1950,6 +1959,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#42-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. .bashrcを再読み込みして設定を反映
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2078,23 +2096,23 @@ configファイルに以下の内容を記載．IdentityFileは作成したフ�
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>fi
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>unset color_prompt force_color_prompt
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a># .bashrcを再読み込みして設定を反映
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>source ~/.bashrc
+</span></code></pre></div>
+<h3 id="42-bashrc">4.2. .bashrcを再読み込みして設定を反映</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>source ~/.bashrc
 </span></code></pre></div>
 <h2 id="5-gitssh">5. GitでSSHのパスフレーズ入力を省略する</h2>
 <h3 id="51-ssh">5.1. SSHエージェントの設定</h3>
-<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>echo 'eval "$(ssh-agent -s)"' &gt;&gt; ~/.bashrc
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>source ~/.bashrc
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>echo 'eval "$(ssh-agent -s)"' &gt;&gt; ~/.bashrc
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>source ~/.bashrc
 </span></code></pre></div>
 <h3 id="52-ssh-add-sshssh-agent">5.2. ssh-add でSSH秘密鍵をssh-agentに登録する</h3>
-<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh-add /Users/[user_name]/.ssh/id_ed25519
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Enter passphrase for /Users/[user_name]/.ssh/id_ed25519: &lt;- SSHのパスフレーズを入力
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Identity added: /Users/[user_name]/.ssh/id_ed25519 (&lt;作成時に入力したコメント&gt;)
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-add /Users/[user_name]/.ssh/id_ed25519
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Enter passphrase for /Users/[user_name]/.ssh/id_ed25519: &lt;- SSHのパスフレーズを入力
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Identity added: /Users/[user_name]/.ssh/id_ed25519 (&lt;作成時に入力したコメント&gt;)
 </span></code></pre></div>
 <h3 id="53">5.3. 登録確認</h3>
-<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-add -l
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ssh-add -l
 </span></code></pre></div>
 
 
