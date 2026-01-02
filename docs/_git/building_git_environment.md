@@ -35,6 +35,7 @@ Host github.com
   User git
   HostName github.com
   IdentityFile ~/.ssh/id_ed25519   # <-- SSH秘密鍵を指定
+  IdentitiesOnly yes
   AddKeysToAgent yes
   UseKeychain yes     # <---Macの場合のみ。Linuxなどだとエラーになるのでこの項目は削除
   ServerAliveInterval 600
@@ -55,7 +56,7 @@ wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-pro
 chmod a+x ~/.git-prompt.sh
 echo "source ~/.git-prompt.sh" >> ~/.bashrc
 ```
-### 4.1. ~/.bashrcに以下の設定を追加する
+### 4.1. ~/.bashrcに設定を追加する
 ```title="~/.bashrc" linenums="0"
 # プロンプトに各種情報を表示 1 or 空欄
 GIT_PS1_SHOWDIRTYSTATE=1 # addされてないときに*、commitされてないときに+を表示
@@ -95,3 +96,27 @@ Identity added: /Users/[user_name]/.ssh/id_ed25519 (<作成時に入力したコ
 ssh-add -l
 ```
 
+## 6. ssh-addで登録したSSH秘密鍵の永続化
+
+- Ubuntuで手順5を実施してもログインし直すと登録したSSH秘密鍵が消える問題がある(Ubuntu以外のディストリビューションでも同じかもしれないが未確認)
+- keychainを利用して永続化する
+
+### 6-1. keychainのインストール
+```linenums="0"
+sudo apt install keychain
+```
+
+### 6.2 ~/.bashrcに設定を追加する
+
+- SSH公開鍵と秘密鍵がないと登録できないので.ssh以下に公開鍵と秘密鍵を用意しておく
+
+```linenums="0"
+echo "/usr/bin/keychain $HOME/.ssh/id_rsa" >> ~/.bashrc
+echo "source $HOME/.keychain/`hostname`-sh" >> ~/.bashrc
+```
+この設定をする場合は手順5で設定した eval "$(ssh-agent -s) の設定は削除して問題ない。
+
+### .bashrcを再読み込みして設定を反映
+```linenums="0"
+source ~/.bashrc
+```
