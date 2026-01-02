@@ -111,7 +111,7 @@ sudo apt install keychain
 - SSH公開鍵と秘密鍵がないと登録できないので.ssh以下に公開鍵と秘密鍵を用意しておく
 
 ```linenums="0"
-echo "/usr/bin/keychain $HOME/.ssh/id_rsa" >> ~/.bashrc
+echo "/usr/bin/keychain $HOME/.ssh/id_ed25519" >> ~/.bashrc
 echo "source $HOME/.keychain/`hostname`-sh" >> ~/.bashrc
 ```
 この設定をする場合は手順5で設定した eval "$(ssh-agent -s) の設定は削除して問題ない。
