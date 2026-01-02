@@ -32,6 +32,7 @@ nav:
   - HOME: index.md
   - Git:
     - Delete the entire contents of a Git repository: _git/delete_contents_git_repository.md
+    - Building a git environment: _git/building_git_environment.md
   - Linux:
     - Common:
       - Removing unnecessary Linux kernels: _linux/delete_linux_kernel.md
