@@ -637,7 +637,7 @@
           <li class="md-nav__item">
   <a href="#41-bashrc" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1. ~/.bashrcに以下の設定を追加する
+      4.1. ~/.bashrcに設定を追加する
     </span>
   </a>
   
@@ -689,6 +689,48 @@
   <a href="#53" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. 登録確認
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ssh-addssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. ssh-addで登録したSSH秘密鍵の永続化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ssh-addで登録したSSH秘密鍵の永続化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-1-keychain" class="md-nav__link">
+    <span class="md-ellipsis">
+      6-1. keychainのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 ~/.bashrcに設定を追加する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      .bashrcを再読み込みして設定を反映
     </span>
   </a>
   
@@ -1953,7 +1995,7 @@
           <li class="md-nav__item">
   <a href="#41-bashrc" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1. ~/.bashrcに以下の設定を追加する
+      4.1. ~/.bashrcに設定を追加する
     </span>
   </a>
   
@@ -2015,6 +2057,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-ssh-addssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. ssh-addで登録したSSH秘密鍵の永続化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ssh-addで登録したSSH秘密鍵の永続化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-1-keychain" class="md-nav__link">
+    <span class="md-ellipsis">
+      6-1. keychainのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 ~/.bashrcに設定を追加する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      .bashrcを再読み込みして設定を反映
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2064,12 +2148,13 @@ configファイルに以下の内容を記載．IdentityFileは作成したフ�
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  User git
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  HostName github.com
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  IdentityFile ~/.ssh/id_ed25519   # &lt;-- SSH秘密鍵を指定
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  AddKeysToAgent yes
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  UseKeychain yes     # &lt;---Macの場合のみ。Linuxなどだとエラーになるのでこの項目は削除
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  ServerAliveInterval 600
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  TCPKeepAlive yes
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  IPQoS lowdelay throughput
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  GSSAPIAuthentication no
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  IdentitiesOnly yes
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  AddKeysToAgent yes
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  UseKeychain yes     # &lt;---Macの場合のみ。Linuxなどだとエラーになるのでこの項目は削除
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  ServerAliveInterval 600
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  TCPKeepAlive yes
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  IPQoS lowdelay throughput
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  GSSAPIAuthentication no
 </span></code></pre></div><p></p>
 <h2 id="4-git">4. gitの拡張機能を入れる</h2>
 <div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># 入力補完
@@ -2082,7 +2167,7 @@ configファイルに以下の内容を記載．IdentityFileは作成したフ�
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>chmod a+x ~/.git-prompt.sh
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>echo "source ~/.git-prompt.sh" &gt;&gt; ~/.bashrc
 </span></code></pre></div>
-<h3 id="41-bashrc">4.1. ~/.bashrcに以下の設定を追加する</h3>
+<h3 id="41-bashrc">4.1. ~/.bashrcに設定を追加する</h3>
 <div class="language-text highlight" style="background: #272822"><span class="filename">~/.bashrc</span><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># プロンプトに各種情報を表示 1 or 空欄
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>GIT_PS1_SHOWDIRTYSTATE=1 # addされてないときに*、commitされてないときに+を表示
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>GIT_PS1_SHOWUPSTREAM=1 # 現在のブランチがupstreamより進んでいたら&gt;、遅れていたら&lt;、遅れてて変更ありなら&lt;&gt;が表示
@@ -2113,6 +2198,25 @@ configファイルに以下の内容を記載．IdentityFileは作成したフ�
 </span></code></pre></div>
 <h3 id="53">5.3. 登録確認</h3>
 <div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ssh-add -l
+</span></code></pre></div>
+<h2 id="6-ssh-addssh">6. ssh-addで登録したSSH秘密鍵の永続化</h2>
+<ul>
+<li>Ubuntuで手順5を実施してもログインし直すと登録したSSH秘密鍵が消える問題がある(Ubuntu以外のディストリビューションでも同じかもしれないが未確認)</li>
+<li>keychainを利用して永続化する</li>
+</ul>
+<h3 id="6-1-keychain">6-1. keychainのインストール</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo apt install keychain
+</span></code></pre></div>
+<h3 id="62-bashrc">6.2 ~/.bashrcに設定を追加する</h3>
+<ul>
+<li>SSH公開鍵と秘密鍵がないと登録できないので.ssh以下に公開鍵と秘密鍵を用意しておく</li>
+</ul>
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>echo "/usr/bin/keychain $HOME/.ssh/id_rsa" &gt;&gt; ~/.bashrc
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>echo "source $HOME/.keychain/`hostname`-sh" &gt;&gt; ~/.bashrc
+</span></code></pre></div>
+この設定をする場合は手順5で設定した eval "$(ssh-agent -s) の設定は削除して問題ない。<p></p>
+<h3 id="bashrc">.bashrcを再読み込みして設定を反映</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>source ~/.bashrc
 </span></code></pre></div>
 
 
