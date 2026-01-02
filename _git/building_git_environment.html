@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://shyokote.github.io/_git/delete_contents_git_repository.html">
+        <link rel="canonical" href="https://shyokote.github.io/_git/building_git_environment.html">
       
       
-        <link rel="prev" href="../index.html">
+        <link rel="prev" href="delete_contents_git_repository.html">
       
       
-        <link rel="next" href="building_git_environment.html">
+        <link rel="next" href="../_linux/delete_linux_kernel.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Delete the entire contents of a Git repository - My Docs</title>
+        <title>Building a git environment - My Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-the-entire-contents-of-a-git-repository" class="md-skip">
+        <a href="#building-a-git-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Delete the entire contents of a Git repository
+              Building a git environment
             
           </span>
         </div>
@@ -522,6 +522,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="delete_contents_git_repository.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delete the entire contents of a Git repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -539,7 +562,7 @@
   
   
   <span class="md-ellipsis">
-    Delete the entire contents of a Git repository
+    Building a git environment
     
   </span>
   
@@ -547,12 +570,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="delete_contents_git_repository.html" class="md-nav__link md-nav__link--active">
+      <a href="building_git_environment.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Delete the entire contents of a Git repository
+    Building a git environment
     
   </span>
   
@@ -575,20 +598,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      目的
+      1. SSHキー生成
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2-github" class="md-nav__link">
     <span class="md-ellipsis">
-      方法
+      2. githubにキーを登録
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. github初期設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. gitの拡張機能を入れる
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. gitの拡張機能を入れる">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. ~/.bashrcに以下の設定を追加する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gitssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. GitでSSHのパスフレーズ入力を省略する
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. GitでSSHのパスフレーズ入力を省略する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. SSHエージェントの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ssh-add-sshssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. ssh-add でSSH秘密鍵をssh-agentに登録する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. 登録確認
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -596,29 +694,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="building_git_environment.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Building a git environment
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1830,20 +1905,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      目的
+      1. SSHキー生成
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2-github" class="md-nav__link">
     <span class="md-ellipsis">
-      方法
+      2. githubにキーを登録
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. github初期設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. gitの拡張機能を入れる
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. gitの拡張機能を入れる">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. ~/.bashrcに以下の設定を追加する
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gitssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. GitでSSHのパスフレーズ入力を省略する
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. GitでSSHのパスフレーズ入力を省略する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. SSHエージェントの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ssh-add-sshssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. ssh-add でSSH秘密鍵をssh-agentに登録する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. 登録確認
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1863,12 +2013,89 @@
 
 
 
-<h1 id="delete-the-entire-contents-of-a-git-repository">Delete the entire contents of a Git repository</h1>
-<h2 id="_1">目的</h2>
-<p>Gitリポジトリの中身を全部一気に消す</p>
-<h2 id="_2">方法</h2>
-<div class="language-bash highlight" style="background: #272822"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span style="color: #F8F8F2"> </span>clean<span style="color: #F8F8F2"> </span>-fdx<span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> test </span><span style="color: #66D9EF">$(</span>git<span style="color: #F8F8F2"> </span>ls-files<span style="color: #F8F8F2"> | </span>wc<span style="color: #F8F8F2"> </span>-l<span style="color: #66D9EF">)</span><span style="color: #F8F8F2"> </span>-eq<span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">||</span><span style="color: #F8F8F2"> </span>git<span style="color: #F8F8F2"> </span>rm<span style="color: #F8F8F2"> </span>-rf<span style="color: #F8F8F2"> </span>.
-</span></code></pre></div></td></tr></tbody></table></div>
+<h1 id="building-a-git-environment">Building a git environment</h1>
+<h2 id="1-ssh">1. SSHキー生成</h2>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh-keygen -t ed25519 -C ""
+</span></code></pre></div>
+<h2 id="2-github">2. githubにキーを登録</h2>
+<p>SSHキー生成で作成されたパブリックキーをコピーする
+</p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat ~/.ssh/id_ed25519.pub
+</span></code></pre></div><p></p>
+<ul>
+<li>githubのページにアクセスして、右上のユーザーアイコンクリック &gt; settings &gt; SSH and GPG keys に移動してSSH keysのNew SSH keyをクリックして登録<ul>
+<li>Titleは自分のわかりやすい名前を入力、Keyの部分にコピーしたパブリックキーを貼り付け</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-github">3. github初期設定</h2>
+<p></p><div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># 設定確認(初期は何も出力されない)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git config --list
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># ユーザー名設定 (githubのアカウント名を指定する)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git config --global user.name "USERNAME"
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a># 設定確認
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>git config --list
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># user.name=USERNAME
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a># configファイルがなければ作成
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>touch ~/.ssh/config
+</span></code></pre></div>
+configファイルに以下の内容を記載．IdentityFileは作成したファイルパスを記載．
+<div class="language-text highlight" style="background: #272822"><span class="filename">~/.ssh/config</span><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Host github.com
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  User git
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  HostName github.com
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  IdentityFile ~/.ssh/id_ed25519   # &lt;-- SSH秘密鍵を指定
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  AddKeysToAgent yes
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  UseKeychain yes     # &lt;---Macの場合のみ。Linuxなどだとエラーになるのでこの項目は削除
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  ServerAliveInterval 600
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  TCPKeepAlive yes
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  IPQoS lowdelay throughput
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  GSSAPIAuthentication no
+</span></code></pre></div><p></p>
+<h2 id="4-git">4. gitの拡張機能を入れる</h2>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># 入力補完
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>chmod a+x ~/.git-completion.bash
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>echo "source ~/.git-completion.bash" &gt;&gt; ~/.bashrc
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a># 拡張情報表示
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>chmod a+x ~/.git-prompt.sh
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>echo "source ~/.git-prompt.sh" &gt;&gt; ~/.bashrc
+</span></code></pre></div>
+<h3 id="41-bashrc">4.1. ~/.bashrcに以下の設定を追加する</h3>
+<div class="language-text highlight" style="background: #272822"><span class="filename">~/.bashrc</span><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># プロンプトに各種情報を表示 1 or 空欄
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>GIT_PS1_SHOWDIRTYSTATE=1 # addされてないときに*、commitされてないときに+を表示
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>GIT_PS1_SHOWUPSTREAM=1 # 現在のブランチがupstreamより進んでいたら&gt;、遅れていたら&lt;、遅れてて変更ありなら&lt;&gt;が表示
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>GIT_PS1_SHOWUNTRACKEDFILES= # addされてない新規ファイルがあったら%を表示
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>GIT_PS1_SHOWSTASHSTATE=1 # stashがあったら$を表示
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>#プロンプト設定 (Ubuntuの場合。お好みでカスタマイズ)
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>if [ "$color_prompt" = yes ]; then
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[00;34m\]\w\[\033[00m\]\[\033[00;31m\]$(__git_ps1)\[\033[00m\]\$ '
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>else
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>fi
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>unset color_prompt force_color_prompt
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a># .bashrcを再読み込みして設定を反映
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>source ~/.bashrc
+</span></code></pre></div>
+<h2 id="5-gitssh">5. GitでSSHのパスフレーズ入力を省略する</h2>
+<h3 id="51-ssh">5.1. SSHエージェントの設定</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>echo 'eval "$(ssh-agent -s)"' &gt;&gt; ~/.bashrc
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>source ~/.bashrc
+</span></code></pre></div>
+<h3 id="52-ssh-add-sshssh-agent">5.2. ssh-add でSSH秘密鍵をssh-agentに登録する</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh-add /Users/[user_name]/.ssh/id_ed25519
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Enter passphrase for /Users/[user_name]/.ssh/id_ed25519: &lt;- SSHのパスフレーズを入力
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Identity added: /Users/[user_name]/.ssh/id_ed25519 (&lt;作成時に入力したコメント&gt;)
+</span></code></pre></div>
+<h3 id="53">5.3. 登録確認</h3>
+<div class="language-text highlight" style="background: #272822"><pre style="line-height: 125%;"><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ssh-add -l
+</span></code></pre></div>
 
 
 
