@@ -70,8 +70,10 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 unset color_prompt force_color_prompt
+```
 
-# .bashrcを再読み込みして設定を反映
+### 4.2. .bashrcを再読み込みして設定を反映
+```linenums="0"
 source ~/.bashrc
 ```
 
