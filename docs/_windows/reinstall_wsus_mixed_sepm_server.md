@@ -3,9 +3,10 @@
 本手順書は、Windows Server 2016上で稼働する Symantec Endpoint Protection Manager (SEPM) と共存している WSUS (Windows Server Update Services) を、SEPM環境に影響を与えずに再インストール（クリーンインストール）するための手順である。
 
 対象環境
-OS: Windows Server 2016 Standard
-共存アプリケーション: Symantec Endpoint Protection Manager (SEPM)
-作業目的: WSUSの不具合解消のための役割削除および再構築
+
+- OS: Windows Server 2016 Standard
+- 共存アプリケーション: Symantec Endpoint Protection Manager (SEPM)
+- 作業目的: WSUSの不具合解消のための役割削除および再構築
 
 !!! danger
 
