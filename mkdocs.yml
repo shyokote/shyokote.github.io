@@ -56,6 +56,7 @@ nav:
     - Apps won't disappear from the Windows Start menu: _windows/apps_wont_diappear_form_the_windows_menu.md
     - Unable to remove Linux installed with WSL: _windows/remove_linux_installed_with_wsl.md
     - Reinstall WSUS (mixed SEPM server): _windows/reinstall_wsus_mixed_sepm_server.md
+    - Reinstall SEPM (mixed WSUS server): _windows/reinstall_sepm_mixed_wsus_server.md
   - Mac:
     - Create a Bootable USB from an ISO image using Mac's standard functions: _mac/create_bootableusb_mac.md
     - Create a Password-Secured Zip: _mac/create_password_secured_zip.md
