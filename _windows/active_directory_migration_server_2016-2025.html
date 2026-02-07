@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://shyokote.github.io/_windows/reinstall_wsus_mixed_sepm_server.html">
+        <link rel="canonical" href="https://shyokote.github.io/_windows/active_directory_migration_server_2016-2025.html">
       
       
-        <link rel="prev" href="remove_linux_installed_with_wsl.html">
+        <link rel="prev" href="reinstall_sepm_mixed_wsus_server.html">
       
       
-        <link rel="next" href="reinstall_sepm_mixed_wsus_server.html">
+        <link rel="next" href="../_mac/create_bootableusb_mac.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Reinstall WSUS (mixed SEPM server) - My Docs</title>
+        <title>Active Directory Migration Procedure (Windows Server 2016 to 2025) - My Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wsussepm" class="md-skip">
+        <a href="#active-directory-windows-server-2016-to-2025" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reinstall WSUS (mixed SEPM server)
+              Active Directory Migration Procedure (Windows Server 2016 to 2025)
             
           </span>
         </div>
@@ -1310,32 +1310,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reinstall WSUS (mixed SEPM server)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="reinstall_wsus_mixed_sepm_server.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="reinstall_wsus_mixed_sepm_server.html" class="md-nav__link">
         
   
   
@@ -1346,200 +1324,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 概要
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 事前準備・確認フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 事前準備・確認フェーズ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1. システムバックアップ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2. 現状構成の記録
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. アンインストール作業フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. アンインストール作業フェーズ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-wsus" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1. WSUSの役割削除
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2. 残存データのクリーンアップ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3. 中間動作確認
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 再インストール作業フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 再インストール作業フェーズ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-wsus" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1. WSUSの役割追加
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-post-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2. 展開後構成 (Post-Install)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 初期設定・動作確認フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. 初期設定・動作確認フェーズ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-iis" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1. IIS構成の確認
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-wsus" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2. WSUS初期設定
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3. 最終動作確認
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.3. 最終動作確認">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      トラブルシューティング
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1572,10 +1356,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="active_directory_migration_server_2016-2025.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Active Directory Migration Procedure (Windows Server 2016 to 2025)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="active_directory_migration_server_2016-2025.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1586,6 +1392,245 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 移行前：前提条件・健全性確認フェーズ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 移行前：前提条件・健全性確認フェーズ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① ドメイン・フォレスト機能レベルの確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sysvol-frs-or-dfsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② SYSVOL 複製方式の確認 (FRS or DFSR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ③ 現行サーバーの健全性診断
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-1addc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 第1段階：ADDC02 のリプレース手順
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 第1段階：ADDC02 のリプレース手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-addc02" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① 旧 ADDC02 の降格と撤去
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-addc02-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 新 ADDC02 (2025) の構築と昇格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2fsmo-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 第2段階：FSMO移行と ADDC01 のリプレース手順
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 第2段階：FSMO移行と ADDC01 のリプレース手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fsmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① FSMO役割の転送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 旧 ADDC01 の降格と撤去
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-addc01-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      ③ 新 ADDC01 (2025) の構築と昇格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-3fsmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 第3段階：FSMOの再転送
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 第3段階：FSMOの再転送">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ffsmoaddc02-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① FFSMOの再転送（ADDC02 → ADDC01）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 転送後の最終確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      ③ DNS参照の最適化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 最終確認・事後作業
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 最終確認・事後作業">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① 最終健全性チェック
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 機能レベルの引き上げ（任意）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考文献
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2061,79 +2106,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      要件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 概要
+      1. 移行前：前提条件・健全性確認フェーズ
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 事前準備・確認フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 事前準備・確認フェーズ">
+    <nav class="md-nav" aria-label="1. 移行前：前提条件・健全性確認フェーズ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1. システムバックアップ
+      ① ドメイン・フォレスト機能レベルの確認
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#2-sysvol-frs-or-dfsr" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2. 現状構成の記録
+      ② SYSVOL 複製方式の確認 (FRS or DFSR)
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. アンインストール作業フェーズ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. アンインストール作業フェーズ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-wsus" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1. WSUSの役割削除
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2. 残存データのクリーンアップ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3. 中間動作確認
+      ③ 現行サーバーの健全性診断
     </span>
   </a>
   
@@ -2145,28 +2166,112 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#2-1addc02" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 再インストール作業フェーズ
+      2. 第1段階：ADDC02 のリプレース手順
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 再インストール作業フェーズ">
+    <nav class="md-nav" aria-label="2. 第1段階：ADDC02 のリプレース手順">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-wsus" class="md-nav__link">
+  <a href="#1-addc02" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1. WSUSの役割追加
+      ① 旧 ADDC02 の降格と撤去
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-post-install" class="md-nav__link">
+  <a href="#2-addc02-2025" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2. 展開後構成 (Post-Install)
+      ② 新 ADDC02 (2025) の構築と昇格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2fsmo-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 第2段階：FSMO移行と ADDC01 のリプレース手順
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 第2段階：FSMO移行と ADDC01 のリプレース手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fsmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① FSMO役割の転送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 旧 ADDC01 の降格と撤去
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-addc01-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      ③ 新 ADDC01 (2025) の構築と昇格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-3fsmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 第3段階：FSMOの再転送
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 第3段階：FSMOの再転送">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ffsmoaddc02-addc01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ① FFSMOの再転送（ADDC02 → ADDC01）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ② 転送後の最終確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      ③ DNS参照の最適化
     </span>
   </a>
   
@@ -2180,45 +2285,26 @@
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 初期設定・動作確認フェーズ
+      5. 最終確認・事後作業
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. 初期設定・動作確認フェーズ">
+    <nav class="md-nav" aria-label="5. 最終確認・事後作業">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-iis" class="md-nav__link">
+  <a href="#1_2" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1. IIS構成の確認
+      ① 最終健全性チェック
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-wsus" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2. WSUS初期設定
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3. 最終動作確認
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.3. 最終動作確認">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      トラブルシューティング
+      ② 機能レベルの引き上げ（任意）
     </span>
   </a>
   
@@ -2228,9 +2314,13 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考文献
+    </span>
+  </a>
   
 </li>
       
@@ -2250,232 +2340,91 @@
 
 
 
-<h1 id="wsussepm">WSUS再インストール（SEPM共存環境）</h1>
-<h2 id="1">1. 概要</h2>
-<p>本手順書は、Windows Server 2016上で稼働する Symantec Endpoint Protection Manager (SEPM) と共存している WSUS (Windows Server Update Services) を、SEPM環境に影響を与えずに再インストール（クリーンインストール）するための手順である。</p>
-<p>対象環境</p>
-<ul>
-<li>OS: Windows Server 2016 Standard</li>
-<li>共存アプリケーション: Symantec Endpoint Protection Manager (SEPM)</li>
-<li>作業目的: WSUSの不具合解消のための役割削除および再構築</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>重要注意事項（作業前に必ず読むこと）</p>
-<ul>
-<li>IIS (Web Server) の役割は絶対に削除しないこと</li>
-<li>SEPMはIIS、またはIISとポートを共有するコンポーネントに依存しています。誤ってIIS全体を削除すると、SEPM管理コンソールおよびクライアント通信が停止します。</li>
-<li>WID データベースファイルの削除</li>
-</ul>
-<p>役割の削除だけではデータベースファイル (SUSDB.mdf) が残留します。これを手動で削除しない限り、再インストールしても過去の不具合（DB破損など）を引き継ぐ可能性があります。</p>
-</div>
-<h2 id="2">2. 事前準備・確認フェーズ</h2>
-<h3 id="21">2.1. システムバックアップ</h3>
-<ul>
-<li>フルバックアップの取得</li>
-<li>仮想マシンの場合はスナップショットを取得する。</li>
-<li>物理サーバーの場合はシステムバックアップを取得する。</li>
-<li>目的: IIS構成破損時の切り戻し用</li>
-</ul>
-<h3 id="22">2.2. 現状構成の記録</h3>
-<ul>
-<li>WSUS設定の記録 (スクリーンショット等)<ul>
-<li>「製品とクラス」の選択状況</li>
-<li>「更新ファイルと言語」の設定</li>
-<li>「同期スケジュール」</li>
-<li>「アップストリームサーバー」の設定</li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<h1 id="active-directory-windows-server-2016-to-2025">Active Directory 移行手順書（Windows Server 2016 to 2025）</h1>
+<h2 id="_1">要件</h2>
 <ol>
-<li>
-<p>WSUS管理コンソールの起動</p>
-</li>
-<li>
-<p>スタートメニュー &gt; Windows Administrative Tools (管理ツール) &gt; Windows Server Update Services を起動します。</p>
-</li>
-<li>左側のツリーで [サーバー名] をクリックし、最下部にある [オプション] をクリックします。</li>
-<li>
-<p>画面中央にオプション項目一覧が表示されます。</p>
-</li>
-<li>
-<p>各項目の確認箇所</p>
-</li>
+<li>ADが利用できない時間は許容しない</li>
+<li>Microsoftの推奨手順を踏襲する</li>
+<li>新サーバーは旧サーバーのホスト名とIPアドレスを引き継ぐ</li>
 </ol>
-<p>① 「製品とクラス」の選択状況</p>
-<p>製品リストは長大になるため、スクリーンショットでの記録漏れに注意してください。</p>
+<h2 id="_2">環境</h2>
 <ul>
-<li>場所: [オプション] &gt; [製品とクラス]</li>
-<li>確認内容:<ul>
-<li>[製品] タブ: ツリーを展開し、チェックが入っている製品（Windows 10, Windows Server 2016など）を記録します。</li>
-<li>[クラス] タブ: 「セキュリティ更新プログラム」「定義更新プログラム」などのチェック状況を記録します。</li>
+<li>ADDS01 (Windows Server 2016)</li>
+<li>ADDS02 (Windows Server 2016)</li>
+<li>新ADDS01 (Windows Server 2025)</li>
+<li>新ADDS02 (Windows Server 2025)</li>
 </ul>
-</li>
-</ul>
-<p>② 「更新ファイルと言語」の設定</p>
-<ul>
-<li>場所: [オプション] &gt; [更新ファイルと言語]</li>
-<li>確認内容:<ul>
-<li>[更新ファイル] タブ:<ul>
-<li>「更新プログラムをローカルに保存する」か「Microsoft Updateからインストールする」か。</li>
-<li>「高速インストールファイル」の設定有無。</li>
-</ul>
-</li>
-<li>[更新言語] タブ:<ul>
-<li>「すべての言語」か「英語」「日本語」のみか。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>③ 「同期スケジュール」</p>
-<ul>
-<li>場所: [オプション] &gt; [同期のスケジュール]</li>
-<li>確認内容:<ul>
-<li>「手動で同期する」か「自動で同期する」か。</li>
-<li>自動の場合、「毎日の同期時刻」と「1日あたりの同期回数」。</li>
-</ul>
-</li>
-</ul>
-<p>④ 「アップストリームサーバー」の設定</p>
-<ul>
-<li>場所: [オプション] &gt; [更新元およびプロキシサーバー]</li>
-<li>確認内容:<ul>
-<li>[更新元] タブ:<ul>
-<li>「Microsoft Updateから同期する」か「別のWSUSサーバーから同期する」か。</li>
-<li>別のサーバーの場合、サーバー名とポート番号。</li>
-</ul>
-</li>
-<li>[プロキシサーバー] タブ:<ul>
-<li>プロキシを使用している場合、サーバー名、ポート、認証情報の有無。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<ul>
-<li>IISバインディングの確認<ul>
-<li>IISマネージャーを開き、既存のサイト構成を確認する。</li>
-<li>Default Web Site および Symantec Endpoint Protection Manager のポート番号を控える。</li>
-<li>目的: 再構築後のポート競合回避</li>
-</ul>
-</li>
-</ul>
-<h2 id="3">3. アンインストール作業フェーズ</h2>
-<h3 id="31-wsus">3.1. WSUSの役割削除</h3>
-<ol>
-<li>サーバーマネージャーを起動し、[管理] &gt; [役割と機能の削除] をクリック。</li>
-<li>対象サーバーを選択。<ul>
-<li>サーバーの役割 の選択画面にて：</li>
-<li>Windows Server Update Services のチェックを 外す。</li>
-<li>Web Server (IIS) のチェックは 入れたままにする（変更しない）。</li>
-</ul>
-</li>
-<li>ウィザードを進め、[削除] を実行する。</li>
-<li>削除完了後、OSを再起動 する。</li>
-</ol>
-<h3 id="32">3.2. 残存データのクリーンアップ</h3>
-<p>再起動後、以下の手順で不要ファイルを削除する。</p>
-<ol>
-<li>IISサイトの残存確認<ul>
-<li>IISマネージャーを開く。</li>
-<li>WSUS Administration サイトが残っている場合は、右クリックして [削除] する。</li>
-<li>他のサイト（SEPM関連）は削除しないこと。</li>
-</ul>
-</li>
-<li>WID データベースの削除<ul>
-<li>PowerShell（管理者）または「サービス」画面から、WIDサービスを停止する。
-<div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Stop-Service -Name "WID"
+<h2 id="1">1. 移行前：前提条件・健全性確認フェーズ</h2>
+<p>移行作業を開始する前に、既存ドメインが「新しいDCを受け入れられる状態か」を以下の手順で確認します。</p>
+<h3 id="1_1">① ドメイン・フォレスト機能レベルの確認</h3>
+<p>Windows Server 2025を導入するには、機能レベルが Windows Server 2008 以上である必要があります。</p>
+<p>確認コマンド:
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># ドメイン機能レベルの確認
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Get-ADDomain | fl Name, DomainMode
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># フォレスト機能レベルの確認
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Get-ADForest | fl Name, ForestMode
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>判断基準: 結果が Windows2008Domain（またはForest）以上であればOKです。もし Windows2003 等の場合は、事前にレベルアップ操作が必要です。
+</span></code></pre></div><p></p>
+<h3 id="2-sysvol-frs-or-dfsr">② SYSVOL 複製方式の確認 (FRS or DFSR)</h3>
+<p>Windows Server 2019以降、古い複製方式であるFRSはサポートされていません。</p>
+<p>確認コマンド
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">DOS</span><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dfsrmig /getglobalstate
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>判断基準: 出力が 「状態 '削除済み' (Eliminated)」 であれば移行済み。それ以外の場合は、まずDFSRへの移行作業（dfsrmig プロセス）を完遂させる必要があります。
+</span></code></pre></div><p></p>
+<h3 id="3">③ 現行サーバーの健全性診断</h3>
+<p>確認コマンド:
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">DOSl</span><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dcdiag /v /c /d /e /s:ADDC01 &gt; dcdiag_check.log
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>dcdiag_check.log  をテキストエディタなどで確認し、"failed" を検索
+</span></code></pre></div><p></p>
+<h2 id="2-1addc02">2. 第1段階：ADDC02 のリプレース手順</h2>
+<h3 id="1-addc02">① 旧 ADDC02 の降格と撤去</h3>
+<p>FSMOの所在確認: netdom query fsmo で、全ての役割が ADDC01 にあることを確認。</p>
+<p>降格実行: ADDC02にて「役割と機能の削除」からAD DSを削除（降格）し、ワークグループに参加させシャットダウン。</p>
+<p>メタデータ・クリーンアップ確認: ADDC01側の「ADユーザーとコンピューター」および「DNSマネージャー」から、ADDC02の古いレコード（特に _msdcs 配下）が消えていることを目視確認。残っている場合は手動削除。</p>
+<h3 id="2-addc02-2025">② 新 ADDC02 (2025) の構築と昇格</h3>
+<p>OS設定: 旧ADDC02と同一のホスト名・固定IPを付与。</p>
+<p>優先DNS設定: 自身のIPではなく、稼働中の ADDC01のIP を優先DNSに指定。</p>
+<p>AD昇格: 「既存のドメインにドメインコントローラーを追加する」オプションで昇格。</p>
+<p>同期確認:
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">DOS</span><pre style="line-height: 125%;"><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repadmin /showrepl /v
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>repadmin /replsummary
+</span></code></pre></div><p></p>
+<h2 id="3-2fsmo-addc01">3. 第2段階：FSMO移行と ADDC01 のリプレース手順</h2>
+<h3 id="1-fsmo">① FSMO役割の転送</h3>
+<p>新ADDC02(2025)へ全ての役割を移します。</p>
+<p>実行コマンド:
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Move-ADDirectoryServerOperationMasterRole -Identity "ADDC02" -OperationMasterRole SchemaMaster, DomainNamingMaster, PDCEmulator, RIDMaster, InfrastructureMaster
+</span></code></pre></div><p></p>
+<h3 id="2-addc01">② 旧 ADDC01 の降格と撤去</h3>
+<p>ADDC02の時と同様に降格・シャットダウン・メタデータ確認を実施。</p>
+<h3 id="3-addc01-2025">③ 新 ADDC01 (2025) の構築と昇格</h3>
+<p>旧ADDC01と同一のホスト名・固定IPでセットアップ。</p>
+<p>優先DNSを ADDC02のIP に向けて昇格実行。</p>
+<h2 id="4-3fsmo">4. 第3段階：FSMOの再転送</h2>
+<h3 id="1-ffsmoaddc02-addc01">① FFSMOの再転送（ADDC02 → ADDC01）</h3>
+<div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Move-ADDirectoryServerOperationMasterRole -Identity "ADDC01" -OperationMasterRole SchemaMaster, DomainNamingMaster, PDCEmulator, RIDMaster, InfrastructureMaster
 </span></code></pre></div>
-※サービス名が見つからない場合は Windows Internal Database を探す。</li>
-</ul>
-</li>
-<li>エクスプローラーで以下のパスを開く。 C:\Windows\WID\Data</li>
-<li>以下の2ファイルを削除（または _old 等へリネーム退避）する。<ul>
-<li>SUSDB.mdf</li>
-<li>SUSDB_log.ldf</li>
-</ul>
-</li>
-<li>WIDサービスを開始する。
-<div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Start-Service -Name "WID"
-</span></code></pre></div></li>
-<li>コンテンツフォルダの処置</li>
-<li>既存の保存先（例: C:\WSUS）を C:\WSUS_OLD などにリネームするか、削除する。</li>
-<li>新たに空のフォルダ（例: C:\WSUS）を作成しておく。</li>
-</ol>
-<h3 id="33">3.3. 中間動作確認</h3>
-<p>SEPMの動作確認
-- SEPM管理コンソールへログインできることを確認する。
-- 既存のIISサイトが停止していないか確認する。</p>
-<h2 id="4">4. 再インストール作業フェーズ</h2>
-<h3 id="41-wsus">4.1. WSUSの役割追加</h3>
-<ol>
-<li>サーバーマネージャー &gt; [管理] &gt; [役割と機能の追加]。</li>
-<li>サーバーの役割 にて Windows Server Update Services にチェックを入れる。</li>
-<li>機能 選択画面はデフォルトのまま次へ。</li>
-<li>WSUS - 役割サービス の選択画面にて以下にチェックが入っていることを確認。<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> WID Connectivity</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> WSUS Services</li>
-</ul>
-</li>
-<li>コンテンツの場所 の選択画面にて、作成したパス（例: C:\WSUS）を指定。</li>
-<li>[インストール] を実行する。</li>
-<li>インストール完了後、必要に応じてOS再起動を行う（保留中の再起動がある場合）。</li>
-</ol>
-<h3 id="42-post-install">4.2. 展開後構成 (Post-Install)</h3>
-<p>役割追加だけではIISへの登録やDB作成が行われていないため、以下を実施する。</p>
-<ol>
-<li>構成タスクの実行</li>
-<li>管理者権限でPowerShellを開き、以下のコマンドを実行する。
-<div class="language-text highlight" style="background: #272822"><span class="filename">PowerShell</span><pre style="line-height: 125%;"><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&amp; 'C:\Program Files\Update Services\Tools\wsusutil.exe' postinstall CONTENT_DIR=C:\WSUS
-</span></code></pre></div>
-※ C:\WSUS は実際のパスに置き換える。</li>
-<li>Postinstall completed successfully と表示されることを確認する。</li>
-</ol>
-<h2 id="5">5. 初期設定・動作確認フェーズ</h2>
-<h3 id="51-iis">5.1. IIS構成の確認</h3>
-<ol>
-<li>IISマネージャーを開く。</li>
-<li>WSUS Administration サイトが作成されていることを確認。</li>
-<li>画面右側の「バインディング」を確認。<ul>
-<li>ポート 8530 (http)</li>
-<li>ポート 8531 (https)</li>
-<li>上記が設定されており、SEPMの使用ポートと競合していないことを確認する。</li>
-</ul>
-</li>
-</ol>
-<h3 id="52-wsus">5.2. WSUS初期設定</h3>
-<ol>
-<li>スタートメニューから「Windows Server Update Services」を開く。</li>
-<li>「WSUS構成ウィザード」が開始されるので、記録しておいた設定値に従って進める。<ul>
-<li>アップストリームサーバーの指定</li>
-<li>プロキシ設定</li>
-<li>接続開始（最初の同期）</li>
-<li>言語、製品、クラスの選択</li>
-<li>同期スケジュール</li>
-</ul>
-</li>
-</ol>
-<h3 id="53">5.3. 最終動作確認</h3>
+<h3 id="2">② 転送後の最終確認</h3>
+<p>正しくADDC01が5つの役割を保持したか確認します。
+</p><div class="language-text highlight" style="background: #272822"><span class="filename">DOSl</span><pre style="line-height: 125%;"><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>netdom query fsmo
+</span></code></pre></div><p></p>
+<h3 id="3-dns">③ DNS参照の最適化</h3>
+<p>FSMOをADDC01に戻した後は、各DCの「自分自身を指すDNS設定」もベストプラクティスに合わせて最終調整してください。</p>
 <ul>
-<li>同期テスト: 手動同期を実行し、エラーなく完了するか。</li>
-<li>クライアント接続: クライアントPCからWindows Updateを実行し、WSUSと通信できるか。</li>
-<li>SEPM確認: 全作業終了後、再度SEPMコンソールへのログインおよびクライアント通信に異常がないか確認する。</li>
+<li>ADDC01のDNS設定: 優先 ADDC02のIP / 代替 127.0.0.1 (自分)</li>
+<li>ADDC02のDNS設定: 優先 ADDC01のIP / 代替 127.0.0.1 (自分)</li>
 </ul>
-<h4 id="_1">トラブルシューティング</h4>
+<p>※DC自身が起動する際、相手方のDNSが生きていることで、自身のADサービスがスムーズに開始されるための推奨設定です。</p>
+<h2 id="5">5. 最終確認・事後作業</h2>
+<h3 id="1_2">① 最終健全性チェック</h3>
+<p>全DCで dcdiag を実行し、エラーがないことを確認。クライアント端末から新規ログオン、グループポリシーの適用（gpupdate /force）が成功することを確認。</p>
+<h3 id="2_1">② 機能レベルの引き上げ（任意）</h3>
+<p>全てのDCがWindows Server 2025に置き換わった後、2025の新機能（ADデータベースの32kページサイズ化等）を利用したい場合は、機能レベルを Windows Server 2025 へ引き上げます。</p>
+<p>※一度上げると戻せないため慎重に</p>
+<h2 id="_3">参考文献</h2>
 <ul>
-<li>WIDデータが削除できない場合:<ul>
-<li>プロセスが掴んでいる可能性があります。サーバーを再起動した後、すぐにファイル削除を試みてください。</li>
-</ul>
-</li>
-<li>Post-Installが失敗する場合:<ul>
-<li>IISにて WSUS Administration サイトが中途半端に残っている可能性があります。IISマネージャーからサイトを削除してから再実行してください。</li>
-<li>ログファイルを確認してください: %TEMP%\Wsustup.log</li>
-</ul>
-</li>
+<li><a href="https://learn.microsoft.com/ja-jp/windows-server/identity/ad-ds/active-directory-functional-levels">Microsoft: AD DS の機能レベルについて</a></li>
+<li><a href="https://learn.microsoft.com/ja-jp/windows-server/get-started/whats-new-windows-server-2025">Windows Server 2025 AD DS 新機能の要件</a></li>
 </ul>
 
 
