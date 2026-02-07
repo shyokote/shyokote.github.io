@@ -81,7 +81,7 @@ Move-ADDirectoryServerOperationMasterRole -Identity "ADDC01" -OperationMasterRol
 ```
 ### ② 転送後の最終確認
 正しくADDC01が5つの役割を保持したか確認します。
-```title="DOSl" linenums="0"
+```title="DOS" linenums="0"
 netdom query fsmo
 ```
 ### ③ DNS参照の最適化
