@@ -34,7 +34,7 @@ dfsrmig /getglobalstate
 ```
 ### ③ 現行サーバーの健全性診断
 確認コマンド:
-```title="DOSl" linenums="0"
+```title="DOS" linenums="0"
 dcdiag /v /c /d /e /s:ADDC01 > dcdiag_check.log
 dcdiag_check.log  をテキストエディタなどで確認し、"failed" を検索
 ```
