@@ -101,7 +101,27 @@ FSMOをADDC01に戻した後は、各DCの「自分自身を指すDNS設定」�
 
 ※一度上げると戻せないため慎重に
 
+## Active Directory Domain Services 機能レベル (任意)
+| Windows Server バージョン(DC) | Windows Server 2025 の機能レベル | Windows Server 2016 の機能レベル | Windows Server 2012 R2 の機能レベル |
+| ----------- | ----------- | ----------- | ----------- |
+| Windows Server 2025 | :material-check: サポート | :material-check: サポート | :material-close: サポートされていません |
+| Windows Server 2022 | :material-close: サポートされていません | :material-check: サポート | :material-check: サポート |
+| Windows Server 2019 | :material-close: サポートされていません | :material-check: サポート | :material-check: サポート |
+| Windows Server 2016 | :material-close: サポートされていません | :material-check: サポート | :material-check: サポート |
+| Windows Server 2012 R2 | :material-close: サポートされていません | :material-close: サポートされていません | :material-check: サポート |
+
+### 現在のフォレスト機能レベル確認の手順
+Active Directory ドメインと信頼コンソールを使用してドメインまたはフォレストの機能レベルを表示するには、次の手順を実行します。
+
+1. AD DS リモート サーバー管理ツール (RSAT) がインストールされているコンピューターにサインインします。
+1. [スタート] メニューを選択し、検索ボックスに 「Active Directory のドメインと信頼」と 入力します。
+1. Active Directory のドメインと信頼を開きます。
+1. コンソール ツリーでドメイン ノードを右クリックし、 [プロパティ]を選択します。
+1. [プロパティ] ダイアログには、現在のドメインとフォレストの機能レベルが表示されます。
+
 ## 参考文献
 - [Microsoft: AD DS の機能レベルについて](https://learn.microsoft.com/ja-jp/windows-server/identity/ad-ds/active-directory-functional-levels)
 - [Windows Server 2025 AD DS 新機能の要件](https://learn.microsoft.com/ja-jp/windows-server/get-started/whats-new-windows-server-2025)
-
+- [Active Directory Domain Services 機能レベル](https://learn.microsoft.com/ja-jp/windows-server/identity/ad-ds/active-directory-functional-levels)
+- [Active Directory の機能レベルを上げる際の影響について](https://jpwinsup.github.io/blog/2023/04/24/ActiveDirectory/FunctionalLevel/impact-of-updating-functionallevel/)
+- [Active Directory ドメイン サービスでドメインとフォレストの機能レベルを上げる](https://learn.microsoft.com/ja-jp/windows-server/identity/ad-ds/plan/raise-domain-forest-functional-levels?tabs=desktop)
